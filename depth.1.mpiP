@@ -1,0 +1,1783 @@
+@ mpiP
+@ Command : ./miniAMR.x --npx 2 --npy 2 --npz 2 
+@ Version                  : 3.4.1
+@ MPIP Build date          : Sep 26 2020, 14:53:51
+@ Start time               : 2020 09 26 16:33:05
+@ Stop time                : 2020 09 26 16:33:06
+@ Timer Used               : PMPI_Wtime
+@ MPIP env var             : [null]
+@ Collector Rank           : 0
+@ Collector PID            : 5928
+@ Final Output Dir         : .
+@ Report generation        : Single collector task
+@ MPI Task Assignment      : 0 csews3
+@ MPI Task Assignment      : 1 csews3
+@ MPI Task Assignment      : 2 csews3
+@ MPI Task Assignment      : 3 csews3
+@ MPI Task Assignment      : 4 csews3
+@ MPI Task Assignment      : 5 csews3
+@ MPI Task Assignment      : 6 csews3
+@ MPI Task Assignment      : 7 csews3
+
+---------------------------------------------------------------------------
+@--- MPI Time (seconds) ---------------------------------------------------
+---------------------------------------------------------------------------
+Task    AppTime    MPITime     MPI%
+   0       1.12     0.0808     7.25
+   1       1.12     0.0887     7.95
+   2       1.12     0.0916     8.21
+   3       1.12      0.092     8.25
+   4       1.12      0.114    10.25
+   5       1.12     0.0879     7.87
+   6       1.12     0.0909     8.14
+   7       1.12      0.107     9.57
+   *       8.93      0.753     8.44
+---------------------------------------------------------------------------
+@--- Callsites: 272 -------------------------------------------------------
+---------------------------------------------------------------------------
+ ID Lev File/Address        Line Parent_Funct             MPI_Call
+  1   0 0x564ce909f827           init                     Comm_split
+  2   0 0x564ce90a54ce           calculate_results        Allreduce
+  3   0 0x564ce9097a44           comm                     Waitany
+  4   0 0x564ce90b2ad1           refine                   Allreduce
+  5   0 0x564ce909bb45           comm_refine              Irecv
+  6   0 0x564ce90a54f3           calculate_results        Allreduce
+  7   0 0x564ce90b08f4           refine_level             Allreduce
+  8   0 0x564ce90b06f4           refine_level             Allreduce
+  9   0 0x564ce9089591           main                     Bcast
+ 10   0 0x564ce90b3189           refine                   Allreduce
+ 11   0 0x564ce9098407           comm                     Waitany
+ 12   0 0x564ce908978f           main                     Barrier
+ 13   0 0x564ce909bc3a           comm_refine              Isend
+ 14   0 0x564ce90b389d           refine                   Allreduce
+ 15   0 0x564ce909be34           comm_refine              Waitany
+ 16   0 0x564ce90896ba           main                     Bcast
+ 17   0 0x564ce90a54a9           calculate_results        Allreduce
+ 18   0 0x564ce90b31ba           refine                   Allreduce
+ 19   0 0x564ce90a494d           calculate_results        Allreduce
+ 20   0 0x564ce90b3851           refine                   Allreduce
+ 21   0 0x564ce90a5566           calculate_results        Allreduce
+ 22   0 0x564ce90b3164           refine                   Allreduce
+ 23   0 0x564ce908d265           check_sum                Allreduce
+ 24   0 0x564ce90977c3           comm                     Isend
+ 25   0 0x564ce90b3877           refine                   Allreduce
+ 26   0 0x564ce90b1975           redistribute_blocks      Allreduce
+ 27   0 0x564ce90b2d07           refine                   Allreduce
+ 28   0 0x564ce90b220a           redistribute_blocks      Allreduce
+ 29   0 0x564ce909bc8d           comm_refine              Waitany
+ 30   0 0x564ce90b3018           refine                   Allreduce
+ 31   0 0x564ce9097581           comm                     Irecv
+ 32   0 0x564ce90b2d36           refine                   Allreduce
+ 33   0 0x564ce90b1a39           redistribute_blocks      Allreduce
+ 34   0 0x564ce90b313f           refine                   Allreduce
+ 35   0 0x55bf71c1f827           [unknown]                Comm_split
+ 36   0 0x55bf71c254ce           [unknown]                Allreduce
+ 37   0 0x55bf71c17a44           [unknown]                Waitany
+ 38   0 0x55bf71c32ad1           [unknown]                Allreduce
+ 39   0 0x55bf71c1bb45           [unknown]                Irecv
+ 40   0 0x55bf71c308f4           [unknown]                Allreduce
+ 41   0 0x55bf71c306f4           [unknown]                Allreduce
+ 42   0 0x55bf71c254f3           [unknown]                Allreduce
+ 43   0 0x55bf71c33189           [unknown]                Allreduce
+ 44   0 0x55bf71c1bc3a           [unknown]                Isend
+ 45   0 0x55bf71c18407           [unknown]                Waitany
+ 46   0 0x55bf71c0978f           [unknown]                Barrier
+ 47   0 0x55bf71c3389d           [unknown]                Allreduce
+ 48   0 0x55bf71c1be34           [unknown]                Waitany
+ 49   0 0x55bf71c254a9           [unknown]                Allreduce
+ 50   0 0x55bf71c331ba           [unknown]                Allreduce
+ 51   0 0x55bf71c0985e           [unknown]                Bcast
+ 52   0 0x55bf71c2494d           [unknown]                Allreduce
+ 53   0 0x55bf71c33851           [unknown]                Allreduce
+ 54   0 0x55bf71c25566           [unknown]                Allreduce
+ 55   0 0x55bf71c33164           [unknown]                Allreduce
+ 56   0 0x55bf71c0d265           [unknown]                Allreduce
+ 57   0 0x55bf71c177c3           [unknown]                Isend
+ 58   0 0x55bf71c33877           [unknown]                Allreduce
+ 59   0 0x55bf71c31975           [unknown]                Allreduce
+ 60   0 0x55bf71c09a64           [unknown]                Bcast
+ 61   0 0x55bf71c32d07           [unknown]                Allreduce
+ 62   0 0x55bf71c3220a           [unknown]                Allreduce
+ 63   0 0x55bf71c1bc8d           [unknown]                Waitany
+ 64   0 0x55bf71c33018           [unknown]                Allreduce
+ 65   0 0x55bf71c17581           [unknown]                Irecv
+ 66   0 0x55bf71c32d36           [unknown]                Allreduce
+ 67   0 0x55bf71c3313f           [unknown]                Allreduce
+ 68   0 0x55bf71c31a39           [unknown]                Allreduce
+ 69   0 0x564e81977827           [unknown]                Comm_split
+ 70   0 0x564e8197d4ce           [unknown]                Allreduce
+ 71   0 0x564e8196fa44           [unknown]                Waitany
+ 72   0 0x564e8198aad1           [unknown]                Allreduce
+ 73   0 0x564e81973b45           [unknown]                Irecv
+ 74   0 0x564e819888f4           [unknown]                Allreduce
+ 75   0 0x564e819886f4           [unknown]                Allreduce
+ 76   0 0x564e8197d4f3           [unknown]                Allreduce
+ 77   0 0x564e8198b189           [unknown]                Allreduce
+ 78   0 0x564e81973c3a           [unknown]                Isend
+ 79   0 0x564e8196178f           [unknown]                Barrier
+ 80   0 0x564e81970407           [unknown]                Waitany
+ 81   0 0x564e8198b89d           [unknown]                Allreduce
+ 82   0 0x564e81973e34           [unknown]                Waitany
+ 83   0 0x564e8197d4a9           [unknown]                Allreduce
+ 84   0 0x564e8198b1ba           [unknown]                Allreduce
+ 85   0 0x564e8196185e           [unknown]                Bcast
+ 86   0 0x564e8197c94d           [unknown]                Allreduce
+ 87   0 0x564e8198b851           [unknown]                Allreduce
+ 88   0 0x564e8197d566           [unknown]                Allreduce
+ 89   0 0x564e81965265           [unknown]                Allreduce
+ 90   0 0x564e8198b164           [unknown]                Allreduce
+ 91   0 0x564e8196f7c3           [unknown]                Isend
+ 92   0 0x564e8198b877           [unknown]                Allreduce
+ 93   0 0x564e81989975           [unknown]                Allreduce
+ 94   0 0x564e81961a64           [unknown]                Bcast
+ 95   0 0x564e8198ad07           [unknown]                Allreduce
+ 96   0 0x564e8198a20a           [unknown]                Allreduce
+ 97   0 0x564e81973c8d           [unknown]                Waitany
+ 98   0 0x564e8198b018           [unknown]                Allreduce
+ 99   0 0x564e8196f581           [unknown]                Irecv
+100   0 0x564e8198ad36           [unknown]                Allreduce
+101   0 0x564e8198b13f           [unknown]                Allreduce
+102   0 0x564e81989a39           [unknown]                Allreduce
+103   0 0x561ae46ae827           [unknown]                Comm_split
+104   0 0x561ae46b44ce           [unknown]                Allreduce
+105   0 0x561ae46c1ad1           [unknown]                Allreduce
+106   0 0x561ae46a6a44           [unknown]                Waitany
+107   0 0x561ae46aab45           [unknown]                Irecv
+108   0 0x561ae46bf8f4           [unknown]                Allreduce
+109   0 0x561ae46bf6f4           [unknown]                Allreduce
+110   0 0x561ae46b44f3           [unknown]                Allreduce
+111   0 0x561ae46c2189           [unknown]                Allreduce
+112   0 0x561ae46aac3a           [unknown]                Isend
+113   0 0x561ae46a7407           [unknown]                Waitany
+114   0 0x561ae469878f           [unknown]                Barrier
+115   0 0x561ae46c289d           [unknown]                Allreduce
+116   0 0x561ae46aae34           [unknown]                Waitany
+117   0 0x561ae46b44a9           [unknown]                Allreduce
+118   0 0x561ae46c21ba           [unknown]                Allreduce
+119   0 0x561ae469885e           [unknown]                Bcast
+120   0 0x561ae46b394d           [unknown]                Allreduce
+121   0 0x561ae46c2851           [unknown]                Allreduce
+122   0 0x561ae46c2164           [unknown]                Allreduce
+123   0 0x561ae469c265           [unknown]                Allreduce
+124   0 0x561ae46b4566           [unknown]                Allreduce
+125   0 0x561ae46a67c3           [unknown]                Isend
+126   0 0x561ae46c0975           [unknown]                Allreduce
+127   0 0x561ae46c2877           [unknown]                Allreduce
+128   0 0x561ae4698a64           [unknown]                Bcast
+129   0 0x561ae46c1d07           [unknown]                Allreduce
+130   0 0x561ae46c120a           [unknown]                Allreduce
+131   0 0x561ae46c2018           [unknown]                Allreduce
+132   0 0x561ae46aac8d           [unknown]                Waitany
+133   0 0x561ae46a6581           [unknown]                Irecv
+134   0 0x561ae46c1d36           [unknown]                Allreduce
+135   0 0x561ae46c213f           [unknown]                Allreduce
+136   0 0x561ae46c0a39           [unknown]                Allreduce
+137   0 0x55e1a7950827           [unknown]                Comm_split
+138   0 0x55e1a79564ce           [unknown]                Allreduce
+139   0 0x55e1a7963ad1           [unknown]                Allreduce
+140   0 0x55e1a7948a44           [unknown]                Waitany
+141   0 0x55e1a794cb45           [unknown]                Irecv
+142   0 0x55e1a79618f4           [unknown]                Allreduce
+143   0 0x55e1a79616f4           [unknown]                Allreduce
+144   0 0x55e1a79564f3           [unknown]                Allreduce
+145   0 0x55e1a7964189           [unknown]                Allreduce
+146   0 0x55e1a794cc3a           [unknown]                Isend
+147   0 0x55e1a793a78f           [unknown]                Barrier
+148   0 0x55e1a7949407           [unknown]                Waitany
+149   0 0x55e1a796489d           [unknown]                Allreduce
+150   0 0x55e1a794ce34           [unknown]                Waitany
+151   0 0x55e1a79564a9           [unknown]                Allreduce
+152   0 0x55e1a79641ba           [unknown]                Allreduce
+153   0 0x55e1a793a85e           [unknown]                Bcast
+154   0 0x55e1a795594d           [unknown]                Allreduce
+155   0 0x55e1a7964851           [unknown]                Allreduce
+156   0 0x55e1a793e265           [unknown]                Allreduce
+157   0 0x55e1a7964164           [unknown]                Allreduce
+158   0 0x55e1a7956566           [unknown]                Allreduce
+159   0 0x55e1a79487c3           [unknown]                Isend
+160   0 0x55e1a7962975           [unknown]                Allreduce
+161   0 0x55e1a7964877           [unknown]                Allreduce
+162   0 0x55e1a793aa64           [unknown]                Bcast
+163   0 0x55e1a7963d07           [unknown]                Allreduce
+164   0 0x55e1a796320a           [unknown]                Allreduce
+165   0 0x55e1a7964018           [unknown]                Allreduce
+166   0 0x55e1a794cc8d           [unknown]                Waitany
+167   0 0x55e1a7948581           [unknown]                Irecv
+168   0 0x55e1a7963d36           [unknown]                Allreduce
+169   0 0x55e1a796413f           [unknown]                Allreduce
+170   0 0x55e1a7962a39           [unknown]                Allreduce
+171   0 0x5558d61fb827           [unknown]                Comm_split
+172   0 0x5558d62014ce           [unknown]                Allreduce
+173   0 0x5558d61f3a44           [unknown]                Waitany
+174   0 0x5558d620ead1           [unknown]                Allreduce
+175   0 0x5558d61f7b45           [unknown]                Irecv
+176   0 0x5558d62014f3           [unknown]                Allreduce
+177   0 0x5558d620c8f4           [unknown]                Allreduce
+178   0 0x5558d620c6f4           [unknown]                Allreduce
+179   0 0x5558d620f189           [unknown]                Allreduce
+180   0 0x5558d61e578f           [unknown]                Barrier
+181   0 0x5558d61f4407           [unknown]                Waitany
+182   0 0x5558d61f7c3a           [unknown]                Isend
+183   0 0x5558d620f89d           [unknown]                Allreduce
+184   0 0x5558d61f7e34           [unknown]                Waitany
+185   0 0x5558d62014a9           [unknown]                Allreduce
+186   0 0x5558d620f1ba           [unknown]                Allreduce
+187   0 0x5558d61e585e           [unknown]                Bcast
+188   0 0x5558d620094d           [unknown]                Allreduce
+189   0 0x5558d620f851           [unknown]                Allreduce
+190   0 0x5558d6201566           [unknown]                Allreduce
+191   0 0x5558d61e9265           [unknown]                Allreduce
+192   0 0x5558d620f164           [unknown]                Allreduce
+193   0 0x5558d61f37c3           [unknown]                Isend
+194   0 0x5558d620f877           [unknown]                Allreduce
+195   0 0x5558d620d975           [unknown]                Allreduce
+196   0 0x5558d61e5a64           [unknown]                Bcast
+197   0 0x5558d620ed07           [unknown]                Allreduce
+198   0 0x5558d620e20a           [unknown]                Allreduce
+199   0 0x5558d61f7c8d           [unknown]                Waitany
+200   0 0x5558d620f018           [unknown]                Allreduce
+201   0 0x5558d61f3581           [unknown]                Irecv
+202   0 0x5558d620ed36           [unknown]                Allreduce
+203   0 0x5558d620da39           [unknown]                Allreduce
+204   0 0x5558d620f13f           [unknown]                Allreduce
+205   0 0x55d5494a3827           [unknown]                Comm_split
+206   0 0x55d5494a94ce           [unknown]                Allreduce
+207   0 0x55d5494b6ad1           [unknown]                Allreduce
+208   0 0x55d54949ba44           [unknown]                Waitany
+209   0 0x55d54949fb45           [unknown]                Irecv
+210   0 0x55d5494a94f3           [unknown]                Allreduce
+211   0 0x55d5494b48f4           [unknown]                Allreduce
+212   0 0x55d5494b46f4           [unknown]                Allreduce
+213   0 0x55d5494b7189           [unknown]                Allreduce
+214   0 0x55d54949c407           [unknown]                Waitany
+215   0 0x55d54948d78f           [unknown]                Barrier
+216   0 0x55d54949fc3a           [unknown]                Isend
+217   0 0x55d5494b789d           [unknown]                Allreduce
+218   0 0x55d54949fe34           [unknown]                Waitany
+219   0 0x55d5494a94a9           [unknown]                Allreduce
+220   0 0x55d5494b71ba           [unknown]                Allreduce
+221   0 0x55d54948d85e           [unknown]                Bcast
+222   0 0x55d5494a894d           [unknown]                Allreduce
+223   0 0x55d5494b7851           [unknown]                Allreduce
+224   0 0x55d5494b7164           [unknown]                Allreduce
+225   0 0x55d549491265           [unknown]                Allreduce
+226   0 0x55d5494a9566           [unknown]                Allreduce
+227   0 0x55d54949b7c3           [unknown]                Isend
+228   0 0x55d5494b5975           [unknown]                Allreduce
+229   0 0x55d5494b7877           [unknown]                Allreduce
+230   0 0x55d54948da64           [unknown]                Bcast
+231   0 0x55d5494b6d07           [unknown]                Allreduce
+232   0 0x55d5494b620a           [unknown]                Allreduce
+233   0 0x55d5494b7018           [unknown]                Allreduce
+234   0 0x55d54949fc8d           [unknown]                Waitany
+235   0 0x55d54949b581           [unknown]                Irecv
+236   0 0x55d5494b6d36           [unknown]                Allreduce
+237   0 0x55d5494b5a39           [unknown]                Allreduce
+238   0 0x55d5494b713f           [unknown]                Allreduce
+239   0 0x55b29a1c1827           [unknown]                Comm_split
+240   0 0x55b29a1c74ce           [unknown]                Allreduce
+241   0 0x55b29a1d4ad1           [unknown]                Allreduce
+242   0 0x55b29a1b9a44           [unknown]                Waitany
+243   0 0x55b29a1bdb45           [unknown]                Irecv
+244   0 0x55b29a1c74f3           [unknown]                Allreduce
+245   0 0x55b29a1d28f4           [unknown]                Allreduce
+246   0 0x55b29a1d26f4           [unknown]                Allreduce
+247   0 0x55b29a1d5189           [unknown]                Allreduce
+248   0 0x55b29a1ab78f           [unknown]                Barrier
+249   0 0x55b29a1ba407           [unknown]                Waitany
+250   0 0x55b29a1bdc3a           [unknown]                Isend
+251   0 0x55b29a1d589d           [unknown]                Allreduce
+252   0 0x55b29a1bde34           [unknown]                Waitany
+253   0 0x55b29a1c74a9           [unknown]                Allreduce
+254   0 0x55b29a1d51ba           [unknown]                Allreduce
+255   0 0x55b29a1ab85e           [unknown]                Bcast
+256   0 0x55b29a1c694d           [unknown]                Allreduce
+257   0 0x55b29a1d5851           [unknown]                Allreduce
+258   0 0x55b29a1af265           [unknown]                Allreduce
+259   0 0x55b29a1d5164           [unknown]                Allreduce
+260   0 0x55b29a1c7566           [unknown]                Allreduce
+261   0 0x55b29a1b97c3           [unknown]                Isend
+262   0 0x55b29a1d3975           [unknown]                Allreduce
+263   0 0x55b29a1d5877           [unknown]                Allreduce
+264   0 0x55b29a1aba64           [unknown]                Bcast
+265   0 0x55b29a1d4d07           [unknown]                Allreduce
+266   0 0x55b29a1d420a           [unknown]                Allreduce
+267   0 0x55b29a1d5018           [unknown]                Allreduce
+268   0 0x55b29a1bdc8d           [unknown]                Waitany
+269   0 0x55b29a1b9581           [unknown]                Irecv
+270   0 0x55b29a1d4d36           [unknown]                Allreduce
+271   0 0x55b29a1d3a39           [unknown]                Allreduce
+272   0 0x55b29a1d513f           [unknown]                Allreduce
+---------------------------------------------------------------------------
+@--- Aggregate Time (top twenty, descending, milliseconds) ----------------
+---------------------------------------------------------------------------
+Call                 Site       Time    App%    MPI%     COV
+Waitany               140       33.5    0.38    4.45    0.00
+Waitany                37       31.5    0.35    4.18    0.00
+Allreduce              56       29.4    0.33    3.90    0.00
+Allreduce             156       29.3    0.33    3.90    0.00
+Allreduce             258       27.1    0.30    3.60    0.00
+Allreduce              89       26.9    0.30    3.57    0.00
+Allreduce             123       26.7    0.30    3.54    0.00
+Allreduce             225       26.6    0.30    3.53    0.00
+Allreduce             191       25.5    0.29    3.39    0.00
+Comm_split             35       25.4    0.28    3.37    0.00
+Allreduce              23       25.1    0.28    3.33    0.00
+Barrier               114       17.5    0.20    2.32    0.00
+Barrier               248       17.1    0.19    2.27    0.00
+Waitany               208       16.3    0.18    2.17    0.00
+Barrier               215       16.3    0.18    2.16    0.00
+Waitany               242       15.8    0.18    2.10    0.00
+Waitany               173       15.3    0.17    2.03    0.00
+Barrier               180       14.8    0.17    1.96    0.00
+Waitany               106       14.1    0.16    1.87    0.00
+Waitany                71       13.7    0.15    1.83    0.00
+---------------------------------------------------------------------------
+@--- Aggregate Sent Message Size (top twenty, descending, bytes) ----------
+---------------------------------------------------------------------------
+Call                 Site      Count      Total       Avrg  Sent%
+Isend                 125       1200   3.84e+07    3.2e+04  12.49
+Isend                  91       1200   3.84e+07    3.2e+04  12.49
+Isend                  57       1200   3.84e+07    3.2e+04  12.49
+Isend                 261       1200   3.84e+07    3.2e+04  12.49
+Isend                  24       1200   3.84e+07    3.2e+04  12.49
+Isend                 227       1200   3.84e+07    3.2e+04  12.49
+Isend                 193       1200   3.84e+07    3.2e+04  12.49
+Isend                 159       1200   3.84e+07    3.2e+04  12.49
+Allreduce             225       3240   2.59e+04          8   0.01
+Allreduce             156       3240   2.59e+04          8   0.01
+Allreduce             191       3240   2.59e+04          8   0.01
+Allreduce              89       3240   2.59e+04          8   0.01
+Allreduce             123       3240   2.59e+04          8   0.01
+Allreduce             258       3240   2.59e+04          8   0.01
+Allreduce              23       3240   2.59e+04          8   0.01
+Allreduce              56       3240   2.59e+04          8   0.01
+Allreduce             200         25    1.2e+03         48   0.00
+Allreduce             233         25    1.2e+03         48   0.00
+Allreduce             131         25    1.2e+03         48   0.00
+Allreduce             165         25    1.2e+03         48   0.00
+---------------------------------------------------------------------------
+@--- Callsite Time statistics (all, milliseconds): 272 --------------------
+---------------------------------------------------------------------------
+Name              Site Rank  Count      Max     Mean      Min   App%   MPI%
+Allreduce            2    0      1  0.00925  0.00925  0.00925   0.00   0.01
+Allreduce            2    *      1  0.00925  0.00925  0.00925   0.00   0.00
+
+Allreduce            4    0      5  0.00925  0.00845  0.00775   0.00   0.05
+Allreduce            4    *      5  0.00925  0.00845  0.00775   0.00   0.01
+
+Allreduce            6    0      1     0.01     0.01     0.01   0.00   0.01
+Allreduce            6    *      1     0.01     0.01     0.01   0.00   0.00
+
+Allreduce            7    0     25  0.00875  0.00732  0.00675   0.02   0.23
+Allreduce            7    *     25  0.00875  0.00732  0.00675   0.00   0.02
+
+Allreduce            8    0     25   0.0217  0.00862  0.00725   0.02   0.27
+Allreduce            8    *     25   0.0217  0.00862  0.00725   0.00   0.03
+
+Allreduce           10    0      5  0.00775  0.00745  0.00725   0.00   0.05
+Allreduce           10    *      5  0.00775  0.00745  0.00725   0.00   0.00
+
+Allreduce           14    0      5    0.009   0.0079   0.0075   0.00   0.05
+Allreduce           14    *      5    0.009   0.0079   0.0075   0.00   0.01
+
+Allreduce           17    0      1   0.0283   0.0283   0.0283   0.00   0.03
+Allreduce           17    *      1   0.0283   0.0283   0.0283   0.00   0.00
+
+Allreduce           18    0      5  0.00725  0.00715    0.007   0.00   0.04
+Allreduce           18    *      5  0.00725  0.00715    0.007   0.00   0.00
+
+Allreduce           19    0      1    0.008    0.008    0.008   0.00   0.01
+Allreduce           19    *      1    0.008    0.008    0.008   0.00   0.00
+
+Allreduce           20    0      5  0.00925  0.00885  0.00825   0.00   0.05
+Allreduce           20    *      5  0.00925  0.00885  0.00825   0.00   0.01
+
+Allreduce           21    0      1  0.00925  0.00925  0.00925   0.00   0.01
+Allreduce           21    *      1  0.00925  0.00925  0.00925   0.00   0.00
+
+Allreduce           22    0      5   0.0103    0.008  0.00725   0.00   0.05
+Allreduce           22    *      5   0.0103    0.008  0.00725   0.00   0.01
+
+Allreduce           23    0   3240    0.218  0.00775   0.0065   2.25  31.05
+Allreduce           23    *   3240    0.218  0.00775   0.0065   0.28   3.33
+
+Allreduce           25    0      5   0.0127   0.0098    0.008   0.00   0.06
+Allreduce           25    *      5   0.0127   0.0098    0.008   0.00   0.01
+
+Allreduce           26    0     25   0.0103  0.00901   0.0055   0.02   0.28
+Allreduce           26    *     25   0.0103  0.00901   0.0055   0.00   0.03
+
+Allreduce           27    0     25  0.00775  0.00734  0.00675   0.02   0.23
+Allreduce           27    *     25  0.00775  0.00734  0.00675   0.00   0.02
+
+Allreduce           28    0     25   0.0085  0.00737  0.00675   0.02   0.23
+Allreduce           28    *     25   0.0085  0.00737  0.00675   0.00   0.02
+
+Allreduce           30    0     25   0.0085  0.00752  0.00675   0.02   0.23
+Allreduce           30    *     25   0.0085  0.00752  0.00675   0.00   0.02
+
+Allreduce           32    0     25     0.01   0.0073   0.0065   0.02   0.23
+Allreduce           32    *     25     0.01   0.0073   0.0065   0.00   0.02
+
+Allreduce           33    0     25    0.009  0.00755  0.00725   0.02   0.23
+Allreduce           33    *     25    0.009  0.00755  0.00725   0.00   0.03
+
+Allreduce           34    0      5    0.008   0.0075  0.00725   0.00   0.05
+Allreduce           34    *      5    0.008   0.0075  0.00725   0.00   0.00
+
+Allreduce           36    4      1  0.00925  0.00925  0.00925   0.00   0.01
+Allreduce           36    *      1  0.00925  0.00925  0.00925   0.00   0.00
+
+Allreduce           38    4      5   0.0655   0.0508   0.0095   0.02   0.22
+Allreduce           38    *      5   0.0655   0.0508   0.0095   0.00   0.03
+
+Allreduce           40    4     25  0.00825  0.00712   0.0065   0.02   0.16
+Allreduce           40    *     25  0.00825  0.00712   0.0065   0.00   0.02
+
+Allreduce           41    4     25   0.0267    0.014   0.0125   0.03   0.31
+Allreduce           41    *     25   0.0267    0.014   0.0125   0.00   0.05
+
+Allreduce           42    4      1   0.0103   0.0103   0.0103   0.00   0.01
+Allreduce           42    *      1   0.0103   0.0103   0.0103   0.00   0.00
+
+Allreduce           43    4      5   0.0075  0.00695    0.006   0.00   0.03
+Allreduce           43    *      5   0.0075  0.00695    0.006   0.00   0.00
+
+Allreduce           47    4      5    0.009  0.00775  0.00725   0.00   0.03
+Allreduce           47    *      5    0.009  0.00775  0.00725   0.00   0.01
+
+Allreduce           49    4      1   0.0288   0.0288   0.0288   0.00   0.03
+Allreduce           49    *      1   0.0288   0.0288   0.0288   0.00   0.00
+
+Allreduce           50    4      5    0.007    0.007    0.007   0.00   0.03
+Allreduce           50    *      5    0.007    0.007    0.007   0.00   0.00
+
+Allreduce           52    4      1    0.077    0.077    0.077   0.01   0.07
+Allreduce           52    *      1    0.077    0.077    0.077   0.00   0.01
+
+Allreduce           53    4      5    0.441    0.401    0.356   0.18   1.75
+Allreduce           53    *      5    0.441    0.401    0.356   0.02   0.27
+
+Allreduce           54    4      1    0.009    0.009    0.009   0.00   0.01
+Allreduce           54    *      1    0.009    0.009    0.009   0.00   0.00
+
+Allreduce           55    4      5     0.01  0.00785    0.007   0.00   0.03
+Allreduce           55    *      5     0.01  0.00785    0.007   0.00   0.01
+
+Allreduce           56    4   3240     0.29  0.00907  0.00575   2.63  25.67
+Allreduce           56    *   3240     0.29  0.00907  0.00575   0.33   3.90
+
+Allreduce           58    4      5   0.0115  0.00845    0.007   0.00   0.04
+Allreduce           58    *      5   0.0115  0.00845    0.007   0.00   0.01
+
+Allreduce           59    4     25   0.0147   0.0137   0.0127   0.03   0.30
+Allreduce           59    *     25   0.0147   0.0137   0.0127   0.00   0.05
+
+Allreduce           61    4     25  0.00775  0.00727    0.007   0.02   0.16
+Allreduce           61    *     25  0.00775  0.00727    0.007   0.00   0.02
+
+Allreduce           62    4     25   0.0085  0.00723   0.0065   0.02   0.16
+Allreduce           62    *     25   0.0085  0.00723   0.0065   0.00   0.02
+
+Allreduce           64    4     25  0.00875  0.00751  0.00675   0.02   0.16
+Allreduce           64    *     25  0.00875  0.00751  0.00675   0.00   0.02
+
+Allreduce           66    4     25    0.008  0.00728   0.0065   0.02   0.16
+Allreduce           66    *     25    0.008  0.00728   0.0065   0.00   0.02
+
+Allreduce           67    4      5  0.00775  0.00745  0.00725   0.00   0.03
+Allreduce           67    *      5  0.00775  0.00745  0.00725   0.00   0.00
+
+Allreduce           68    4     25    0.009  0.00742    0.007   0.02   0.16
+Allreduce           68    *     25    0.009  0.00742    0.007   0.00   0.02
+
+Allreduce           70    5      1  0.00975  0.00975  0.00975   0.00   0.01
+Allreduce           70    *      1  0.00975  0.00975  0.00975   0.00   0.00
+
+Allreduce           72    5      5   0.0198   0.0171   0.0143   0.01   0.10
+Allreduce           72    *      5   0.0198   0.0171   0.0143   0.00   0.01
+
+Allreduce           74    5     25   0.0085  0.00731  0.00675   0.02   0.21
+Allreduce           74    *     25   0.0085  0.00731  0.00675   0.00   0.02
+
+Allreduce           75    5     25    0.011  0.00762  0.00675   0.02   0.22
+Allreduce           75    *     25    0.011  0.00762  0.00675   0.00   0.03
+
+Allreduce           76    5      1    0.009    0.009    0.009   0.00   0.01
+Allreduce           76    *      1    0.009    0.009    0.009   0.00   0.00
+
+Allreduce           77    5      5     0.01   0.0078    0.007   0.00   0.04
+Allreduce           77    *      5     0.01   0.0078    0.007   0.00   0.01
+
+Allreduce           81    5      5  0.00875   0.0078   0.0075   0.00   0.04
+Allreduce           81    *      5  0.00875   0.0078   0.0075   0.00   0.01
+
+Allreduce           83    5      1   0.0288   0.0288   0.0288   0.00   0.03
+Allreduce           83    *      1   0.0288   0.0288   0.0288   0.00   0.00
+
+Allreduce           84    5      5  0.00725   0.0071    0.007   0.00   0.04
+Allreduce           84    *      5  0.00725   0.0071    0.007   0.00   0.00
+
+Allreduce           86    5      1   0.0765   0.0765   0.0765   0.01   0.09
+Allreduce           86    *      1   0.0765   0.0765   0.0765   0.00   0.01
+
+Allreduce           87    5      5    0.441    0.401    0.356   0.18   2.28
+Allreduce           87    *      5    0.441    0.401    0.356   0.02   0.27
+
+Allreduce           88    5      1  0.00925  0.00925  0.00925   0.00   0.01
+Allreduce           88    *      1  0.00925  0.00925  0.00925   0.00   0.00
+
+Allreduce           89    5   3240    0.408  0.00831   0.0065   2.41  30.63
+Allreduce           89    *   3240    0.408  0.00831   0.0065   0.30   3.57
+
+Allreduce           90    5      5   0.0103    0.008  0.00725   0.00   0.05
+Allreduce           90    *      5   0.0103    0.008  0.00725   0.00   0.01
+
+Allreduce           92    5      5   0.0123   0.0092   0.0075   0.00   0.05
+Allreduce           92    *      5   0.0123   0.0092   0.0075   0.00   0.01
+
+Allreduce           93    5     25    0.009  0.00787  0.00725   0.02   0.22
+Allreduce           93    *     25    0.009  0.00787  0.00725   0.00   0.03
+
+Allreduce           95    5     25  0.00775  0.00727    0.007   0.02   0.21
+Allreduce           95    *     25  0.00775  0.00727    0.007   0.00   0.02
+
+Allreduce           96    5     25   0.0085  0.00736  0.00675   0.02   0.21
+Allreduce           96    *     25   0.0085  0.00736  0.00675   0.00   0.02
+
+Allreduce           98    5     25    0.009  0.00767    0.007   0.02   0.22
+Allreduce           98    *     25    0.009  0.00767    0.007   0.00   0.03
+
+Allreduce          100    5     25   0.0085  0.00741   0.0065   0.02   0.21
+Allreduce          100    *     25   0.0085  0.00741   0.0065   0.00   0.02
+
+Allreduce          101    5      5  0.00775  0.00735    0.007   0.00   0.04
+Allreduce          101    *      5  0.00775  0.00735    0.007   0.00   0.00
+
+Allreduce          102    5     25   0.0085  0.00754  0.00725   0.02   0.21
+Allreduce          102    *     25   0.0085  0.00754  0.00725   0.00   0.03
+
+Allreduce          104    6      1  0.00925  0.00925  0.00925   0.00   0.01
+Allreduce          104    *      1  0.00925  0.00925  0.00925   0.00   0.00
+
+Allreduce          105    6      5   0.0198   0.0159  0.00725   0.01   0.09
+Allreduce          105    *      5   0.0198   0.0159  0.00725   0.00   0.01
+
+Allreduce          108    6     25    0.009  0.00734  0.00675   0.02   0.20
+Allreduce          108    *     25    0.009  0.00734  0.00675   0.00   0.02
+
+Allreduce          109    6     25    0.009  0.00751  0.00625   0.02   0.21
+Allreduce          109    *     25    0.009  0.00751  0.00625   0.00   0.02
+
+Allreduce          110    6      1  0.00975  0.00975  0.00975   0.00   0.01
+Allreduce          110    *      1  0.00975  0.00975  0.00975   0.00   0.00
+
+Allreduce          111    6      5     0.01   0.0077    0.007   0.00   0.04
+Allreduce          111    *      5     0.01   0.0077    0.007   0.00   0.01
+
+Allreduce          115    6      5    0.009  0.00775  0.00725   0.00   0.04
+Allreduce          115    *      5    0.009  0.00775  0.00725   0.00   0.01
+
+Allreduce          117    6      1   0.0288   0.0288   0.0288   0.00   0.03
+Allreduce          117    *      1   0.0288   0.0288   0.0288   0.00   0.00
+
+Allreduce          118    6      5  0.00725  0.00715    0.007   0.00   0.04
+Allreduce          118    *      5  0.00725  0.00715    0.007   0.00   0.00
+
+Allreduce          120    6      1   0.0772   0.0772   0.0772   0.01   0.09
+Allreduce          120    *      1   0.0772   0.0772   0.0772   0.00   0.01
+
+Allreduce          121    6      5    0.441    0.401    0.356   0.18   2.20
+Allreduce          121    *      5    0.441    0.401    0.356   0.02   0.27
+
+Allreduce          122    6      5   0.0103    0.008  0.00725   0.00   0.04
+Allreduce          122    *      5   0.0103    0.008  0.00725   0.00   0.01
+
+Allreduce          123    6   3240    0.427  0.00824  0.00625   2.39  29.37
+Allreduce          123    *   3240    0.427  0.00824  0.00625   0.30   3.54
+
+Allreduce          124    6      1  0.00925  0.00925  0.00925   0.00   0.01
+Allreduce          124    *      1  0.00925  0.00925  0.00925   0.00   0.00
+
+Allreduce          126    6     25  0.00925  0.00802  0.00725   0.02   0.22
+Allreduce          126    *     25  0.00925  0.00802  0.00725   0.00   0.03
+
+Allreduce          127    6      5   0.0125  0.00925   0.0075   0.00   0.05
+Allreduce          127    *      5   0.0125  0.00925   0.0075   0.00   0.01
+
+Allreduce          129    6     25  0.00775  0.00724  0.00675   0.02   0.20
+Allreduce          129    *     25  0.00775  0.00724  0.00675   0.00   0.02
+
+Allreduce          130    6     25  0.00875  0.00738  0.00675   0.02   0.20
+Allreduce          130    *     25  0.00875  0.00738  0.00675   0.00   0.02
+
+Allreduce          131    6     25    0.009  0.00763    0.007   0.02   0.21
+Allreduce          131    *     25    0.009  0.00763    0.007   0.00   0.03
+
+Allreduce          134    6     25   0.0085  0.00735   0.0065   0.02   0.20
+Allreduce          134    *     25   0.0085  0.00735   0.0065   0.00   0.02
+
+Allreduce          135    6      5  0.00775  0.00735    0.007   0.00   0.04
+Allreduce          135    *      5  0.00775  0.00735    0.007   0.00   0.00
+
+Allreduce          136    6     25    0.009  0.00757  0.00725   0.02   0.21
+Allreduce          136    *     25    0.009  0.00757  0.00725   0.00   0.03
+
+Allreduce          138    7      1  0.00925  0.00925  0.00925   0.00   0.01
+Allreduce          138    *      1  0.00925  0.00925  0.00925   0.00   0.00
+
+Allreduce          139    7      5    0.063   0.0511  0.00825   0.02   0.24
+Allreduce          139    *      5    0.063   0.0511  0.00825   0.00   0.03
+
+Allreduce          142    7     25  0.00875  0.00735  0.00675   0.02   0.17
+Allreduce          142    *     25  0.00875  0.00735  0.00675   0.00   0.02
+
+Allreduce          143    7     25   0.0278   0.0145   0.0125   0.03   0.34
+Allreduce          143    *     25   0.0278   0.0145   0.0125   0.00   0.05
+
+Allreduce          144    7      1     0.01     0.01     0.01   0.00   0.01
+Allreduce          144    *      1     0.01     0.01     0.01   0.00   0.00
+
+Allreduce          145    7      5     0.01   0.0078    0.007   0.00   0.04
+Allreduce          145    *      5     0.01   0.0078    0.007   0.00   0.01
+
+Allreduce          149    7      5    0.009  0.00785  0.00725   0.00   0.04
+Allreduce          149    *      5    0.009  0.00785  0.00725   0.00   0.01
+
+Allreduce          151    7      1   0.0288   0.0288   0.0288   0.00   0.03
+Allreduce          151    *      1   0.0288   0.0288   0.0288   0.00   0.00
+
+Allreduce          152    7      5  0.00725   0.0072    0.007   0.00   0.03
+Allreduce          152    *      5  0.00725   0.0072    0.007   0.00   0.00
+
+Allreduce          154    7      1   0.0772   0.0772   0.0772   0.01   0.07
+Allreduce          154    *      1   0.0772   0.0772   0.0772   0.00   0.01
+
+Allreduce          155    7      5    0.442    0.401    0.356   0.18   1.88
+Allreduce          155    *      5    0.442    0.401    0.356   0.02   0.27
+
+Allreduce          156    7   3240    0.422  0.00906    0.006   2.63  27.47
+Allreduce          156    *   3240    0.422  0.00906    0.006   0.33   3.90
+
+Allreduce          157    7      5  0.00825   0.0076  0.00725   0.00   0.04
+Allreduce          157    *      5  0.00825   0.0076  0.00725   0.00   0.01
+
+Allreduce          158    7      1   0.0103   0.0103   0.0103   0.00   0.01
+Allreduce          158    *      1   0.0103   0.0103   0.0103   0.00   0.00
+
+Allreduce          160    7     25    0.016   0.0146   0.0138   0.03   0.34
+Allreduce          160    *     25    0.016   0.0146   0.0138   0.00   0.05
+
+Allreduce          161    7      5   0.0115  0.00905   0.0075   0.00   0.04
+Allreduce          161    *      5   0.0115  0.00905   0.0075   0.00   0.01
+
+Allreduce          163    7     25    0.008  0.00728  0.00675   0.02   0.17
+Allreduce          163    *     25    0.008  0.00728  0.00675   0.00   0.02
+
+Allreduce          164    7     25  0.00875  0.00744  0.00675   0.02   0.17
+Allreduce          164    *     25  0.00875  0.00744  0.00675   0.00   0.02
+
+Allreduce          165    7     25   0.0085  0.00756  0.00675   0.02   0.18
+Allreduce          165    *     25   0.0085  0.00756  0.00675   0.00   0.03
+
+Allreduce          168    7     25  0.00825  0.00725  0.00575   0.02   0.17
+Allreduce          168    *     25  0.00825  0.00725  0.00575   0.00   0.02
+
+Allreduce          169    7      5  0.00775  0.00735    0.007   0.00   0.03
+Allreduce          169    *      5  0.00775  0.00735    0.007   0.00   0.00
+
+Allreduce          170    7     25  0.00925  0.00757    0.007   0.02   0.18
+Allreduce          170    *     25  0.00925  0.00757    0.007   0.00   0.03
+
+Allreduce          172    1      1    0.009    0.009    0.009   0.00   0.01
+Allreduce          172    *      1    0.009    0.009    0.009   0.00   0.00
+
+Allreduce          174    1      5   0.0145   0.0099  0.00775   0.00   0.06
+Allreduce          174    *      5   0.0145   0.0099  0.00775   0.00   0.01
+
+Allreduce          176    1      1   0.0103   0.0103   0.0103   0.00   0.01
+Allreduce          176    *      1   0.0103   0.0103   0.0103   0.00   0.00
+
+Allreduce          177    1     25  0.00875  0.00725   0.0065   0.02   0.20
+Allreduce          177    *     25  0.00875  0.00725   0.0065   0.00   0.02
+
+Allreduce          178    1     25    0.022  0.00882   0.0075   0.02   0.25
+Allreduce          178    *     25    0.022  0.00882   0.0075   0.00   0.03
+
+Allreduce          179    1      5  0.00775   0.0074    0.007   0.00   0.04
+Allreduce          179    *      5  0.00775   0.0074    0.007   0.00   0.00
+
+Allreduce          183    1      5  0.00875   0.0079  0.00725   0.00   0.04
+Allreduce          183    *      5  0.00875   0.0079  0.00725   0.00   0.01
+
+Allreduce          185    1      1   0.0285   0.0285   0.0285   0.00   0.03
+Allreduce          185    *      1   0.0285   0.0285   0.0285   0.00   0.00
+
+Allreduce          186    1      5  0.00725   0.0072    0.007   0.00   0.04
+Allreduce          186    *      5  0.00725   0.0072    0.007   0.00   0.00
+
+Allreduce          188    1      1    0.077    0.077    0.077   0.01   0.09
+Allreduce          188    *      1    0.077    0.077    0.077   0.00   0.01
+
+Allreduce          189    1      5     0.44      0.4    0.356   0.18   2.26
+Allreduce          189    *      5     0.44      0.4    0.356   0.02   0.27
+
+Allreduce          190    1      1  0.00925  0.00925  0.00925   0.00   0.01
+Allreduce          190    *      1  0.00925  0.00925  0.00925   0.00   0.00
+
+Allreduce          191    1   3240    0.218  0.00787    0.006   2.29  28.75
+Allreduce          191    *   3240    0.218  0.00787    0.006   0.29   3.39
+
+Allreduce          192    1      5   0.0105    0.008  0.00725   0.00   0.05
+Allreduce          192    *      5   0.0105    0.008  0.00725   0.00   0.01
+
+Allreduce          194    1      5   0.0115  0.00865  0.00725   0.00   0.05
+Allreduce          194    *      5   0.0115  0.00865  0.00725   0.00   0.01
+
+Allreduce          195    1     25   0.0103  0.00921    0.008   0.02   0.26
+Allreduce          195    *     25   0.0103  0.00921    0.008   0.00   0.03
+
+Allreduce          197    1     25    0.008  0.00735    0.007   0.02   0.21
+Allreduce          197    *     25    0.008  0.00735    0.007   0.00   0.02
+
+Allreduce          198    1     25   0.0085  0.00739  0.00675   0.02   0.21
+Allreduce          198    *     25   0.0085  0.00739  0.00675   0.00   0.02
+
+Allreduce          200    1     25  0.00875  0.00765    0.007   0.02   0.22
+Allreduce          200    *     25  0.00875  0.00765    0.007   0.00   0.03
+
+Allreduce          202    1     25  0.00825   0.0072  0.00625   0.02   0.20
+Allreduce          202    *     25  0.00825   0.0072  0.00625   0.00   0.02
+
+Allreduce          203    1     25    0.009  0.00756  0.00675   0.02   0.21
+Allreduce          203    *     25    0.009  0.00756  0.00675   0.00   0.03
+
+Allreduce          204    1      5  0.00775   0.0075  0.00725   0.00   0.04
+Allreduce          204    *      5  0.00775   0.0075  0.00725   0.00   0.00
+
+Allreduce          206    2      1  0.00925  0.00925  0.00925   0.00   0.01
+Allreduce          206    *      1  0.00925  0.00925  0.00925   0.00   0.00
+
+Allreduce          207    2      5   0.0333   0.0278   0.0143   0.01   0.15
+Allreduce          207    *      5   0.0333   0.0278   0.0143   0.00   0.02
+
+Allreduce          210    2      1     0.01     0.01     0.01   0.00   0.01
+Allreduce          210    *      1     0.01     0.01     0.01   0.00   0.00
+
+Allreduce          211    2     25    0.009  0.00723  0.00675   0.02   0.20
+Allreduce          211    *     25    0.009  0.00723  0.00675   0.00   0.02
+
+Allreduce          212    2     25  0.00775  0.00713   0.0065   0.02   0.19
+Allreduce          212    *     25  0.00775  0.00713   0.0065   0.00   0.02
+
+Allreduce          213    2      5   0.0075   0.0072    0.007   0.00   0.04
+Allreduce          213    *      5   0.0075   0.0072    0.007   0.00   0.00
+
+Allreduce          217    2      5    0.009    0.008  0.00725   0.00   0.04
+Allreduce          217    *      5    0.009    0.008  0.00725   0.00   0.01
+
+Allreduce          219    2      1   0.0285   0.0285   0.0285   0.00   0.03
+Allreduce          219    *      1   0.0285   0.0285   0.0285   0.00   0.00
+
+Allreduce          220    2      5  0.00725  0.00715    0.007   0.00   0.04
+Allreduce          220    *      5  0.00725  0.00715    0.007   0.00   0.00
+
+Allreduce          222    2      1   0.0767   0.0767   0.0767   0.01   0.08
+Allreduce          222    *      1   0.0767   0.0767   0.0767   0.00   0.01
+
+Allreduce          223    2      5    0.442      0.4    0.355   0.18   2.18
+Allreduce          223    *      5    0.442      0.4    0.355   0.02   0.27
+
+Allreduce          224    2      5   0.0103   0.0079  0.00725   0.00   0.04
+Allreduce          224    *      5   0.0103   0.0079  0.00725   0.00   0.01
+
+Allreduce          225    2   3240    0.345   0.0082  0.00625   2.38  29.01
+Allreduce          225    *   3240    0.345   0.0082  0.00625   0.30   3.53
+
+Allreduce          226    2      1  0.00925  0.00925  0.00925   0.00   0.01
+Allreduce          226    *      1  0.00925  0.00925  0.00925   0.00   0.00
+
+Allreduce          228    2     25   0.0085  0.00755    0.007   0.02   0.21
+Allreduce          228    *     25   0.0085  0.00755    0.007   0.00   0.03
+
+Allreduce          229    2      5   0.0103  0.00935  0.00825   0.00   0.05
+Allreduce          229    *      5   0.0103  0.00935  0.00825   0.00   0.01
+
+Allreduce          231    2     25  0.00775  0.00728  0.00675   0.02   0.20
+Allreduce          231    *     25  0.00775  0.00728  0.00675   0.00   0.02
+
+Allreduce          232    2     25    0.008  0.00732  0.00675   0.02   0.20
+Allreduce          232    *     25    0.008  0.00732  0.00675   0.00   0.02
+
+Allreduce          233    2     25  0.00875  0.00761  0.00675   0.02   0.21
+Allreduce          233    *     25  0.00875  0.00761  0.00675   0.00   0.03
+
+Allreduce          236    2     25    0.008  0.00723   0.0065   0.02   0.20
+Allreduce          236    *     25    0.008  0.00723   0.0065   0.00   0.02
+
+Allreduce          237    2     25    0.009  0.00754    0.007   0.02   0.21
+Allreduce          237    *     25    0.009  0.00754    0.007   0.00   0.03
+
+Allreduce          238    2      5  0.00825  0.00755  0.00725   0.00   0.04
+Allreduce          238    *      5  0.00825  0.00755  0.00725   0.00   0.01
+
+Allreduce          240    3      1  0.00925  0.00925  0.00925   0.00   0.01
+Allreduce          240    *      1  0.00925  0.00925  0.00925   0.00   0.00
+
+Allreduce          241    3      5   0.0338   0.0271     0.01   0.01   0.15
+Allreduce          241    *      5   0.0338   0.0271     0.01   0.00   0.02
+
+Allreduce          244    3      1     0.01     0.01     0.01   0.00   0.01
+Allreduce          244    *      1     0.01     0.01     0.01   0.00   0.00
+
+Allreduce          245    3     25   0.0085  0.00725  0.00675   0.02   0.20
+Allreduce          245    *     25   0.0085  0.00725  0.00675   0.00   0.02
+
+Allreduce          246    3     25    0.008  0.00731  0.00675   0.02   0.20
+Allreduce          246    *     25    0.008  0.00731  0.00675   0.00   0.02
+
+Allreduce          247    3      5  0.00775  0.00725    0.007   0.00   0.04
+Allreduce          247    *      5  0.00775  0.00725    0.007   0.00   0.00
+
+Allreduce          251    3      5    0.009   0.0079  0.00725   0.00   0.04
+Allreduce          251    *      5    0.009   0.0079  0.00725   0.00   0.01
+
+Allreduce          253    3      1    0.029    0.029    0.029   0.00   0.03
+Allreduce          253    *      1    0.029    0.029    0.029   0.00   0.00
+
+Allreduce          254    3      5  0.00725   0.0071  0.00675   0.00   0.04
+Allreduce          254    *      5  0.00725   0.0071  0.00675   0.00   0.00
+
+Allreduce          256    3      1    0.077    0.077    0.077   0.01   0.08
+Allreduce          256    *      1    0.077    0.077    0.077   0.00   0.01
+
+Allreduce          257    3      5    0.442      0.4    0.355   0.18   2.17
+Allreduce          257    *      5    0.442      0.4    0.355   0.02   0.27
+
+Allreduce          258    3   3240    0.354  0.00837  0.00625   2.43  29.48
+Allreduce          258    *   3240    0.354  0.00837  0.00625   0.30   3.60
+
+Allreduce          259    3      5   0.0105    0.008  0.00675   0.00   0.04
+Allreduce          259    *      5   0.0105    0.008  0.00675   0.00   0.01
+
+Allreduce          260    3      1   0.0085   0.0085   0.0085   0.00   0.01
+Allreduce          260    *      1   0.0085   0.0085   0.0085   0.00   0.00
+
+Allreduce          262    3     25   0.0095  0.00781  0.00675   0.02   0.21
+Allreduce          262    *     25   0.0095  0.00781  0.00675   0.00   0.03
+
+Allreduce          263    3      5   0.0105  0.00935  0.00825   0.00   0.05
+Allreduce          263    *      5   0.0105  0.00935  0.00825   0.00   0.01
+
+Allreduce          265    3     25  0.00775  0.00728  0.00675   0.02   0.20
+Allreduce          265    *     25  0.00775  0.00728  0.00675   0.00   0.02
+
+Allreduce          266    3     25    0.008  0.00731   0.0065   0.02   0.20
+Allreduce          266    *     25    0.008  0.00731   0.0065   0.00   0.02
+
+Allreduce          267    3     25    0.009   0.0076    0.007   0.02   0.21
+Allreduce          267    *     25    0.009   0.0076    0.007   0.00   0.03
+
+Allreduce          270    3     25  0.00825  0.00732  0.00675   0.02   0.20
+Allreduce          270    *     25  0.00825  0.00732  0.00675   0.00   0.02
+
+Allreduce          271    3     25  0.00925  0.00765  0.00725   0.02   0.21
+Allreduce          271    *     25  0.00925  0.00765  0.00725   0.00   0.03
+
+Allreduce          272    3      5  0.00825   0.0075  0.00725   0.00   0.04
+Allreduce          272    *      5  0.00825   0.0075  0.00725   0.00   0.00
+
+Barrier             12    0      1     13.7     13.7     13.7   1.22  16.89
+Barrier             12    *      1     13.7     13.7     13.7   0.15   1.81
+
+Barrier             46    4      1   0.0297   0.0297   0.0297   0.00   0.03
+Barrier             46    *      1   0.0297   0.0297   0.0297   0.00   0.00
+
+Barrier             79    5      1     13.6     13.6     13.6   1.22  15.45
+Barrier             79    *      1     13.6     13.6     13.6   0.15   1.80
+
+Barrier            114    6      1     17.5     17.5     17.5   1.56  19.21
+Barrier            114    *      1     17.5     17.5     17.5   0.20   2.32
+
+Barrier            147    7      1     7.68     7.68     7.68   0.69   7.19
+Barrier            147    *      1     7.68     7.68     7.68   0.09   1.02
+
+Barrier            180    1      1     14.8     14.8     14.8   1.32  16.64
+Barrier            180    *      1     14.8     14.8     14.8   0.17   1.96
+
+Barrier            215    2      1     16.3     16.3     16.3   1.46  17.74
+Barrier            215    *      1     16.3     16.3     16.3   0.18   2.16
+
+Barrier            248    3      1     17.1     17.1     17.1   1.54  18.62
+Barrier            248    *      1     17.1     17.1     17.1   0.19   2.27
+
+Bcast                9    0      1   0.0755   0.0755   0.0755   0.01   0.09
+Bcast                9    *      1   0.0755   0.0755   0.0755   0.00   0.01
+
+Bcast               16    0      1    0.005    0.005    0.005   0.00   0.01
+Bcast               16    *      1    0.005    0.005    0.005   0.00   0.00
+
+Bcast               51    4      1    0.706    0.706    0.706   0.06   0.62
+Bcast               51    *      1    0.706    0.706    0.706   0.01   0.09
+
+Bcast               60    4      1   0.0055   0.0055   0.0055   0.00   0.00
+Bcast               60    *      1   0.0055   0.0055   0.0055   0.00   0.00
+
+Bcast               85    5      1    0.428    0.428    0.428   0.04   0.49
+Bcast               85    *      1    0.428    0.428    0.428   0.00   0.06
+
+Bcast               94    5      1    0.005    0.005    0.005   0.00   0.01
+Bcast               94    *      1    0.005    0.005    0.005   0.00   0.00
+
+Bcast              119    6      1    0.427    0.427    0.427   0.04   0.47
+Bcast              119    *      1    0.427    0.427    0.427   0.00   0.06
+
+Bcast              128    6      1    0.004    0.004    0.004   0.00   0.00
+Bcast              128    *      1    0.004    0.004    0.004   0.00   0.00
+
+Bcast              153    7      1    0.713    0.713    0.713   0.06   0.67
+Bcast              153    *      1    0.713    0.713    0.713   0.01   0.09
+
+Bcast              162    7      1   0.0045   0.0045   0.0045   0.00   0.00
+Bcast              162    *      1   0.0045   0.0045   0.0045   0.00   0.00
+
+Bcast              187    1      1     0.44     0.44     0.44   0.04   0.50
+Bcast              187    *      1     0.44     0.44     0.44   0.00   0.06
+
+Bcast              196    1      1  0.00525  0.00525  0.00525   0.00   0.01
+Bcast              196    *      1  0.00525  0.00525  0.00525   0.00   0.00
+
+Bcast              221    2      1    0.425    0.425    0.425   0.04   0.46
+Bcast              221    *      1    0.425    0.425    0.425   0.00   0.06
+
+Bcast              230    2      1  0.00525  0.00525  0.00525   0.00   0.01
+Bcast              230    *      1  0.00525  0.00525  0.00525   0.00   0.00
+
+Bcast              255    3      1    0.428    0.428    0.428   0.04   0.46
+Bcast              255    *      1    0.428    0.428    0.428   0.00   0.06
+
+Bcast              264    3      1    0.005    0.005    0.005   0.00   0.01
+Bcast              264    *      1    0.005    0.005    0.005   0.00   0.00
+
+Comm_split           1    0      3      1.2    0.477  0.00975   0.13   1.77
+Comm_split           1    *      3      1.2    0.477  0.00975   0.02   0.19
+
+Comm_split          35    4      3     25.2     8.46   0.0158   2.27  22.19
+Comm_split          35    *      3     25.2     8.46   0.0158   0.28   3.37
+
+Comm_split          69    5      3    0.992    0.339  0.00825   0.09   1.16
+Comm_split          69    *      3    0.992    0.339  0.00825   0.01   0.14
+
+Comm_split         103    6      3    0.055   0.0274    0.008   0.01   0.09
+Comm_split         103    *      3    0.055   0.0274    0.008   0.00   0.01
+
+Comm_split         137    7      3      9.3     3.11  0.00825   0.84   8.73
+Comm_split         137    *      3      9.3     3.11  0.00825   0.10   1.24
+
+Comm_split         171    1      3    0.713    0.363    0.091   0.10   1.23
+Comm_split         171    *      3    0.713    0.363    0.091   0.01   0.14
+
+Comm_split         205    2      3    0.458    0.186  0.00775   0.05   0.61
+Comm_split         205    *      3    0.458    0.186  0.00775   0.01   0.07
+
+Comm_split         239    3      3    0.112   0.0704  0.00825   0.02   0.23
+Comm_split         239    *      3    0.112   0.0704  0.00825   0.00   0.03
+
+Irecv                5    0    225   0.0195  0.00521  0.00475   0.11   1.45
+Irecv                5    *    225   0.0195  0.00521  0.00475   0.01   0.16
+
+Irecv               31    0   1200   0.0222  0.00538  0.00375   0.58   7.98
+Irecv               31    *   1200   0.0222  0.00538  0.00375   0.07   0.86
+
+Irecv               39    4    225    0.016  0.00402  0.00325   0.08   0.79
+Irecv               39    *    225    0.016  0.00402  0.00325   0.01   0.12
+
+Irecv               65    4   1200    0.015  0.00439  0.00325   0.47   4.61
+Irecv               65    *   1200    0.015  0.00439  0.00325   0.06   0.70
+
+Irecv               73    5    225   0.0195  0.00524  0.00475   0.11   1.34
+Irecv               73    *    225   0.0195  0.00524  0.00475   0.01   0.16
+
+Irecv               99    5   1200    0.126  0.00538  0.00375   0.58   7.34
+Irecv               99    *   1200    0.126  0.00538  0.00375   0.07   0.86
+
+Irecv              107    6    225   0.0192  0.00525  0.00475   0.11   1.30
+Irecv              107    *    225   0.0192  0.00525  0.00475   0.01   0.16
+
+Irecv              133    6   1200   0.0198  0.00536  0.00375   0.58   7.08
+Irecv              133    *   1200   0.0198  0.00536  0.00375   0.07   0.85
+
+Irecv              141    7    225   0.0177  0.00399   0.0035   0.08   0.84
+Irecv              141    *    225   0.0177  0.00399   0.0035   0.01   0.12
+
+Irecv              167    7   1200    0.006  0.00409  0.00375   0.44   4.59
+Irecv              167    *   1200    0.006  0.00409  0.00375   0.05   0.65
+
+Irecv              175    1    225     0.02  0.00521  0.00425   0.10   1.32
+Irecv              175    *    225     0.02  0.00521  0.00425   0.01   0.16
+
+Irecv              201    1   1200   0.0175  0.00523  0.00375   0.56   7.08
+Irecv              201    *   1200   0.0175  0.00523  0.00375   0.07   0.83
+
+Irecv              209    2    225   0.0192  0.00527  0.00475   0.11   1.29
+Irecv              209    *    225   0.0192  0.00527  0.00475   0.01   0.16
+
+Irecv              235    2   1200    0.017   0.0052  0.00375   0.56   6.81
+Irecv              235    *   1200    0.017   0.0052  0.00375   0.07   0.83
+
+Irecv              243    3    225   0.0238  0.00529  0.00475   0.11   1.29
+Irecv              243    *    225   0.0238  0.00529  0.00475   0.01   0.16
+
+Irecv              269    3   1200   0.0185  0.00524  0.00375   0.56   6.83
+Irecv              269    *   1200   0.0185  0.00524  0.00375   0.07   0.83
+
+Isend               13    0    225    0.018  0.00526  0.00475   0.11   1.47
+Isend               13    *    225    0.018  0.00526  0.00475   0.01   0.16
+
+Isend               24    0   1200   0.0325  0.00863    0.006   0.93  12.80
+Isend               24    *   1200   0.0325  0.00863    0.006   0.12   1.37
+
+Isend               44    4    225   0.0147  0.00409  0.00325   0.08   0.80
+Isend               44    *    225   0.0147  0.00409  0.00325   0.01   0.12
+
+Isend               57    4   1200     0.08  0.00666    0.005   0.72   6.99
+Isend               57    *   1200     0.08  0.00666    0.005   0.09   1.06
+
+Isend               78    5    225   0.0187  0.00532    0.005   0.11   1.36
+Isend               78    *    225   0.0187  0.00532    0.005   0.01   0.16
+
+Isend               91    5   1200   0.0357  0.00875  0.00575   0.94  11.94
+Isend               91    *   1200   0.0357  0.00875  0.00575   0.12   1.39
+
+Isend              112    6    225   0.0185  0.00531    0.005   0.11   1.31
+Isend              112    *    225   0.0185  0.00531    0.005   0.01   0.16
+
+Isend              125    6   1200   0.0312  0.00877  0.00575   0.94  11.58
+Isend              125    *   1200   0.0312  0.00877  0.00575   0.12   1.40
+
+Isend              146    7    225   0.0145  0.00403  0.00375   0.08   0.85
+Isend              146    *    225   0.0145  0.00403  0.00375   0.01   0.12
+
+Isend              159    7   1200   0.0305  0.00612   0.0055   0.66   6.88
+Isend              159    *   1200   0.0305  0.00612   0.0055   0.08   0.98
+
+Isend              182    1    225   0.0187  0.00526  0.00475   0.11   1.33
+Isend              182    *    225   0.0187  0.00526  0.00475   0.01   0.16
+
+Isend              193    1   1200   0.0973  0.00858  0.00575   0.92  11.60
+Isend              193    *   1200   0.0973  0.00858  0.00575   0.12   1.37
+
+Isend              216    2    225   0.0187  0.00531  0.00475   0.11   1.30
+Isend              216    *    225   0.0187  0.00531  0.00475   0.01   0.16
+
+Isend              227    2   1200    0.129  0.00838    0.006   0.90  10.98
+Isend              227    *   1200    0.129  0.00838    0.006   0.11   1.34
+
+Isend              250    3    225   0.0185  0.00531  0.00475   0.11   1.30
+Isend              250    *    225   0.0185  0.00531  0.00475   0.01   0.16
+
+Isend              261    3   1200   0.0348  0.00829    0.006   0.89  10.81
+Isend              261    *   1200   0.0348  0.00829    0.006   0.11   1.32
+
+Waitany              3    0   1200    0.116  0.00889    0.006   0.96  13.19
+Waitany              3    *   1200    0.116  0.00889    0.006   0.12   1.42
+
+Waitany             11    0   1200   0.0323  0.00539    0.004   0.58   8.00
+Waitany             11    *   1200   0.0323  0.00539    0.004   0.07   0.86
+
+Waitany             15    0    225  0.00525  0.00506   0.0045   0.10   1.41
+Waitany             15    *    225  0.00525  0.00506   0.0045   0.01   0.15
+
+Waitany             29    0    225    0.019  0.00536  0.00475   0.11   1.49
+Waitany             29    *    225    0.019  0.00536  0.00475   0.01   0.16
+
+Waitany             37    4   1200    0.433   0.0262  0.00375   2.82  27.52
+Waitany             37    *   1200    0.433   0.0262  0.00375   0.35   4.18
+
+Waitany             45    4   1200   0.0155  0.00445  0.00325   0.48   4.67
+Waitany             45    *   1200   0.0155  0.00445  0.00325   0.06   0.71
+
+Waitany             48    4    225   0.0175  0.00399    0.003   0.08   0.79
+Waitany             48    *    225   0.0175  0.00399    0.003   0.01   0.12
+
+Waitany             63    4    225   0.0145  0.00753  0.00375   0.15   1.48
+Waitany             63    *    225   0.0145  0.00753  0.00375   0.02   0.22
+
+Waitany             71    5   1200    0.398   0.0115  0.00475   1.23  15.65
+Waitany             71    *   1200    0.398   0.0115  0.00475   0.15   1.83
+
+Waitany             80    5   1200     0.02  0.00544  0.00375   0.58   7.43
+Waitany             80    *   1200     0.02  0.00544  0.00375   0.07   0.87
+
+Waitany             82    5    225   0.0055  0.00512   0.0045   0.10   1.31
+Waitany             82    *    225   0.0055  0.00512   0.0045   0.01   0.15
+
+Waitany             97    5    225   0.0192  0.00542    0.005   0.11   1.39
+Waitany             97    *    225   0.0192  0.00542    0.005   0.01   0.16
+
+Waitany            106    6   1200    0.417   0.0117    0.004   1.26  15.48
+Waitany            106    *   1200    0.417   0.0117    0.004   0.16   1.87
+
+Waitany            113    6   1200     0.02  0.00541  0.00375   0.58   7.14
+Waitany            113    *   1200     0.02  0.00541  0.00375   0.07   0.86
+
+Waitany            116    6    225  0.00525  0.00512  0.00475   0.10   1.27
+Waitany            116    *    225  0.00525  0.00512  0.00475   0.01   0.15
+
+Waitany            132    6    225    0.019   0.0054    0.005   0.11   1.34
+Waitany            132    *    225    0.019   0.0054    0.005   0.01   0.16
+
+Waitany            140    7   1200    0.443   0.0279    0.004   3.00  31.36
+Waitany            140    *   1200    0.443   0.0279    0.004   0.38   4.45
+
+Waitany            148    7   1200   0.0143  0.00427  0.00375   0.46   4.80
+Waitany            148    *   1200   0.0143  0.00427  0.00375   0.06   0.68
+
+Waitany            150    7    225   0.0138   0.0039   0.0035   0.08   0.82
+Waitany            150    *    225   0.0138   0.0039   0.0035   0.01   0.12
+
+Waitany            166    7    225    0.015  0.00775  0.00375   0.16   1.63
+Waitany            166    *    225    0.015  0.00775  0.00375   0.02   0.23
+
+Waitany            173    1   1200    0.479   0.0127  0.00575   1.37  17.24
+Waitany            173    *   1200    0.479   0.0127  0.00575   0.17   2.03
+
+Waitany            181    1   1200   0.0168  0.00529  0.00375   0.57   7.16
+Waitany            181    *   1200   0.0168  0.00529  0.00375   0.07   0.84
+
+Waitany            184    1    225  0.00525  0.00509   0.0045   0.10   1.29
+Waitany            184    *    225  0.00525  0.00509   0.0045   0.01   0.15
+
+Waitany            199    1    225   0.0192  0.00537  0.00475   0.11   1.36
+Waitany            199    *    225   0.0192  0.00537  0.00475   0.01   0.16
+
+Waitany            208    2   1200    0.447   0.0136  0.00525   1.46  17.84
+Waitany            208    *   1200    0.447   0.0136  0.00525   0.18   2.17
+
+Waitany            214    2   1200   0.0155  0.00533    0.004   0.57   6.98
+Waitany            214    *   1200   0.0155  0.00533    0.004   0.07   0.85
+
+Waitany            218    2    225   0.0175  0.00519  0.00475   0.10   1.27
+Waitany            218    *    225   0.0175  0.00519  0.00475   0.01   0.15
+
+Waitany            234    2    225   0.0225  0.00547  0.00475   0.11   1.34
+Waitany            234    *    225   0.0225  0.00547  0.00475   0.01   0.16
+
+Waitany            242    3   1200    0.434   0.0132   0.0055   1.42  17.20
+Waitany            242    *   1200    0.434   0.0132   0.0055   0.18   2.10
+
+Waitany            249    3   1200   0.0152  0.00524  0.00375   0.56   6.84
+Waitany            249    *   1200   0.0152  0.00524  0.00375   0.07   0.84
+
+Waitany            252    3    225   0.0177   0.0052   0.0045   0.10   1.27
+Waitany            252    *    225   0.0177   0.0052   0.0045   0.01   0.16
+
+Waitany            268    3    225   0.0177  0.00539  0.00475   0.11   1.32
+Waitany            268    *    225   0.0177  0.00539  0.00475   0.01   0.16
+---------------------------------------------------------------------------
+@--- Callsite Message Sent statistics (all, sent bytes) -------------------
+---------------------------------------------------------------------------
+Name              Site Rank   Count       Max      Mean       Min       Sum
+Allreduce            2    0       1      1056      1056      1056      1056
+Allreduce            2    *       1      1056      1056      1056      1056
+
+Allreduce            4    0       5        48        48        48       240
+Allreduce            4    *       5        48        48        48       240
+
+Allreduce            6    0       1      1056      1056      1056      1056
+Allreduce            6    *       1      1056      1056      1056      1056
+
+Allreduce            7    0      25         4         4         4       100
+Allreduce            7    *      25         4         4         4       100
+
+Allreduce            8    0      25         4         4         4       100
+Allreduce            8    *      25         4         4         4       100
+
+Allreduce           10    0       5         4         4         4        20
+Allreduce           10    *       5         4         4         4        20
+
+Allreduce           14    0       5        20        20        20       100
+Allreduce           14    *       5        20        20        20       100
+
+Allreduce           17    0       1      1080      1080      1080      1080
+Allreduce           17    *       1      1080      1080      1080      1080
+
+Allreduce           18    0       5         4         4         4        20
+Allreduce           18    *       5         4         4         4        20
+
+Allreduce           19    0       1         4         4         4         4
+Allreduce           19    *       1         4         4         4         4
+
+Allreduce           20    0       5        20        20        20       100
+Allreduce           20    *       5        20        20        20       100
+
+Allreduce           21    0       1      1056      1056      1056      1056
+Allreduce           21    *       1      1056      1056      1056      1056
+
+Allreduce           22    0       5         4         4         4        20
+Allreduce           22    *       5         4         4         4        20
+
+Allreduce           23    0    3240         8         8         8 2.592e+04
+Allreduce           23    *    3240         8         8         8 2.592e+04
+
+Allreduce           25    0       5        20        20        20       100
+Allreduce           25    *       5        20        20        20       100
+
+Allreduce           26    0      25        32        32        32       800
+Allreduce           26    *      25        32        32        32       800
+
+Allreduce           27    0      25         4         4         4       100
+Allreduce           27    *      25         4         4         4       100
+
+Allreduce           28    0      25         4         4         4       100
+Allreduce           28    *      25         4         4         4       100
+
+Allreduce           30    0      25        48        48        48      1200
+Allreduce           30    *      25        48        48        48      1200
+
+Allreduce           32    0      25         4         4         4       100
+Allreduce           32    *      25         4         4         4       100
+
+Allreduce           33    0      25        32        32        32       800
+Allreduce           33    *      25        32        32        32       800
+
+Allreduce           34    0       5         4         4         4        20
+Allreduce           34    *       5         4         4         4        20
+
+Allreduce           36    4       1      1056      1056      1056      1056
+Allreduce           36    *       1      1056      1056      1056      1056
+
+Allreduce           38    4       5        48        48        48       240
+Allreduce           38    *       5        48        48        48       240
+
+Allreduce           40    4      25         4         4         4       100
+Allreduce           40    *      25         4         4         4       100
+
+Allreduce           41    4      25         4         4         4       100
+Allreduce           41    *      25         4         4         4       100
+
+Allreduce           42    4       1      1056      1056      1056      1056
+Allreduce           42    *       1      1056      1056      1056      1056
+
+Allreduce           43    4       5         4         4         4        20
+Allreduce           43    *       5         4         4         4        20
+
+Allreduce           47    4       5        20        20        20       100
+Allreduce           47    *       5        20        20        20       100
+
+Allreduce           49    4       1      1080      1080      1080      1080
+Allreduce           49    *       1      1080      1080      1080      1080
+
+Allreduce           50    4       5         4         4         4        20
+Allreduce           50    *       5         4         4         4        20
+
+Allreduce           52    4       1         4         4         4         4
+Allreduce           52    *       1         4         4         4         4
+
+Allreduce           53    4       5        20        20        20       100
+Allreduce           53    *       5        20        20        20       100
+
+Allreduce           54    4       1      1056      1056      1056      1056
+Allreduce           54    *       1      1056      1056      1056      1056
+
+Allreduce           55    4       5         4         4         4        20
+Allreduce           55    *       5         4         4         4        20
+
+Allreduce           56    4    3240         8         8         8 2.592e+04
+Allreduce           56    *    3240         8         8         8 2.592e+04
+
+Allreduce           58    4       5        20        20        20       100
+Allreduce           58    *       5        20        20        20       100
+
+Allreduce           59    4      25        32        32        32       800
+Allreduce           59    *      25        32        32        32       800
+
+Allreduce           61    4      25         4         4         4       100
+Allreduce           61    *      25         4         4         4       100
+
+Allreduce           62    4      25         4         4         4       100
+Allreduce           62    *      25         4         4         4       100
+
+Allreduce           64    4      25        48        48        48      1200
+Allreduce           64    *      25        48        48        48      1200
+
+Allreduce           66    4      25         4         4         4       100
+Allreduce           66    *      25         4         4         4       100
+
+Allreduce           67    4       5         4         4         4        20
+Allreduce           67    *       5         4         4         4        20
+
+Allreduce           68    4      25        32        32        32       800
+Allreduce           68    *      25        32        32        32       800
+
+Allreduce           70    5       1      1056      1056      1056      1056
+Allreduce           70    *       1      1056      1056      1056      1056
+
+Allreduce           72    5       5        48        48        48       240
+Allreduce           72    *       5        48        48        48       240
+
+Allreduce           74    5      25         4         4         4       100
+Allreduce           74    *      25         4         4         4       100
+
+Allreduce           75    5      25         4         4         4       100
+Allreduce           75    *      25         4         4         4       100
+
+Allreduce           76    5       1      1056      1056      1056      1056
+Allreduce           76    *       1      1056      1056      1056      1056
+
+Allreduce           77    5       5         4         4         4        20
+Allreduce           77    *       5         4         4         4        20
+
+Allreduce           81    5       5        20        20        20       100
+Allreduce           81    *       5        20        20        20       100
+
+Allreduce           83    5       1      1080      1080      1080      1080
+Allreduce           83    *       1      1080      1080      1080      1080
+
+Allreduce           84    5       5         4         4         4        20
+Allreduce           84    *       5         4         4         4        20
+
+Allreduce           86    5       1         4         4         4         4
+Allreduce           86    *       1         4         4         4         4
+
+Allreduce           87    5       5        20        20        20       100
+Allreduce           87    *       5        20        20        20       100
+
+Allreduce           88    5       1      1056      1056      1056      1056
+Allreduce           88    *       1      1056      1056      1056      1056
+
+Allreduce           89    5    3240         8         8         8 2.592e+04
+Allreduce           89    *    3240         8         8         8 2.592e+04
+
+Allreduce           90    5       5         4         4         4        20
+Allreduce           90    *       5         4         4         4        20
+
+Allreduce           92    5       5        20        20        20       100
+Allreduce           92    *       5        20        20        20       100
+
+Allreduce           93    5      25        32        32        32       800
+Allreduce           93    *      25        32        32        32       800
+
+Allreduce           95    5      25         4         4         4       100
+Allreduce           95    *      25         4         4         4       100
+
+Allreduce           96    5      25         4         4         4       100
+Allreduce           96    *      25         4         4         4       100
+
+Allreduce           98    5      25        48        48        48      1200
+Allreduce           98    *      25        48        48        48      1200
+
+Allreduce          100    5      25         4         4         4       100
+Allreduce          100    *      25         4         4         4       100
+
+Allreduce          101    5       5         4         4         4        20
+Allreduce          101    *       5         4         4         4        20
+
+Allreduce          102    5      25        32        32        32       800
+Allreduce          102    *      25        32        32        32       800
+
+Allreduce          104    6       1      1056      1056      1056      1056
+Allreduce          104    *       1      1056      1056      1056      1056
+
+Allreduce          105    6       5        48        48        48       240
+Allreduce          105    *       5        48        48        48       240
+
+Allreduce          108    6      25         4         4         4       100
+Allreduce          108    *      25         4         4         4       100
+
+Allreduce          109    6      25         4         4         4       100
+Allreduce          109    *      25         4         4         4       100
+
+Allreduce          110    6       1      1056      1056      1056      1056
+Allreduce          110    *       1      1056      1056      1056      1056
+
+Allreduce          111    6       5         4         4         4        20
+Allreduce          111    *       5         4         4         4        20
+
+Allreduce          115    6       5        20        20        20       100
+Allreduce          115    *       5        20        20        20       100
+
+Allreduce          117    6       1      1080      1080      1080      1080
+Allreduce          117    *       1      1080      1080      1080      1080
+
+Allreduce          118    6       5         4         4         4        20
+Allreduce          118    *       5         4         4         4        20
+
+Allreduce          120    6       1         4         4         4         4
+Allreduce          120    *       1         4         4         4         4
+
+Allreduce          121    6       5        20        20        20       100
+Allreduce          121    *       5        20        20        20       100
+
+Allreduce          122    6       5         4         4         4        20
+Allreduce          122    *       5         4         4         4        20
+
+Allreduce          123    6    3240         8         8         8 2.592e+04
+Allreduce          123    *    3240         8         8         8 2.592e+04
+
+Allreduce          124    6       1      1056      1056      1056      1056
+Allreduce          124    *       1      1056      1056      1056      1056
+
+Allreduce          126    6      25        32        32        32       800
+Allreduce          126    *      25        32        32        32       800
+
+Allreduce          127    6       5        20        20        20       100
+Allreduce          127    *       5        20        20        20       100
+
+Allreduce          129    6      25         4         4         4       100
+Allreduce          129    *      25         4         4         4       100
+
+Allreduce          130    6      25         4         4         4       100
+Allreduce          130    *      25         4         4         4       100
+
+Allreduce          131    6      25        48        48        48      1200
+Allreduce          131    *      25        48        48        48      1200
+
+Allreduce          134    6      25         4         4         4       100
+Allreduce          134    *      25         4         4         4       100
+
+Allreduce          135    6       5         4         4         4        20
+Allreduce          135    *       5         4         4         4        20
+
+Allreduce          136    6      25        32        32        32       800
+Allreduce          136    *      25        32        32        32       800
+
+Allreduce          138    7       1      1056      1056      1056      1056
+Allreduce          138    *       1      1056      1056      1056      1056
+
+Allreduce          139    7       5        48        48        48       240
+Allreduce          139    *       5        48        48        48       240
+
+Allreduce          142    7      25         4         4         4       100
+Allreduce          142    *      25         4         4         4       100
+
+Allreduce          143    7      25         4         4         4       100
+Allreduce          143    *      25         4         4         4       100
+
+Allreduce          144    7       1      1056      1056      1056      1056
+Allreduce          144    *       1      1056      1056      1056      1056
+
+Allreduce          145    7       5         4         4         4        20
+Allreduce          145    *       5         4         4         4        20
+
+Allreduce          149    7       5        20        20        20       100
+Allreduce          149    *       5        20        20        20       100
+
+Allreduce          151    7       1      1080      1080      1080      1080
+Allreduce          151    *       1      1080      1080      1080      1080
+
+Allreduce          152    7       5         4         4         4        20
+Allreduce          152    *       5         4         4         4        20
+
+Allreduce          154    7       1         4         4         4         4
+Allreduce          154    *       1         4         4         4         4
+
+Allreduce          155    7       5        20        20        20       100
+Allreduce          155    *       5        20        20        20       100
+
+Allreduce          156    7    3240         8         8         8 2.592e+04
+Allreduce          156    *    3240         8         8         8 2.592e+04
+
+Allreduce          157    7       5         4         4         4        20
+Allreduce          157    *       5         4         4         4        20
+
+Allreduce          158    7       1      1056      1056      1056      1056
+Allreduce          158    *       1      1056      1056      1056      1056
+
+Allreduce          160    7      25        32        32        32       800
+Allreduce          160    *      25        32        32        32       800
+
+Allreduce          161    7       5        20        20        20       100
+Allreduce          161    *       5        20        20        20       100
+
+Allreduce          163    7      25         4         4         4       100
+Allreduce          163    *      25         4         4         4       100
+
+Allreduce          164    7      25         4         4         4       100
+Allreduce          164    *      25         4         4         4       100
+
+Allreduce          165    7      25        48        48        48      1200
+Allreduce          165    *      25        48        48        48      1200
+
+Allreduce          168    7      25         4         4         4       100
+Allreduce          168    *      25         4         4         4       100
+
+Allreduce          169    7       5         4         4         4        20
+Allreduce          169    *       5         4         4         4        20
+
+Allreduce          170    7      25        32        32        32       800
+Allreduce          170    *      25        32        32        32       800
+
+Allreduce          172    1       1      1056      1056      1056      1056
+Allreduce          172    *       1      1056      1056      1056      1056
+
+Allreduce          174    1       5        48        48        48       240
+Allreduce          174    *       5        48        48        48       240
+
+Allreduce          176    1       1      1056      1056      1056      1056
+Allreduce          176    *       1      1056      1056      1056      1056
+
+Allreduce          177    1      25         4         4         4       100
+Allreduce          177    *      25         4         4         4       100
+
+Allreduce          178    1      25         4         4         4       100
+Allreduce          178    *      25         4         4         4       100
+
+Allreduce          179    1       5         4         4         4        20
+Allreduce          179    *       5         4         4         4        20
+
+Allreduce          183    1       5        20        20        20       100
+Allreduce          183    *       5        20        20        20       100
+
+Allreduce          185    1       1      1080      1080      1080      1080
+Allreduce          185    *       1      1080      1080      1080      1080
+
+Allreduce          186    1       5         4         4         4        20
+Allreduce          186    *       5         4         4         4        20
+
+Allreduce          188    1       1         4         4         4         4
+Allreduce          188    *       1         4         4         4         4
+
+Allreduce          189    1       5        20        20        20       100
+Allreduce          189    *       5        20        20        20       100
+
+Allreduce          190    1       1      1056      1056      1056      1056
+Allreduce          190    *       1      1056      1056      1056      1056
+
+Allreduce          191    1    3240         8         8         8 2.592e+04
+Allreduce          191    *    3240         8         8         8 2.592e+04
+
+Allreduce          192    1       5         4         4         4        20
+Allreduce          192    *       5         4         4         4        20
+
+Allreduce          194    1       5        20        20        20       100
+Allreduce          194    *       5        20        20        20       100
+
+Allreduce          195    1      25        32        32        32       800
+Allreduce          195    *      25        32        32        32       800
+
+Allreduce          197    1      25         4         4         4       100
+Allreduce          197    *      25         4         4         4       100
+
+Allreduce          198    1      25         4         4         4       100
+Allreduce          198    *      25         4         4         4       100
+
+Allreduce          200    1      25        48        48        48      1200
+Allreduce          200    *      25        48        48        48      1200
+
+Allreduce          202    1      25         4         4         4       100
+Allreduce          202    *      25         4         4         4       100
+
+Allreduce          203    1      25        32        32        32       800
+Allreduce          203    *      25        32        32        32       800
+
+Allreduce          204    1       5         4         4         4        20
+Allreduce          204    *       5         4         4         4        20
+
+Allreduce          206    2       1      1056      1056      1056      1056
+Allreduce          206    *       1      1056      1056      1056      1056
+
+Allreduce          207    2       5        48        48        48       240
+Allreduce          207    *       5        48        48        48       240
+
+Allreduce          210    2       1      1056      1056      1056      1056
+Allreduce          210    *       1      1056      1056      1056      1056
+
+Allreduce          211    2      25         4         4         4       100
+Allreduce          211    *      25         4         4         4       100
+
+Allreduce          212    2      25         4         4         4       100
+Allreduce          212    *      25         4         4         4       100
+
+Allreduce          213    2       5         4         4         4        20
+Allreduce          213    *       5         4         4         4        20
+
+Allreduce          217    2       5        20        20        20       100
+Allreduce          217    *       5        20        20        20       100
+
+Allreduce          219    2       1      1080      1080      1080      1080
+Allreduce          219    *       1      1080      1080      1080      1080
+
+Allreduce          220    2       5         4         4         4        20
+Allreduce          220    *       5         4         4         4        20
+
+Allreduce          222    2       1         4         4         4         4
+Allreduce          222    *       1         4         4         4         4
+
+Allreduce          223    2       5        20        20        20       100
+Allreduce          223    *       5        20        20        20       100
+
+Allreduce          224    2       5         4         4         4        20
+Allreduce          224    *       5         4         4         4        20
+
+Allreduce          225    2    3240         8         8         8 2.592e+04
+Allreduce          225    *    3240         8         8         8 2.592e+04
+
+Allreduce          226    2       1      1056      1056      1056      1056
+Allreduce          226    *       1      1056      1056      1056      1056
+
+Allreduce          228    2      25        32        32        32       800
+Allreduce          228    *      25        32        32        32       800
+
+Allreduce          229    2       5        20        20        20       100
+Allreduce          229    *       5        20        20        20       100
+
+Allreduce          231    2      25         4         4         4       100
+Allreduce          231    *      25         4         4         4       100
+
+Allreduce          232    2      25         4         4         4       100
+Allreduce          232    *      25         4         4         4       100
+
+Allreduce          233    2      25        48        48        48      1200
+Allreduce          233    *      25        48        48        48      1200
+
+Allreduce          236    2      25         4         4         4       100
+Allreduce          236    *      25         4         4         4       100
+
+Allreduce          237    2      25        32        32        32       800
+Allreduce          237    *      25        32        32        32       800
+
+Allreduce          238    2       5         4         4         4        20
+Allreduce          238    *       5         4         4         4        20
+
+Allreduce          240    3       1      1056      1056      1056      1056
+Allreduce          240    *       1      1056      1056      1056      1056
+
+Allreduce          241    3       5        48        48        48       240
+Allreduce          241    *       5        48        48        48       240
+
+Allreduce          244    3       1      1056      1056      1056      1056
+Allreduce          244    *       1      1056      1056      1056      1056
+
+Allreduce          245    3      25         4         4         4       100
+Allreduce          245    *      25         4         4         4       100
+
+Allreduce          246    3      25         4         4         4       100
+Allreduce          246    *      25         4         4         4       100
+
+Allreduce          247    3       5         4         4         4        20
+Allreduce          247    *       5         4         4         4        20
+
+Allreduce          251    3       5        20        20        20       100
+Allreduce          251    *       5        20        20        20       100
+
+Allreduce          253    3       1      1080      1080      1080      1080
+Allreduce          253    *       1      1080      1080      1080      1080
+
+Allreduce          254    3       5         4         4         4        20
+Allreduce          254    *       5         4         4         4        20
+
+Allreduce          256    3       1         4         4         4         4
+Allreduce          256    *       1         4         4         4         4
+
+Allreduce          257    3       5        20        20        20       100
+Allreduce          257    *       5        20        20        20       100
+
+Allreduce          258    3    3240         8         8         8 2.592e+04
+Allreduce          258    *    3240         8         8         8 2.592e+04
+
+Allreduce          259    3       5         4         4         4        20
+Allreduce          259    *       5         4         4         4        20
+
+Allreduce          260    3       1      1056      1056      1056      1056
+Allreduce          260    *       1      1056      1056      1056      1056
+
+Allreduce          262    3      25        32        32        32       800
+Allreduce          262    *      25        32        32        32       800
+
+Allreduce          263    3       5        20        20        20       100
+Allreduce          263    *       5        20        20        20       100
+
+Allreduce          265    3      25         4         4         4       100
+Allreduce          265    *      25         4         4         4       100
+
+Allreduce          266    3      25         4         4         4       100
+Allreduce          266    *      25         4         4         4       100
+
+Allreduce          267    3      25        48        48        48      1200
+Allreduce          267    *      25        48        48        48      1200
+
+Allreduce          270    3      25         4         4         4       100
+Allreduce          270    *      25         4         4         4       100
+
+Allreduce          271    3      25        32        32        32       800
+Allreduce          271    *      25        32        32        32       800
+
+Allreduce          272    3       5         4         4         4        20
+Allreduce          272    *       5         4         4         4        20
+
+Bcast                9    0       1       152       152       152       152
+Bcast                9    *       1       152       152       152       152
+
+Bcast               51    4       1       152       152       152       152
+Bcast               51    *       1       152       152       152       152
+
+Bcast               85    5       1       152       152       152       152
+Bcast               85    *       1       152       152       152       152
+
+Bcast              119    6       1       152       152       152       152
+Bcast              119    *       1       152       152       152       152
+
+Bcast              153    7       1       152       152       152       152
+Bcast              153    *       1       152       152       152       152
+
+Bcast              187    1       1       152       152       152       152
+Bcast              187    *       1       152       152       152       152
+
+Bcast              221    2       1       152       152       152       152
+Bcast              221    *       1       152       152       152       152
+
+Bcast              255    3       1       152       152       152       152
+Bcast              255    *       1       152       152       152       152
+
+Isend               13    0     225         4         4         4       900
+Isend               13    *     225         4         4         4       900
+
+Isend               24    0    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+Isend               24    *    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+
+Isend               44    4     225         4         4         4       900
+Isend               44    *     225         4         4         4       900
+
+Isend               57    4    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+Isend               57    *    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+
+Isend               78    5     225         4         4         4       900
+Isend               78    *     225         4         4         4       900
+
+Isend               91    5    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+Isend               91    *    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+
+Isend              112    6     225         4         4         4       900
+Isend              112    *     225         4         4         4       900
+
+Isend              125    6    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+Isend              125    *    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+
+Isend              146    7     225         4         4         4       900
+Isend              146    *     225         4         4         4       900
+
+Isend              159    7    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+Isend              159    *    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+
+Isend              182    1     225         4         4         4       900
+Isend              182    *     225         4         4         4       900
+
+Isend              193    1    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+Isend              193    *    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+
+Isend              216    2     225         4         4         4       900
+Isend              216    *     225         4         4         4       900
+
+Isend              227    2    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+Isend              227    *    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+
+Isend              250    3     225         4         4         4       900
+Isend              250    *     225         4         4         4       900
+
+Isend              261    3    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+Isend              261    *    1200   3.2e+04   3.2e+04   3.2e+04  3.84e+07
+---------------------------------------------------------------------------
+@--- End of Report --------------------------------------------------------
+---------------------------------------------------------------------------
