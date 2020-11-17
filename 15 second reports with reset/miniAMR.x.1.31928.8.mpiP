@@ -1,0 +1,220 @@
+@ mpiP
+@ Command : ./miniAMR.x --nx 50 --ny 50 --nz 50 
+@ Version                  : 3.4.1
+@ MPIP Build date          : Nov 15 2020, 22:48:07
+@ Start time               : 2020 11 15 22:50:45
+@ Stop time                : 2020 11 15 22:51:00
+@ Timer Used               : PMPI_Wtime
+@ MPIP env var             : -y -p -f /users/misc/sagnikd/mpiPOutputs
+@ Collector Rank           : 0
+@ Collector PID            : 31928
+@ Final Output Dir         : /users/misc/sagnikd/mpiPOutputs
+@ Report generation        : Single collector task
+@ MPI Task Assignment      : 0 csews1
+
+---------------------------------------------------------------------------
+@--- MPI Time (seconds) ---------------------------------------------------
+---------------------------------------------------------------------------
+Task    AppTime    MPITime     MPI%
+   0         15     0.0047     0.03
+   *         15     0.0047     0.03
+---------------------------------------------------------------------------
+@--- Callsites: 20 --------------------------------------------------------
+---------------------------------------------------------------------------
+ ID Lev File/Address        Line Parent_Funct             MPI_Call
+  1   0 main.c               247 main                     Bcast
+  2   0 main.c               224 main                     Bcast
+  3   0 init.c               161 init                     Comm_split
+  4   0 refine.c             180 refine                   Allreduce
+  5   0 refine.c             613 redistribute_blocks      Allreduce
+  6   0 refine.c             544 redistribute_blocks      Allreduce
+  7   0 refine.c             136 refine                   Allreduce
+  8   0 refine.c             100 refine                   Allreduce
+  9   0 refine.c             271 refine                   Allreduce
+ 10   0 refine.c             181 refine                   Allreduce
+ 11   0 refine.c             391 refine_level             Allreduce
+ 12   0 refine.c             446 refine_level             Allreduce
+ 13   0 refine.c              51 refine                   Allreduce
+ 14   0 refine.c             530 redistribute_blocks      Allreduce
+ 15   0 refine.c              98 refine                   Allreduce
+ 16   0 refine.c             179 refine                   Allreduce
+ 17   0 check_sum.c           57 check_sum                Allreduce
+ 18   0 refine.c             272 refine                   Allreduce
+ 19   0 refine.c             183 refine                   Allreduce
+ 20   0 refine.c             273 refine                   Allreduce
+---------------------------------------------------------------------------
+@--- Aggregate Time (top twenty, descending, milliseconds) ----------------
+---------------------------------------------------------------------------
+Call                 Site       Time    App%    MPI%     COV
+Allreduce              17        4.4    0.03   93.63    0.00
+Allreduce               7     0.0267    0.00    0.57    0.00
+Allreduce               8     0.0267    0.00    0.57    0.00
+Allreduce              14     0.0267    0.00    0.57    0.00
+Allreduce              12     0.0267    0.00    0.57    0.00
+Allreduce               6     0.0265    0.00    0.56    0.00
+Allreduce              11     0.0265    0.00    0.56    0.00
+Allreduce               5     0.0262    0.00    0.56    0.00
+Allreduce              15     0.0262    0.00    0.56    0.00
+Allreduce              18     0.0208    0.00    0.44    0.00
+Allreduce              20     0.0203    0.00    0.43    0.00
+Allreduce              13     0.0185    0.00    0.39    0.00
+Allreduce               9    0.00575    0.00    0.12    0.00
+Allreduce              16    0.00575    0.00    0.12    0.00
+Allreduce               4     0.0055    0.00    0.12    0.00
+Allreduce              10    0.00525    0.00    0.11    0.00
+Allreduce              19      0.005    0.00    0.11    0.00
+---------------------------------------------------------------------------
+@--- Aggregate Sent Message Size (top twenty, descending, bytes) ----------
+---------------------------------------------------------------------------
+Call                 Site      Count      Total       Avrg  Sent%
+Allreduce              17       1360   1.09e+04          8  91.52
+Allreduce               7         10        480         48   4.04
+Allreduce              13          2         96         48   0.81
+Allreduce               6         10         40          4   0.34
+Allreduce               5         10         40          4   0.34
+Allreduce              11         10         40          4   0.34
+Allreduce               8         10         40          4   0.34
+Allreduce               9          2         40         20   0.34
+Allreduce              14         10         40          4   0.34
+Allreduce              15         10         40          4   0.34
+Allreduce              12         10         40          4   0.34
+Allreduce              18          2         40         20   0.34
+Allreduce              20          2         40         20   0.34
+Allreduce               4          2          8          4   0.07
+Allreduce              10          2          8          4   0.07
+Allreduce              19          2          8          4   0.07
+Allreduce              16          2          8          4   0.07
+---------------------------------------------------------------------------
+@--- Aggregate Collective Time (top twenty, descending) -------------------
+---------------------------------------------------------------------------
+Call                 MPI Time %             Comm Size             Data Size
+Allreduce                   221          0 -        7          8 -       15
+Allreduce                  9.01          0 -        7          0 -        7
+Allreduce                  1.81          0 -        7         32 -       63
+Bcast                      1.52          0 -        7        128 -      255
+Allreduce                  1.37          0 -        7         16 -       31
+Bcast                    0.0692          0 -        7          0 -        7
+---------------------------------------------------------------------------
+@--- Aggregate Point-To-Point Sent (top twenty, descending) ---------------
+---------------------------------------------------------------------------
+No point to point operations to report
+---------------------------------------------------------------------------
+@--- Callsite Time statistics (all, milliseconds): 20 ---------------------
+---------------------------------------------------------------------------
+Name              Site Rank  Count      Max     Mean      Min   App%   MPI%
+Allreduce            4    0      2    0.003  0.00275   0.0025   0.00   0.12
+Allreduce            4    *      2    0.003  0.00275   0.0025   0.00   0.12
+
+Allreduce            5    0     10  0.00275  0.00263   0.0025   0.00   0.56
+Allreduce            5    *     10  0.00275  0.00263   0.0025   0.00   0.56
+
+Allreduce            6    0     10  0.00275  0.00265   0.0025   0.00   0.56
+Allreduce            6    *     10  0.00275  0.00265   0.0025   0.00   0.56
+
+Allreduce            7    0     10    0.003  0.00267   0.0025   0.00   0.57
+Allreduce            7    *     10    0.003  0.00267   0.0025   0.00   0.57
+
+Allreduce            8    0     10  0.00275  0.00267   0.0025   0.00   0.57
+Allreduce            8    *     10  0.00275  0.00267   0.0025   0.00   0.57
+
+Allreduce            9    0      2    0.003  0.00287  0.00275   0.00   0.12
+Allreduce            9    *      2    0.003  0.00287  0.00275   0.00   0.12
+
+Allreduce           10    0      2  0.00275  0.00263   0.0025   0.00   0.11
+Allreduce           10    *      2  0.00275  0.00263   0.0025   0.00   0.11
+
+Allreduce           11    0     10    0.003  0.00265   0.0025   0.00   0.56
+Allreduce           11    *     10    0.003  0.00265   0.0025   0.00   0.56
+
+Allreduce           12    0     10  0.00275  0.00267   0.0025   0.00   0.57
+Allreduce           12    *     10  0.00275  0.00267   0.0025   0.00   0.57
+
+Allreduce           13    0      2  0.00925  0.00925  0.00925   0.00   0.39
+Allreduce           13    *      2  0.00925  0.00925  0.00925   0.00   0.39
+
+Allreduce           14    0     10    0.003  0.00267   0.0025   0.00   0.57
+Allreduce           14    *     10    0.003  0.00267   0.0025   0.00   0.57
+
+Allreduce           15    0     10  0.00275  0.00263   0.0025   0.00   0.56
+Allreduce           15    *     10  0.00275  0.00263   0.0025   0.00   0.56
+
+Allreduce           16    0      2    0.003  0.00287  0.00275   0.00   0.12
+Allreduce           16    *      2    0.003  0.00287  0.00275   0.00   0.12
+
+Allreduce           17    0   1360   0.0163  0.00323  0.00275   0.03  93.63
+Allreduce           17    *   1360   0.0163  0.00323  0.00275   0.03  93.63
+
+Allreduce           18    0      2   0.0182   0.0104   0.0025   0.00   0.44
+Allreduce           18    *      2   0.0182   0.0104   0.0025   0.00   0.44
+
+Allreduce           19    0      2   0.0025   0.0025   0.0025   0.00   0.11
+Allreduce           19    *      2   0.0025   0.0025   0.0025   0.00   0.11
+
+Allreduce           20    0      2   0.0177   0.0101   0.0025   0.00   0.43
+Allreduce           20    *      2   0.0177   0.0101   0.0025   0.00   0.43
+
+Bcast                1    0      0        0     -nan 1.8e+305   0.00   0.00
+Bcast                1    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Bcast                2    0      0        0     -nan 1.8e+305   0.00   0.00
+Bcast                2    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Comm_split           3    0      0        0     -nan 1.8e+305   0.00   0.00
+Comm_split           3    *      0        0     -nan 1.8e+305   0.00   0.00
+---------------------------------------------------------------------------
+@--- Callsite Message Sent statistics (all, sent bytes) -------------------
+---------------------------------------------------------------------------
+Name              Site Rank   Count       Max      Mean       Min       Sum
+Allreduce            4    0       2         4         4         4         8
+Allreduce            4    *       2         4         4         4         8
+
+Allreduce            5    0      10         4         4         4        40
+Allreduce            5    *      10         4         4         4        40
+
+Allreduce            6    0      10         4         4         4        40
+Allreduce            6    *      10         4         4         4        40
+
+Allreduce            7    0      10        48        48        48       480
+Allreduce            7    *      10        48        48        48       480
+
+Allreduce            8    0      10         4         4         4        40
+Allreduce            8    *      10         4         4         4        40
+
+Allreduce            9    0       2        20        20        20        40
+Allreduce            9    *       2        20        20        20        40
+
+Allreduce           10    0       2         4         4         4         8
+Allreduce           10    *       2         4         4         4         8
+
+Allreduce           11    0      10         4         4         4        40
+Allreduce           11    *      10         4         4         4        40
+
+Allreduce           12    0      10         4         4         4        40
+Allreduce           12    *      10         4         4         4        40
+
+Allreduce           13    0       2        48        48        48        96
+Allreduce           13    *       2        48        48        48        96
+
+Allreduce           14    0      10         4         4         4        40
+Allreduce           14    *      10         4         4         4        40
+
+Allreduce           15    0      10         4         4         4        40
+Allreduce           15    *      10         4         4         4        40
+
+Allreduce           16    0       2         4         4         4         8
+Allreduce           16    *       2         4         4         4         8
+
+Allreduce           17    0    1360         8         8         8 1.088e+04
+Allreduce           17    *    1360         8         8         8 1.088e+04
+
+Allreduce           18    0       2        20        20        20        40
+Allreduce           18    *       2        20        20        20        40
+
+Allreduce           19    0       2         4         4         4         8
+Allreduce           19    *       2         4         4         4         8
+
+Allreduce           20    0       2        20        20        20        40
+Allreduce           20    *       2        20        20        20        40
+---------------------------------------------------------------------------
+@--- End of Report --------------------------------------------------------
+---------------------------------------------------------------------------

@@ -1,0 +1,47 @@
+@ mpiP
+@ Command : ./miniAMR.x --nx 50 --ny 50 --nz 50 
+@ Version                  : 3.4.1
+@ MPIP Build date          : Nov 15 2020, 22:48:07
+@ Start time               : 2020 11 15 22:50:11
+@ Stop time                : 2020 11 15 22:50:26
+@ Timer Used               : PMPI_Wtime
+@ MPIP env var             : -y -p -f /users/misc/sagnikd/mpiPOutputs
+@ Collector Rank           : 0
+@ Collector PID            : 31928
+@ Final Output Dir         : /users/misc/sagnikd/mpiPOutputs
+@ Report generation        : Single collector task
+@ MPI Task Assignment      : 0 csews1
+
+---------------------------------------------------------------------------
+@--- MPI Time (seconds) ---------------------------------------------------
+---------------------------------------------------------------------------
+Task    AppTime    MPITime     MPI%
+   0         15      0.472     3.15
+   *         15      0.472     3.15
+---------------------------------------------------------------------------
+@--- Callsites: 3 ---------------------------------------------------------
+---------------------------------------------------------------------------
+ ID Lev File/Address        Line Parent_Funct             MPI_Call
+  1   0 main.c               247 main                     Bcast
+  2   0 main.c               224 main                     Bcast
+  3   0 init.c               161 init                     Comm_split
+---------------------------------------------------------------------------
+@--- Aggregate Time (top twenty, descending, milliseconds) ----------------
+---------------------------------------------------------------------------
+Call                 Site       Time    App%    MPI%     COV
+Comm_split              3        472    3.15  100.00    0.00
+---------------------------------------------------------------------------
+@--- Callsite Time statistics (all, milliseconds): 3 ----------------------
+---------------------------------------------------------------------------
+Name              Site Rank  Count      Max     Mean      Min   App%   MPI%
+Bcast                1    0      0        0     -nan 1.8e+305   0.00   0.00
+Bcast                1    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Bcast                2    0      0        0     -nan 1.8e+305   0.00   0.00
+Bcast                2    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Comm_split           3    0      1      472      472      472   3.15 100.00
+Comm_split           3    *      1      472      472      472   3.15 100.00
+---------------------------------------------------------------------------
+@--- End of Report --------------------------------------------------------
+---------------------------------------------------------------------------
