@@ -1,0 +1,104 @@
+@ mpiP
+@ Command : ./miniFE.x -nx 200 -ny 200 -nz 200 
+@ Version                  : 3.4.1
+@ MPIP Build date          : Dec 24 2020, 15:01:11
+@ Start time               : 2020 12 24 15:26:14
+@ Stop time                : 2020 12 24 15:26:29
+@ Timer Used               : PMPI_Wtime
+@ MPIP env var             : -y -p -f /users/misc/sagnikd/mpiPOutputs
+@ Collector Rank           : 0
+@ Collector PID            : 8388
+@ Final Output Dir         : /users/misc/sagnikd/mpiPOutputs
+@ Report generation        : Single collector task
+@ MPI Task Assignment      : 0 csews2
+
+---------------------------------------------------------------------------
+@--- MPI Time (seconds) ---------------------------------------------------
+---------------------------------------------------------------------------
+Task    AppTime    MPITime     MPI%
+   0         15   0.000341     0.00
+   *         15   0.000341     0.00
+---------------------------------------------------------------------------
+@--- Callsites: 11 --------------------------------------------------------
+---------------------------------------------------------------------------
+ ID Lev File/Address                   Line Parent_Funct                                                                                                                                                                                                      MPI_Call
+  1   0 utils.hpp                        96 void miniFE::get_global_min_max<int>(int, int&, int&, int&, int&, int&)                                                                                                                                           Allreduce
+  2   0 main.cpp                        121 main                                                                                                                                                                                                              Allreduce
+  3   0 box_utils.hpp                   254 void miniFE::create_map_id_to_row<int>(int, int, int, Box const&, std::map<int, int, std::less<int>, std::allocator<std::pair<int const, int> > >&)                                                               Allgather
+  4   0 box_utils.hpp                   266 void miniFE::create_map_id_to_row<int>(int, int, int, Box const&, std::map<int, int, std::less<int>, std::allocator<std::pair<int const, int> > >&)                                                               Allgather
+  5   0 utils.cpp                        92 miniFE::broadcast_parameters(miniFE::Parameters&)                                                                                                                                                                 Bcast
+  6   0 utils.cpp                       108 miniFE::broadcast_parameters(miniFE::Parameters&)                                                                                                                                                                 Bcast
+  7   0 utils.hpp                       142 float miniFE::compute_std_dev_as_percentage<float>(float, float)                                                                                                                                                  Allgather
+  8   0 generate_matrix_structure.hpp   141 int miniFE::generate_matrix_structure<miniFE::CSRMatrix<double, int, int> >(miniFE::simple_mesh_description<miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType> const&, miniFE::CSRMatrix<double, int, int>&) Allreduce
+  9   0 Vector_functions.hpp            221 miniFE::TypeTraits<miniFE::Vector<double, int, int>::ScalarType>::magnitude_type miniFE::dot<miniFE::Vector<double, int, int> >(miniFE::Vector<double, int, int> const&, miniFE::Vector<double, int, int> const&) Allreduce
+ 10   0 utils.hpp                        96 void miniFE::get_global_min_max<double>(double, double&, double&, int&, double&, int&)                                                                                                                            Allreduce
+ 11   0 SparseMatrix_functions.hpp      313 double miniFE::parallel_memory_overhead_MB<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int> const&)                                                                                      Allreduce
+---------------------------------------------------------------------------
+@--- Aggregate Time (top twenty, descending, milliseconds) ----------------
+---------------------------------------------------------------------------
+Call                 Site       Time    App%    MPI%     COV
+Allreduce               9      0.341    0.00  100.00    0.00
+---------------------------------------------------------------------------
+@--- Aggregate Sent Message Size (top twenty, descending, bytes) ----------
+---------------------------------------------------------------------------
+Call                 Site      Count      Total       Avrg  Sent%
+Allreduce               9         48        384          8 100.00
+---------------------------------------------------------------------------
+@--- Aggregate Collective Time (top twenty, descending) -------------------
+---------------------------------------------------------------------------
+Call                 MPI Time %             Comm Size             Data Size
+Allreduce                   744          0 -        7          8 -       15
+Bcast                       116          0 -        7         32 -       63
+Allreduce                  31.7          0 -        7          0 -        7
+Allgather                  16.4          0 -        7          0 -        7
+Bcast                      4.11          0 -        7          0 -        7
+Allgather                 0.733          0 -        7         16 -       31
+---------------------------------------------------------------------------
+@--- Aggregate Point-To-Point Sent (top twenty, descending) ---------------
+---------------------------------------------------------------------------
+No point to point operations to report
+---------------------------------------------------------------------------
+@--- Callsite Time statistics (all, milliseconds): 11 ---------------------
+---------------------------------------------------------------------------
+Name              Site Rank  Count      Max     Mean      Min   App%   MPI%
+Allgather            3    0      0        0     -nan 1.8e+305   0.00   0.00
+Allgather            3    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Allgather            4    0      0        0     -nan 1.8e+305   0.00   0.00
+Allgather            4    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Allgather            7    0      0        0     -nan 1.8e+305   0.00   0.00
+Allgather            7    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Allreduce            1    0      0        0     -nan 1.8e+305   0.00   0.00
+Allreduce            1    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Allreduce            2    0      0        0     -nan 1.8e+305   0.00   0.00
+Allreduce            2    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Allreduce            8    0      0        0     -nan 1.8e+305   0.00   0.00
+Allreduce            8    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Allreduce            9    0     48     0.01   0.0071   0.0055   0.00 100.00
+Allreduce            9    *     48     0.01   0.0071   0.0055   0.00 100.00
+
+Allreduce           10    0      0        0     -nan 1.8e+305   0.00   0.00
+Allreduce           10    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Allreduce           11    0      0        0     -nan 1.8e+305   0.00   0.00
+Allreduce           11    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Bcast                5    0      0        0     -nan 1.8e+305   0.00   0.00
+Bcast                5    *      0        0     -nan 1.8e+305   0.00   0.00
+
+Bcast                6    0      0        0     -nan 1.8e+305   0.00   0.00
+Bcast                6    *      0        0     -nan 1.8e+305   0.00   0.00
+---------------------------------------------------------------------------
+@--- Callsite Message Sent statistics (all, sent bytes) -------------------
+---------------------------------------------------------------------------
+Name              Site Rank   Count       Max      Mean       Min       Sum
+Allreduce            9    0      48         8         8         8       384
+Allreduce            9    *      48         8         8         8       384
+---------------------------------------------------------------------------
+@--- End of Report --------------------------------------------------------
+---------------------------------------------------------------------------
