@@ -1,0 +1,403 @@
+@ mpiP
+@ Command : ./miniFE.x -nx 350 -ny 350 -nz 350 
+@ Version                  : 3.4.1
+@ MPIP Build date          : Jan  7 2021, 20:05:11
+@ Start time               : 2021 01 07 20:12:34
+@ Stop time                : 2021 01 07 20:12:34
+@ Timer Used               : PMPI_Wtime
+@ MPIP env var             : -y -p -f /users/misc/sagnikd/mpiPOutputs
+@ Collector Rank           : 0
+@ Collector PID            : 23024
+@ Final Output Dir         : /users/misc/sagnikd/mpiPOutputs
+@ Report generation        : Single collector task
+@ MPI Task Assignment      : 0 csews3
+@ MPI Task Assignment      : 1 csews3
+@ MPI Task Assignment      : 2 csews3
+@ MPI Task Assignment      : 3 csews3
+@ MPI Task Assignment      : 4 csews3
+@ MPI Task Assignment      : 5 csews3
+@ MPI Task Assignment      : 6 csews3
+@ MPI Task Assignment      : 7 csews3
+@ MPI Task Assignment      : 8 csews3
+@ MPI Task Assignment      : 9 csews3
+@ MPI Task Assignment      : 10 csews3
+@ MPI Task Assignment      : 11 csews3
+@ MPI Task Assignment      : 12 csews4
+@ MPI Task Assignment      : 13 csews4
+@ MPI Task Assignment      : 14 csews4
+@ MPI Task Assignment      : 15 csews4
+@ MPI Task Assignment      : 16 csews4
+@ MPI Task Assignment      : 17 csews4
+@ MPI Task Assignment      : 18 csews4
+@ MPI Task Assignment      : 19 csews4
+@ MPI Task Assignment      : 20 csews4
+@ MPI Task Assignment      : 21 csews4
+@ MPI Task Assignment      : 22 csews4
+@ MPI Task Assignment      : 23 csews4
+@ MPI Task Assignment      : 24 csews5
+@ MPI Task Assignment      : 25 csews5
+@ MPI Task Assignment      : 26 csews5
+@ MPI Task Assignment      : 27 csews5
+@ MPI Task Assignment      : 28 csews5
+@ MPI Task Assignment      : 29 csews5
+@ MPI Task Assignment      : 30 csews5
+@ MPI Task Assignment      : 31 csews5
+@ MPI Task Assignment      : 32 csews5
+@ MPI Task Assignment      : 33 csews5
+@ MPI Task Assignment      : 34 csews5
+@ MPI Task Assignment      : 35 csews5
+@ MPI Task Assignment      : 36 csews6
+@ MPI Task Assignment      : 37 csews6
+@ MPI Task Assignment      : 38 csews6
+@ MPI Task Assignment      : 39 csews6
+@ MPI Task Assignment      : 40 csews6
+@ MPI Task Assignment      : 41 csews6
+@ MPI Task Assignment      : 42 csews6
+@ MPI Task Assignment      : 43 csews6
+@ MPI Task Assignment      : 44 csews6
+@ MPI Task Assignment      : 45 csews6
+@ MPI Task Assignment      : 46 csews6
+@ MPI Task Assignment      : 47 csews6
+@ MPI Task Assignment      : 48 csews7
+@ MPI Task Assignment      : 49 csews7
+@ MPI Task Assignment      : 50 csews7
+@ MPI Task Assignment      : 51 csews7
+@ MPI Task Assignment      : 52 csews7
+@ MPI Task Assignment      : 53 csews7
+@ MPI Task Assignment      : 54 csews7
+@ MPI Task Assignment      : 55 csews7
+@ MPI Task Assignment      : 56 csews7
+@ MPI Task Assignment      : 57 csews7
+@ MPI Task Assignment      : 58 csews7
+@ MPI Task Assignment      : 59 csews7
+@ MPI Task Assignment      : 60 csews8
+@ MPI Task Assignment      : 61 csews8
+@ MPI Task Assignment      : 62 csews8
+@ MPI Task Assignment      : 63 csews8
+@ MPI Task Assignment      : 64 csews8
+@ MPI Task Assignment      : 65 csews8
+@ MPI Task Assignment      : 66 csews8
+@ MPI Task Assignment      : 67 csews8
+@ MPI Task Assignment      : 68 csews8
+@ MPI Task Assignment      : 69 csews8
+@ MPI Task Assignment      : 70 csews8
+@ MPI Task Assignment      : 71 csews8
+
+---------------------------------------------------------------------------
+@--- MPI Time (seconds) ---------------------------------------------------
+---------------------------------------------------------------------------
+Task    AppTime    MPITime     MPI%
+   0          0     0.0239     0.00
+   1   5.65e-05          0     0.00
+   2    3.8e-05          0     0.00
+   3   3.92e-05          0     0.00
+   4          0          0     0.00
+   5          0          0     0.00
+   6    4.2e-05          0     0.00
+   7   2.98e-05          0     0.00
+   8   5.87e-05          0     0.00
+   9    0.00944          0     0.00
+  10   6.88e-05          0     0.00
+  11   4.65e-05          0     0.00
+  12   6.53e-05          0     0.00
+  13   7.95e-05          0     0.00
+  14   9.05e-05          0     0.00
+  15    4.9e-05          0     0.00
+  16   0.000409     0.0363    8887.71
+  17   0.000416          0     0.00
+  18   4.62e-05          0     0.00
+  19   5.45e-05          0     0.00
+  20   0.000229          0     0.00
+  21   4.85e-05          0     0.00
+  22   6.43e-05          0     0.00
+  23   5.15e-05          0     0.00
+  24   8.57e-05     0.0259    30159.77
+  25    6.4e-05          0     0.00
+  26    0.00023          0     0.00
+  27          0          0     0.00
+  28     0.0001          0     0.00
+  29   4.05e-05          0     0.00
+  30          0          0     0.00
+  31   4.58e-05          0     0.00
+  32          0       0.03     0.00
+  33   3.85e-05          0     0.00
+  34   4.47e-05     0.0223    49739.11
+  35          0          0     0.00
+  36   5.08e-05       0.02    39375.86
+  37    3.5e-05          0     0.00
+  38          0          0     0.00
+  39   3.35e-05          0     0.00
+  40   3.95e-05     0.0549    138959.49
+  41    3.5e-05          0     0.00
+  42   3.83e-05          0     0.00
+  43          0          0     0.00
+  44   4.03e-05     0.0477    118604.35
+  45    3.2e-05          0     0.00
+  46          0          0     0.00
+  47   3.85e-05          0     0.00
+  48          0      0.044     0.00
+  49   0.000102          0     0.00
+  50          0          0     0.00
+  51    6.1e-05          0     0.00
+  52          0     0.0121     0.00
+  53   7.28e-05          0     0.00
+  54   3.95e-05     0.0158    40112.03
+  55   4.73e-05          0     0.00
+  56          0      0.012     0.00
+  57   3.87e-05          0     0.00
+  58          0    0.00426     0.00
+  59   3.85e-05          0     0.00
+  60    4.8e-05     0.0119    24818.23
+  61   3.33e-05          0     0.00
+  62   7.88e-05          0     0.00
+  63   3.92e-05          0     0.00
+  64    3.7e-05     0.0479    129371.62
+  65   3.65e-05          0     0.00
+  66   5.95e-05          0     0.00
+  67   3.85e-05          0     0.00
+  68   3.53e-05          0     0.00
+  69   3.33e-05          0     0.00
+  70   3.45e-05          0     0.00
+  71    3.7e-05          0     0.00
+   *     0.0133      0.409    3069.34
+---------------------------------------------------------------------------
+@--- Callsites: 24 --------------------------------------------------------
+---------------------------------------------------------------------------
+ ID Lev File/Address        Line Parent_Funct                                      MPI_Call
+  1   0 utils.cpp             92 miniFE::broadcast_parameters(miniFE::Parameters&) Bcast
+  2   0 utils.cpp            108 miniFE::broadcast_parameters(miniFE::Parameters&) Bcast
+  3   0 0x55fea19420a8           [unknown]                                         Bcast
+  4   0 0x55fea1942158           [unknown]                                         Bcast
+  5   0 0x55e8f403e0a8           [unknown]                                         Bcast
+  6   0 0x55a1353190a8           [unknown]                                         Bcast
+  7   0 0x55a135319158           [unknown]                                         Bcast
+  8   0 0x55fd5b1350a8           [unknown]                                         Bcast
+  9   0 0x55b77f0cf0a8           [unknown]                                         Bcast
+ 10   0 0x55bb282ce0a8           [unknown]                                         Bcast
+ 11   0 0x5574790710a8           [unknown]                                         Bcast
+ 12   0 0x5633659740a8           [unknown]                                         Bcast
+ 13   0 0x563365974158           [unknown]                                         Bcast
+ 14   0 0x55c929f730a8           [unknown]                                         Bcast
+ 15   0 0x55c929f73158           [unknown]                                         Bcast
+ 16   0 0x559b9be3e0a8           [unknown]                                         Bcast
+ 17   0 0x559b9be3e158           [unknown]                                         Bcast
+ 18   0 0x55d2ffaa20a8           [unknown]                                         Bcast
+ 19   0 0x55d2ffaa2158           [unknown]                                         Bcast
+ 20   0 0x55f8df1fb0a8           [unknown]                                         Bcast
+ 21   0 0x55f8df1fb158           [unknown]                                         Bcast
+ 22   0 0x557caf0390a8           [unknown]                                         Bcast
+ 23   0 0x560c820600a8           [unknown]                                         Bcast
+ 24   0 0x560c82060158           [unknown]                                         Bcast
+---------------------------------------------------------------------------
+@--- Aggregate Time (top twenty, descending, milliseconds) ----------------
+---------------------------------------------------------------------------
+Call                 Site       Time    App%    MPI%     COV
+Bcast                  18       54.9  411.92   13.42    0.00
+Bcast                  23       47.7  358.25   11.67    0.00
+Bcast                   3       36.3  272.62    8.88    0.00
+Bcast                   6       31.9  239.27    7.80    0.00
+Bcast                  15       31.9  239.24    7.79    0.00
+Bcast                  16         23  172.41    5.62    0.00
+Bcast                  10       22.3  167.06    5.44    0.00
+Bcast                  12       22.2  166.34    5.42    0.00
+Bcast                   1         21  157.68    5.14    0.00
+Bcast                  20         20  149.94    4.88    0.00
+Bcast                   7         16  120.01    3.91    0.00
+Bcast                   5       15.8  118.92    3.87    0.00
+Bcast                   8       12.1   90.88    2.96    0.00
+Bcast                  14       12.1   90.86    2.96    0.00
+Bcast                  11         12   90.05    2.93    0.00
+Bcast                  22       11.9   89.41    2.91    0.00
+Bcast                  13        7.8   58.58    1.91    0.00
+Bcast                   9       4.26   31.97    1.04    0.00
+Bcast                   2       2.93   22.01    0.72    0.00
+Bcast                  17       2.89   21.70    0.71    0.00
+---------------------------------------------------------------------------
+@--- Aggregate Sent Message Size (top twenty, descending, bytes) ----------
+---------------------------------------------------------------------------
+Call                 Site      Count      Total       Avrg  Sent%
+Bcast                  18          1         52         52   6.37
+Bcast                  16          1         52         52   6.37
+Bcast                  23          1         52         52   6.37
+Bcast                  22          1         52         52   6.37
+Bcast                  20          1         52         52   6.37
+Bcast                  11          1         52         52   6.37
+Bcast                  10          1         52         52   6.37
+Bcast                   9          1         52         52   6.37
+Bcast                   8          1         52         52   6.37
+Bcast                  14          1         52         52   6.37
+Bcast                  12          1         52         52   6.37
+Bcast                   3          1         52         52   6.37
+Bcast                   1          1         52         52   6.37
+Bcast                   6          1         52         52   6.37
+Bcast                   5          1         52         52   6.37
+Bcast                  24          1          4          4   0.49
+Bcast                  19          1          4          4   0.49
+Bcast                  17          1          4          4   0.49
+Bcast                  21          1          4          4   0.49
+Bcast                  15          1          4          4   0.49
+---------------------------------------------------------------------------
+@--- Aggregate Collective Time (top twenty, descending) -------------------
+---------------------------------------------------------------------------
+Call                 MPI Time %             Comm Size             Data Size
+Allreduce              2.91e+03         64 -      127          0 -        7
+Allreduce              1.08e+03         64 -      127        256 -      511
+Bcast                       552         64 -      127         32 -       63
+Bcast                       238         64 -      127          0 -        7
+---------------------------------------------------------------------------
+@--- Aggregate Point-To-Point Sent (top twenty, descending) ---------------
+---------------------------------------------------------------------------
+No point to point operations to report
+---------------------------------------------------------------------------
+@--- Callsite Time statistics (all, milliseconds): 24 ---------------------
+---------------------------------------------------------------------------
+Name              Site Rank  Count      Max     Mean      Min   App%   MPI%
+Bcast                1    0      1       21       21       21    inf  87.75
+Bcast                1    *      1       21       21       21 157.68   5.14
+
+Bcast                2    0      1     2.93     2.93     2.93    inf  12.25
+Bcast                2    *      1     2.93     2.93     2.93  22.01   0.72
+
+Bcast                3   16      1     36.3     36.3     36.3 8885.93  99.98
+Bcast                3    *      1     36.3     36.3     36.3 272.62   8.88
+
+Bcast                4   16      1  0.00725  0.00725  0.00725   1.77   0.02
+Bcast                4    *      1  0.00725  0.00725  0.00725   0.05   0.00
+
+Bcast                5   54      1     15.8     15.8     15.8 40112.03 100.00
+Bcast                5    *      1     15.8     15.8     15.8 118.92   3.87
+
+Bcast                6   64      1     31.9     31.9     31.9 86158.78  66.60
+Bcast                6    *      1     31.9     31.9     31.9 239.27   7.80
+
+Bcast                7   64      1       16       16       16 43212.84  33.40
+Bcast                7    *      1       16       16       16 120.01   3.91
+
+Bcast                8   52      1     12.1     12.1     12.1    inf 100.00
+Bcast                8    *      1     12.1     12.1     12.1  90.88   2.96
+
+Bcast                9   58      1     4.26     4.26     4.26    inf 100.00
+Bcast                9    *      1     4.26     4.26     4.26  31.97   1.04
+
+Bcast               10   34      1     22.3     22.3     22.3 49739.11 100.00
+Bcast               10    *      1     22.3     22.3     22.3 167.06   5.44
+
+Bcast               11   56      1       12       12       12    inf 100.00
+Bcast               11    *      1       12       12       12  90.05   2.93
+
+Bcast               12   32      1     22.2     22.2     22.2    inf  73.96
+Bcast               12    *      1     22.2     22.2     22.2 166.34   5.42
+
+Bcast               13   32      1      7.8      7.8      7.8    inf  26.04
+Bcast               13    *      1      7.8      7.8      7.8  58.58   1.91
+
+Bcast               14   48      1     12.1     12.1     12.1    inf  27.53
+Bcast               14    *      1     12.1     12.1     12.1  90.86   2.96
+
+Bcast               15   48      1     31.9     31.9     31.9    inf  72.47
+Bcast               15    *      1     31.9     31.9     31.9 239.24   7.79
+
+Bcast               16   24      1       23       23       23 26788.05  88.82
+Bcast               16    *      1       23       23       23 172.41   5.62
+
+Bcast               17   24      1     2.89     2.89     2.89 3371.72  11.18
+Bcast               17    *      1     2.89     2.89     2.89  21.70   0.71
+
+Bcast               18   40      1     54.9     54.9     54.9 138938.61  99.98
+Bcast               18    *      1     54.9     54.9     54.9 411.92  13.42
+
+Bcast               19   40      1  0.00825  0.00825  0.00825  20.89   0.02
+Bcast               19    *      1  0.00825  0.00825  0.00825   0.06   0.00
+
+Bcast               20   36      1       20       20       20 39362.07  99.96
+Bcast               20    *      1       20       20       20 149.94   4.88
+
+Bcast               21   36      1    0.007    0.007    0.007  13.79   0.04
+Bcast               21    *      1    0.007    0.007    0.007   0.05   0.00
+
+Bcast               22   60      1     11.9     11.9     11.9 24818.23 100.00
+Bcast               22    *      1     11.9     11.9     11.9  89.41   2.91
+
+Bcast               23   44      1     47.7     47.7     47.7 118584.47  99.98
+Bcast               23    *      1     47.7     47.7     47.7 358.25  11.67
+
+Bcast               24   44      1    0.008    0.008    0.008  19.88   0.02
+Bcast               24    *      1    0.008    0.008    0.008   0.06   0.00
+---------------------------------------------------------------------------
+@--- Callsite Message Sent statistics (all, sent bytes) -------------------
+---------------------------------------------------------------------------
+Name              Site Rank   Count       Max      Mean       Min       Sum
+Bcast                1    0       1        52        52        52        52
+Bcast                1    *       1        52        52        52        52
+
+Bcast                2    0       1         4         4         4         4
+Bcast                2    *       1         4         4         4         4
+
+Bcast                3   16       1        52        52        52        52
+Bcast                3    *       1        52        52        52        52
+
+Bcast                4   16       1         4         4         4         4
+Bcast                4    *       1         4         4         4         4
+
+Bcast                5   54       1        52        52        52        52
+Bcast                5    *       1        52        52        52        52
+
+Bcast                6   64       1        52        52        52        52
+Bcast                6    *       1        52        52        52        52
+
+Bcast                7   64       1         4         4         4         4
+Bcast                7    *       1         4         4         4         4
+
+Bcast                8   52       1        52        52        52        52
+Bcast                8    *       1        52        52        52        52
+
+Bcast                9   58       1        52        52        52        52
+Bcast                9    *       1        52        52        52        52
+
+Bcast               10   34       1        52        52        52        52
+Bcast               10    *       1        52        52        52        52
+
+Bcast               11   56       1        52        52        52        52
+Bcast               11    *       1        52        52        52        52
+
+Bcast               12   32       1        52        52        52        52
+Bcast               12    *       1        52        52        52        52
+
+Bcast               13   32       1         4         4         4         4
+Bcast               13    *       1         4         4         4         4
+
+Bcast               14   48       1        52        52        52        52
+Bcast               14    *       1        52        52        52        52
+
+Bcast               15   48       1         4         4         4         4
+Bcast               15    *       1         4         4         4         4
+
+Bcast               16   24       1        52        52        52        52
+Bcast               16    *       1        52        52        52        52
+
+Bcast               17   24       1         4         4         4         4
+Bcast               17    *       1         4         4         4         4
+
+Bcast               18   40       1        52        52        52        52
+Bcast               18    *       1        52        52        52        52
+
+Bcast               19   40       1         4         4         4         4
+Bcast               19    *       1         4         4         4         4
+
+Bcast               20   36       1        52        52        52        52
+Bcast               20    *       1        52        52        52        52
+
+Bcast               21   36       1         4         4         4         4
+Bcast               21    *       1         4         4         4         4
+
+Bcast               22   60       1        52        52        52        52
+Bcast               22    *       1        52        52        52        52
+
+Bcast               23   44       1        52        52        52        52
+Bcast               23    *       1        52        52        52        52
+
+Bcast               24   44       1         4         4         4         4
+Bcast               24    *       1         4         4         4         4
+---------------------------------------------------------------------------
+@--- End of Report --------------------------------------------------------
+---------------------------------------------------------------------------
