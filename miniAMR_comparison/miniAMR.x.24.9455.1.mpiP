@@ -1,0 +1,167 @@
+@ mpiP
+@ Command : ./miniAMR.x --npx 2 --npy 3 --npz 4 
+@ Version                  : 3.4.1
+@ MPIP Build date          : Jan 11 2021, 16:10:54
+@ Start time               : 2021 01 11 17:17:39
+@ Stop time                : 2021 01 11 17:17:39
+@ Timer Used               : PMPI_Wtime
+@ MPIP env var             : -y -p -f /users/misc/sagnikd/mpiPOutputs
+@ Collector Rank           : 0
+@ Collector PID            : 9455
+@ Final Output Dir         : /users/misc/sagnikd/mpiPOutputs
+@ Report generation        : Single collector task
+@ MPI Task Assignment      : 0 csews2
+@ MPI Task Assignment      : 1 csews2
+@ MPI Task Assignment      : 2 csews2
+@ MPI Task Assignment      : 3 csews2
+@ MPI Task Assignment      : 4 csews2
+@ MPI Task Assignment      : 5 csews2
+@ MPI Task Assignment      : 6 csews2
+@ MPI Task Assignment      : 7 csews2
+@ MPI Task Assignment      : 8 csews2
+@ MPI Task Assignment      : 9 csews2
+@ MPI Task Assignment      : 10 csews2
+@ MPI Task Assignment      : 11 csews2
+@ MPI Task Assignment      : 12 csews3
+@ MPI Task Assignment      : 13 csews3
+@ MPI Task Assignment      : 14 csews3
+@ MPI Task Assignment      : 15 csews3
+@ MPI Task Assignment      : 16 csews3
+@ MPI Task Assignment      : 17 csews3
+@ MPI Task Assignment      : 18 csews3
+@ MPI Task Assignment      : 19 csews3
+@ MPI Task Assignment      : 20 csews3
+@ MPI Task Assignment      : 21 csews3
+@ MPI Task Assignment      : 22 csews3
+@ MPI Task Assignment      : 23 csews3
+
+---------------------------------------------------------------------------
+@--- MPI Time (seconds) ---------------------------------------------------
+---------------------------------------------------------------------------
+Task    AppTime    MPITime     MPI%
+   0   0.000127   0.000441    347.24
+   1          0          0     0.00
+   2   0.000218          0     0.00
+   3   0.000992          0     0.00
+   4          0   0.000944     0.00
+   5          0          0     0.00
+   6   0.000267   0.000584    218.62
+   7   0.000277          0     0.00
+   8          0     0.0154     0.00
+   9          0          0     0.00
+  10   0.000353          0     0.00
+  11   0.000141          0     0.00
+  12   0.000264   6.57e-05    24.86
+  13   0.000125          0     0.00
+  14          0          0     0.00
+  15          0          0     0.00
+  16   8.67e-05          0     0.00
+  17          0          0     0.00
+  18   8.75e-05          0     0.00
+  19          0          0     0.00
+  20          0          0     0.00
+  21          0          0     0.00
+  22          0          0     0.00
+  23    9.1e-05          0     0.00
+   *    0.00303     0.0175    576.38
+---------------------------------------------------------------------------
+@--- Callsites: 10 --------------------------------------------------------
+---------------------------------------------------------------------------
+ ID Lev File/Address        Line Parent_Funct             MPI_Call
+  1   0 main.c               247 main                     Bcast
+  2   0 main.c               224 main                     Bcast
+  3   0 0x5622d50a954d           [unknown]                Bcast
+  4   0 0x5622d50a9316           [unknown]                Bcast
+  5   0 0x5629eb7db54d           [unknown]                Bcast
+  6   0 0x5629eb7db316           [unknown]                Bcast
+  7   0 0x55865579b54d           [unknown]                Bcast
+  8   0 0x55865579b316           [unknown]                Bcast
+  9   0 0x56509410d54d           [unknown]                Bcast
+ 10   0 0x56509410d316           [unknown]                Bcast
+---------------------------------------------------------------------------
+@--- Aggregate Time (top twenty, descending, milliseconds) ----------------
+---------------------------------------------------------------------------
+Call                 Site       Time    App%    MPI%     COV
+Bcast                  10       15.4  508.08   88.15    0.00
+Bcast                   6      0.919   30.32    5.26    0.00
+Bcast                   4      0.559   18.45    3.20    0.00
+Bcast                   2       0.34   11.21    1.95    0.00
+Bcast                   1      0.101    3.33    0.58    0.00
+Bcast                   8     0.0622    2.05    0.36    0.00
+Bcast                   9     0.0355    1.17    0.20    0.00
+Bcast                   5      0.025    0.82    0.14    0.00
+Bcast                   3     0.0248    0.82    0.14    0.00
+Bcast                   7     0.0035    0.12    0.02    0.00
+---------------------------------------------------------------------------
+@--- Aggregate Sent Message Size (top twenty, descending, bytes) ----------
+---------------------------------------------------------------------------
+Call                 Site      Count      Total       Avrg  Sent%
+Bcast                  10          1        152        152  20.00
+Bcast                   8          1        152        152  20.00
+Bcast                   2          1        152        152  20.00
+Bcast                   6          1        152        152  20.00
+Bcast                   4          1        152        152  20.00
+---------------------------------------------------------------------------
+@--- Aggregate Collective Time (top twenty, descending) -------------------
+---------------------------------------------------------------------------
+Call                 MPI Time %             Comm Size             Data Size
+Bcast                  1.99e+03         16 -       31        128 -      255
+Bcast                       140         16 -       31          0 -        7
+---------------------------------------------------------------------------
+@--- Aggregate Point-To-Point Sent (top twenty, descending) ---------------
+---------------------------------------------------------------------------
+No point to point operations to report
+---------------------------------------------------------------------------
+@--- Callsite Time statistics (all, milliseconds): 10 ---------------------
+---------------------------------------------------------------------------
+Name              Site Rank  Count      Max     Mean      Min   App%   MPI%
+Bcast                1    0      1    0.101    0.101    0.101  79.53  22.90
+Bcast                1    *      1    0.101    0.101    0.101   3.33   0.58
+
+Bcast                2    0      1     0.34     0.34     0.34 267.72  77.10
+Bcast                2    *      1     0.34     0.34     0.34  11.21   1.95
+
+Bcast                3    6      1   0.0248   0.0248   0.0248   9.26   4.24
+Bcast                3    *      1   0.0248   0.0248   0.0248   0.82   0.14
+
+Bcast                4    6      1    0.559    0.559    0.559 209.35  95.76
+Bcast                4    *      1    0.559    0.559    0.559  18.45   3.20
+
+Bcast                5    4      1    0.025    0.025    0.025    inf   2.65
+Bcast                5    *      1    0.025    0.025    0.025   0.82   0.14
+
+Bcast                6    4      1    0.919    0.919    0.919    inf  97.35
+Bcast                6    *      1    0.919    0.919    0.919  30.32   5.26
+
+Bcast                7   12      1   0.0035   0.0035   0.0035   1.32   5.32
+Bcast                7    *      1   0.0035   0.0035   0.0035   0.12   0.02
+
+Bcast                8   12      1   0.0622   0.0622   0.0622  23.53  94.68
+Bcast                8    *      1   0.0622   0.0622   0.0622   2.05   0.36
+
+Bcast                9    8      1   0.0355   0.0355   0.0355    inf   0.23
+Bcast                9    *      1   0.0355   0.0355   0.0355   1.17   0.20
+
+Bcast               10    8      1     15.4     15.4     15.4    inf  99.77
+Bcast               10    *      1     15.4     15.4     15.4 508.08  88.15
+---------------------------------------------------------------------------
+@--- Callsite Message Sent statistics (all, sent bytes) -------------------
+---------------------------------------------------------------------------
+Name              Site Rank   Count       Max      Mean       Min       Sum
+Bcast                2    0       1       152       152       152       152
+Bcast                2    *       1       152       152       152       152
+
+Bcast                4    6       1       152       152       152       152
+Bcast                4    *       1       152       152       152       152
+
+Bcast                6    4       1       152       152       152       152
+Bcast                6    *       1       152       152       152       152
+
+Bcast                8   12       1       152       152       152       152
+Bcast                8    *       1       152       152       152       152
+
+Bcast               10    8       1       152       152       152       152
+Bcast               10    *       1       152       152       152       152
+---------------------------------------------------------------------------
+@--- End of Report --------------------------------------------------------
+---------------------------------------------------------------------------

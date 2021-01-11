@@ -1,0 +1,1438 @@
+@ mpiP
+@ Command : ./miniFE.x -nx 150 -ny 150 -nz 150 
+@ Version                  : 3.4.1
+@ MPIP Build date          : Oct 27 2020, 14:35:58
+@ Start time               : 2021 01 11 16:12:53
+@ Stop time                : 2021 01 11 16:13:35
+@ Timer Used               : PMPI_Wtime
+@ MPIP env var             : -y -p -f /users/misc/sagnikd/mpiPOutputs
+@ Collector Rank           : 0
+@ Collector PID            : 28547
+@ Final Output Dir         : /users/misc/sagnikd/mpiPOutputs
+@ Report generation        : Single collector task
+@ MPI Task Assignment      : 0 csews3
+@ MPI Task Assignment      : 1 csews3
+@ MPI Task Assignment      : 2 csews3
+@ MPI Task Assignment      : 3 csews3
+@ MPI Task Assignment      : 4 csews3
+@ MPI Task Assignment      : 5 csews3
+@ MPI Task Assignment      : 6 csews3
+@ MPI Task Assignment      : 7 csews3
+
+---------------------------------------------------------------------------
+@--- MPI Time (seconds) ---------------------------------------------------
+---------------------------------------------------------------------------
+Task    AppTime    MPITime     MPI%
+   0       42.6       5.99    14.09
+   1       42.6       10.2    24.02
+   2       42.6       13.1    30.74
+   3       42.5       8.37    19.68
+   4       42.6       5.44    12.79
+   5       42.6         10    23.54
+   6       42.6       5.02    11.81
+   7       42.6     0.0757     0.18
+   *        340       58.2    17.11
+---------------------------------------------------------------------------
+@--- Callsites: 216 -------------------------------------------------------
+---------------------------------------------------------------------------
+ ID Lev File/Address                   Line Parent_Funct                                                                                                                                                                                                      MPI_Call
+  1   0 make_local_matrix.hpp           276 void miniFE::make_local_matrix<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int>&)                                                                                                        Wait
+  2   0 utils.cpp                       108 miniFE::broadcast_parameters(miniFE::Parameters&)                                                                                                                                                                 Bcast
+  3   0 make_local_matrix.hpp           366 void miniFE::make_local_matrix<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int>&)                                                                                                        Send
+  4   0 make_local_matrix.hpp           408 void miniFE::make_local_matrix<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int>&)                                                                                                        Send
+  5   0 utils.hpp                        96 void miniFE::get_global_min_max<double>(double, double&, double&, int&, double&, int&)                                                                                                                            Allreduce
+  6   0 exchange_externals.hpp          149 void miniFE::exchange_externals<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int> >(miniFE::CSRMatrix<double, int, int>&, miniFE::Vector<double, int, int>&)                                  Wait
+  7   0 make_local_matrix.hpp           266 void miniFE::make_local_matrix<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int>&)                                                                                                        Send
+  8   0 SparseMatrix_functions.hpp      313 double miniFE::parallel_memory_overhead_MB<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int> const&)                                                                                      Allreduce
+  9   0 utils.hpp                       142 float miniFE::compute_std_dev_as_percentage<float>(float, float)                                                                                                                                                  Allgather
+ 10   0 generate_matrix_structure.hpp   141 int miniFE::generate_matrix_structure<miniFE::CSRMatrix<double, int, int> >(miniFE::simple_mesh_description<miniFE::CSRMatrix<double, int, int>::GlobalOrdinalType> const&, miniFE::CSRMatrix<double, int, int>&) Allreduce
+ 11   0 main.cpp                        169 main                                                                                                                                                                                                              Reduce
+ 12   0 box_utils.hpp                   266 void miniFE::create_map_id_to_row<int>(int, int, int, Box const&, std::map<int, int, std::less<int>, std::allocator<std::pair<int const, int> > >&)                                                               Allgather
+ 13   0 make_local_matrix.hpp           388 void miniFE::make_local_matrix<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int>&)                                                                                                        Irecv
+ 14   0 make_local_matrix.hpp           216 void miniFE::make_local_matrix<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int>&)                                                                                                        Allreduce
+ 15   0 exchange_externals.hpp          134 void miniFE::exchange_externals<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int> >(miniFE::CSRMatrix<double, int, int>&, miniFE::Vector<double, int, int>&)                                  Send
+ 16   0 utils.hpp                        96 void miniFE::get_global_min_max<int>(int, int&, int&, int&, int&, int&)                                                                                                                                           Allreduce
+ 17   0 make_local_matrix.hpp           334 void miniFE::make_local_matrix<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int>&)                                                                                                        Irecv
+ 18   0 exchange_externals.hpp           98 void miniFE::exchange_externals<miniFE::CSRMatrix<double, int, int>, miniFE::Vector<double, int, int> >(miniFE::CSRMatrix<double, int, int>&, miniFE::Vector<double, int, int>&)                                  Irecv
+ 19   0 make_local_matrix.hpp           415 void miniFE::make_local_matrix<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int>&)                                                                                                        Wait
+ 20   0 main.cpp                        167 main                                                                                                                                                                                                              Reduce
+ 21   0 make_local_matrix.hpp           372 void miniFE::make_local_matrix<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int>&)                                                                                                        Wait
+ 22   0 make_local_matrix.hpp           129 void miniFE::make_local_matrix<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int>&)                                                                                                        Allreduce
+ 23   0 utils.cpp                        92 miniFE::broadcast_parameters(miniFE::Parameters&)                                                                                                                                                                 Bcast
+ 24   0 make_local_matrix.hpp           259 void miniFE::make_local_matrix<miniFE::CSRMatrix<double, int, int> >(miniFE::CSRMatrix<double, int, int>&)                                                                                                        Irecv
+ 25   0 main.cpp                        121 main                                                                                                                                                                                                              Allreduce
+ 26   0 box_utils.hpp                   254 void miniFE::create_map_id_to_row<int>(int, int, int, Box const&, std::map<int, int, std::less<int>, std::allocator<std::pair<int const, int> > >&)                                                               Allgather
+ 27   0 Vector_functions.hpp            221 miniFE::TypeTraits<miniFE::Vector<double, int, int>::ScalarType>::magnitude_type miniFE::dot<miniFE::Vector<double, int, int> >(miniFE::Vector<double, int, int> const&, miniFE::Vector<double, int, int> const&) Allreduce
+ 28   0 0x563fd3e1f85f                      [unknown]                                                                                                                                                                                                         Wait
+ 29   0 0x563fd3e36fe8                      [unknown]                                                                                                                                                                                                         Bcast
+ 30   0 0x563fd3e1fe38                      [unknown]                                                                                                                                                                                                         Send
+ 31   0 0x563fd3e2013f                      [unknown]                                                                                                                                                                                                         Send
+ 32   0 0x563fd3e26698                      [unknown]                                                                                                                                                                                                         Allreduce
+ 33   0 0x563fd3e2a531                      [unknown]                                                                                                                                                                                                         Wait
+ 34   0 0x563fd3e1f80a                      [unknown]                                                                                                                                                                                                         Send
+ 35   0 0x563fd3e26ab4                      [unknown]                                                                                                                                                                                                         Allreduce
+ 36   0 0x563fd3e24bbf                      [unknown]                                                                                                                                                                                                         Allgather
+ 37   0 0x563fd3e1e1bc                      [unknown]                                                                                                                                                                                                         Allreduce
+ 38   0 0x563fd3e14ae0                      [unknown]                                                                                                                                                                                                         Reduce
+ 39   0 0x563fd3e25044                      [unknown]                                                                                                                                                                                                         Allgather
+ 40   0 0x563fd3e1ffea                      [unknown]                                                                                                                                                                                                         Irecv
+ 41   0 0x563fd3e1f548                      [unknown]                                                                                                                                                                                                         Allreduce
+ 42   0 0x563fd3e2a4d3                      [unknown]                                                                                                                                                                                                         Send
+ 43   0 0x563fd3e24872                      [unknown]                                                                                                                                                                                                         Allreduce
+ 44   0 0x563fd3e1fbd1                      [unknown]                                                                                                                                                                                                         Irecv
+ 45   0 0x563fd3e2a3ae                      [unknown]                                                                                                                                                                                                         Irecv
+ 46   0 0x563fd3e14aa7                      [unknown]                                                                                                                                                                                                         Reduce
+ 47   0 0x563fd3e1fe90                      [unknown]                                                                                                                                                                                                         Wait
+ 48   0 0x563fd3e20193                      [unknown]                                                                                                                                                                                                         Wait
+ 49   0 0x563fd3e1ef21                      [unknown]                                                                                                                                                                                                         Allreduce
+ 50   0 0x563fd3e36f38                      [unknown]                                                                                                                                                                                                         Bcast
+ 51   0 0x563fd3e1f784                      [unknown]                                                                                                                                                                                                         Irecv
+ 52   0 0x563fd3e1472d                      [unknown]                                                                                                                                                                                                         Allreduce
+ 53   0 0x563fd3e24f33                      [unknown]                                                                                                                                                                                                         Allgather
+ 54   0 0x563fd3e2713c                      [unknown]                                                                                                                                                                                                         Allreduce
+ 55   0 0x555d86b1a85f                      [unknown]                                                                                                                                                                                                         Wait
+ 56   0 0x555d86b31fe8                      [unknown]                                                                                                                                                                                                         Bcast
+ 57   0 0x555d86b1ae38                      [unknown]                                                                                                                                                                                                         Send
+ 58   0 0x555d86b1b13f                      [unknown]                                                                                                                                                                                                         Send
+ 59   0 0x555d86b21698                      [unknown]                                                                                                                                                                                                         Allreduce
+ 60   0 0x555d86b25531                      [unknown]                                                                                                                                                                                                         Wait
+ 61   0 0x555d86b1a80a                      [unknown]                                                                                                                                                                                                         Send
+ 62   0 0x555d86b21ab4                      [unknown]                                                                                                                                                                                                         Allreduce
+ 63   0 0x555d86b1fbbf                      [unknown]                                                                                                                                                                                                         Allgather
+ 64   0 0x555d86b191bc                      [unknown]                                                                                                                                                                                                         Allreduce
+ 65   0 0x555d86b0fae0                      [unknown]                                                                                                                                                                                                         Reduce
+ 66   0 0x555d86b20044                      [unknown]                                                                                                                                                                                                         Allgather
+ 67   0 0x555d86b1afea                      [unknown]                                                                                                                                                                                                         Irecv
+ 68   0 0x555d86b1a548                      [unknown]                                                                                                                                                                                                         Allreduce
+ 69   0 0x555d86b254d3                      [unknown]                                                                                                                                                                                                         Send
+ 70   0 0x555d86b1f872                      [unknown]                                                                                                                                                                                                         Allreduce
+ 71   0 0x555d86b1abd1                      [unknown]                                                                                                                                                                                                         Irecv
+ 72   0 0x555d86b253ae                      [unknown]                                                                                                                                                                                                         Irecv
+ 73   0 0x555d86b0faa7                      [unknown]                                                                                                                                                                                                         Reduce
+ 74   0 0x555d86b1ae90                      [unknown]                                                                                                                                                                                                         Wait
+ 75   0 0x555d86b1b193                      [unknown]                                                                                                                                                                                                         Wait
+ 76   0 0x555d86b19f21                      [unknown]                                                                                                                                                                                                         Allreduce
+ 77   0 0x555d86b31f38                      [unknown]                                                                                                                                                                                                         Bcast
+ 78   0 0x555d86b1a784                      [unknown]                                                                                                                                                                                                         Irecv
+ 79   0 0x555d86b0f72d                      [unknown]                                                                                                                                                                                                         Allreduce
+ 80   0 0x555d86b1ff33                      [unknown]                                                                                                                                                                                                         Allgather
+ 81   0 0x555d86b2213c                      [unknown]                                                                                                                                                                                                         Allreduce
+ 82   0 0x5618e98cd85f                      [unknown]                                                                                                                                                                                                         Wait
+ 83   0 0x5618e98e4fe8                      [unknown]                                                                                                                                                                                                         Bcast
+ 84   0 0x5618e98ce13f                      [unknown]                                                                                                                                                                                                         Send
+ 85   0 0x5618e98cde38                      [unknown]                                                                                                                                                                                                         Send
+ 86   0 0x5618e98d4698                      [unknown]                                                                                                                                                                                                         Allreduce
+ 87   0 0x5618e98d8531                      [unknown]                                                                                                                                                                                                         Wait
+ 88   0 0x5618e98d4ab4                      [unknown]                                                                                                                                                                                                         Allreduce
+ 89   0 0x5618e98cd80a                      [unknown]                                                                                                                                                                                                         Send
+ 90   0 0x5618e98cc1bc                      [unknown]                                                                                                                                                                                                         Allreduce
+ 91   0 0x5618e98d2bbf                      [unknown]                                                                                                                                                                                                         Allgather
+ 92   0 0x5618e98cdfea                      [unknown]                                                                                                                                                                                                         Irecv
+ 93   0 0x5618e98c2ae0                      [unknown]                                                                                                                                                                                                         Reduce
+ 94   0 0x5618e98d3044                      [unknown]                                                                                                                                                                                                         Allgather
+ 95   0 0x5618e98cd548                      [unknown]                                                                                                                                                                                                         Allreduce
+ 96   0 0x5618e98d84d3                      [unknown]                                                                                                                                                                                                         Send
+ 97   0 0x5618e98d2872                      [unknown]                                                                                                                                                                                                         Allreduce
+ 98   0 0x5618e98cdbd1                      [unknown]                                                                                                                                                                                                         Irecv
+ 99   0 0x5618e98ce193                      [unknown]                                                                                                                                                                                                         Wait
+100   0 0x5618e98c2aa7                      [unknown]                                                                                                                                                                                                         Reduce
+101   0 0x5618e98cde90                      [unknown]                                                                                                                                                                                                         Wait
+102   0 0x5618e98d83ae                      [unknown]                                                                                                                                                                                                         Irecv
+103   0 0x5618e98ccf21                      [unknown]                                                                                                                                                                                                         Allreduce
+104   0 0x5618e98e4f38                      [unknown]                                                                                                                                                                                                         Bcast
+105   0 0x5618e98c272d                      [unknown]                                                                                                                                                                                                         Allreduce
+106   0 0x5618e98cd784                      [unknown]                                                                                                                                                                                                         Irecv
+107   0 0x5618e98d2f33                      [unknown]                                                                                                                                                                                                         Allgather
+108   0 0x5618e98d513c                      [unknown]                                                                                                                                                                                                         Allreduce
+109   0 0x556129ec385f                      [unknown]                                                                                                                                                                                                         Wait
+110   0 0x556129edafe8                      [unknown]                                                                                                                                                                                                         Bcast
+111   0 0x556129ec413f                      [unknown]                                                                                                                                                                                                         Send
+112   0 0x556129ec3e38                      [unknown]                                                                                                                                                                                                         Send
+113   0 0x556129eca698                      [unknown]                                                                                                                                                                                                         Allreduce
+114   0 0x556129ece531                      [unknown]                                                                                                                                                                                                         Wait
+115   0 0x556129ecaab4                      [unknown]                                                                                                                                                                                                         Allreduce
+116   0 0x556129ec380a                      [unknown]                                                                                                                                                                                                         Send
+117   0 0x556129ec21bc                      [unknown]                                                                                                                                                                                                         Allreduce
+118   0 0x556129ec8bbf                      [unknown]                                                                                                                                                                                                         Allgather
+119   0 0x556129ec3fea                      [unknown]                                                                                                                                                                                                         Irecv
+120   0 0x556129eb8ae0                      [unknown]                                                                                                                                                                                                         Reduce
+121   0 0x556129ec9044                      [unknown]                                                                                                                                                                                                         Allgather
+122   0 0x556129ec3548                      [unknown]                                                                                                                                                                                                         Allreduce
+123   0 0x556129ece4d3                      [unknown]                                                                                                                                                                                                         Send
+124   0 0x556129ec8872                      [unknown]                                                                                                                                                                                                         Allreduce
+125   0 0x556129ec3bd1                      [unknown]                                                                                                                                                                                                         Irecv
+126   0 0x556129ec4193                      [unknown]                                                                                                                                                                                                         Wait
+127   0 0x556129eb8aa7                      [unknown]                                                                                                                                                                                                         Reduce
+128   0 0x556129ec3e90                      [unknown]                                                                                                                                                                                                         Wait
+129   0 0x556129ece3ae                      [unknown]                                                                                                                                                                                                         Irecv
+130   0 0x556129ec2f21                      [unknown]                                                                                                                                                                                                         Allreduce
+131   0 0x556129edaf38                      [unknown]                                                                                                                                                                                                         Bcast
+132   0 0x556129eb872d                      [unknown]                                                                                                                                                                                                         Allreduce
+133   0 0x556129ec3784                      [unknown]                                                                                                                                                                                                         Irecv
+134   0 0x556129ec8f33                      [unknown]                                                                                                                                                                                                         Allgather
+135   0 0x556129ecb13c                      [unknown]                                                                                                                                                                                                         Allreduce
+136   0 0x55ab5ae3c85f                      [unknown]                                                                                                                                                                                                         Wait
+137   0 0x55ab5ae53fe8                      [unknown]                                                                                                                                                                                                         Bcast
+138   0 0x55ab5ae3d13f                      [unknown]                                                                                                                                                                                                         Send
+139   0 0x55ab5ae3ce38                      [unknown]                                                                                                                                                                                                         Send
+140   0 0x55ab5ae43698                      [unknown]                                                                                                                                                                                                         Allreduce
+141   0 0x55ab5ae47531                      [unknown]                                                                                                                                                                                                         Wait
+142   0 0x55ab5ae43ab4                      [unknown]                                                                                                                                                                                                         Allreduce
+143   0 0x55ab5ae3c80a                      [unknown]                                                                                                                                                                                                         Send
+144   0 0x55ab5ae3b1bc                      [unknown]                                                                                                                                                                                                         Allreduce
+145   0 0x55ab5ae41bbf                      [unknown]                                                                                                                                                                                                         Allgather
+146   0 0x55ab5ae3cfea                      [unknown]                                                                                                                                                                                                         Irecv
+147   0 0x55ab5ae31ae0                      [unknown]                                                                                                                                                                                                         Reduce
+148   0 0x55ab5ae42044                      [unknown]                                                                                                                                                                                                         Allgather
+149   0 0x55ab5ae3c548                      [unknown]                                                                                                                                                                                                         Allreduce
+150   0 0x55ab5ae474d3                      [unknown]                                                                                                                                                                                                         Send
+151   0 0x55ab5ae41872                      [unknown]                                                                                                                                                                                                         Allreduce
+152   0 0x55ab5ae3cbd1                      [unknown]                                                                                                                                                                                                         Irecv
+153   0 0x55ab5ae31aa7                      [unknown]                                                                                                                                                                                                         Reduce
+154   0 0x55ab5ae3ce90                      [unknown]                                                                                                                                                                                                         Wait
+155   0 0x55ab5ae3d193                      [unknown]                                                                                                                                                                                                         Wait
+156   0 0x55ab5ae473ae                      [unknown]                                                                                                                                                                                                         Irecv
+157   0 0x55ab5ae3bf21                      [unknown]                                                                                                                                                                                                         Allreduce
+158   0 0x55ab5ae53f38                      [unknown]                                                                                                                                                                                                         Bcast
+159   0 0x55ab5ae3172d                      [unknown]                                                                                                                                                                                                         Allreduce
+160   0 0x55ab5ae3c784                      [unknown]                                                                                                                                                                                                         Irecv
+161   0 0x55ab5ae41f33                      [unknown]                                                                                                                                                                                                         Allgather
+162   0 0x55ab5ae4413c                      [unknown]                                                                                                                                                                                                         Allreduce
+163   0 0x5628680b485f                      [unknown]                                                                                                                                                                                                         Wait
+164   0 0x5628680cbfe8                      [unknown]                                                                                                                                                                                                         Bcast
+165   0 0x5628680b513f                      [unknown]                                                                                                                                                                                                         Send
+166   0 0x5628680b4e38                      [unknown]                                                                                                                                                                                                         Send
+167   0 0x5628680bb698                      [unknown]                                                                                                                                                                                                         Allreduce
+168   0 0x5628680bf531                      [unknown]                                                                                                                                                                                                         Wait
+169   0 0x5628680bbab4                      [unknown]                                                                                                                                                                                                         Allreduce
+170   0 0x5628680b480a                      [unknown]                                                                                                                                                                                                         Send
+171   0 0x5628680b31bc                      [unknown]                                                                                                                                                                                                         Allreduce
+172   0 0x5628680b9bbf                      [unknown]                                                                                                                                                                                                         Allgather
+173   0 0x5628680b4fea                      [unknown]                                                                                                                                                                                                         Irecv
+174   0 0x5628680a9ae0                      [unknown]                                                                                                                                                                                                         Reduce
+175   0 0x5628680ba044                      [unknown]                                                                                                                                                                                                         Allgather
+176   0 0x5628680b4548                      [unknown]                                                                                                                                                                                                         Allreduce
+177   0 0x5628680bf4d3                      [unknown]                                                                                                                                                                                                         Send
+178   0 0x5628680b9872                      [unknown]                                                                                                                                                                                                         Allreduce
+179   0 0x5628680b4bd1                      [unknown]                                                                                                                                                                                                         Irecv
+180   0 0x5628680a9aa7                      [unknown]                                                                                                                                                                                                         Reduce
+181   0 0x5628680b4e90                      [unknown]                                                                                                                                                                                                         Wait
+182   0 0x5628680b5193                      [unknown]                                                                                                                                                                                                         Wait
+183   0 0x5628680bf3ae                      [unknown]                                                                                                                                                                                                         Irecv
+184   0 0x5628680b3f21                      [unknown]                                                                                                                                                                                                         Allreduce
+185   0 0x5628680cbf38                      [unknown]                                                                                                                                                                                                         Bcast
+186   0 0x5628680a972d                      [unknown]                                                                                                                                                                                                         Allreduce
+187   0 0x5628680b4784                      [unknown]                                                                                                                                                                                                         Irecv
+188   0 0x5628680b9f33                      [unknown]                                                                                                                                                                                                         Allgather
+189   0 0x5628680bc13c                      [unknown]                                                                                                                                                                                                         Allreduce
+190   0 0x55faf775285f                      [unknown]                                                                                                                                                                                                         Wait
+191   0 0x55faf7769fe8                      [unknown]                                                                                                                                                                                                         Bcast
+192   0 0x55faf7752e38                      [unknown]                                                                                                                                                                                                         Send
+193   0 0x55faf775313f                      [unknown]                                                                                                                                                                                                         Send
+194   0 0x55faf7759698                      [unknown]                                                                                                                                                                                                         Allreduce
+195   0 0x55faf775d531                      [unknown]                                                                                                                                                                                                         Wait
+196   0 0x55faf775280a                      [unknown]                                                                                                                                                                                                         Send
+197   0 0x55faf7759ab4                      [unknown]                                                                                                                                                                                                         Allreduce
+198   0 0x55faf7757bbf                      [unknown]                                                                                                                                                                                                         Allgather
+199   0 0x55faf77511bc                      [unknown]                                                                                                                                                                                                         Allreduce
+200   0 0x55faf7747ae0                      [unknown]                                                                                                                                                                                                         Reduce
+201   0 0x55faf7758044                      [unknown]                                                                                                                                                                                                         Allgather
+202   0 0x55faf7752fea                      [unknown]                                                                                                                                                                                                         Irecv
+203   0 0x55faf7752548                      [unknown]                                                                                                                                                                                                         Allreduce
+204   0 0x55faf775d4d3                      [unknown]                                                                                                                                                                                                         Send
+205   0 0x55faf7757872                      [unknown]                                                                                                                                                                                                         Allreduce
+206   0 0x55faf7752bd1                      [unknown]                                                                                                                                                                                                         Irecv
+207   0 0x55faf775d3ae                      [unknown]                                                                                                                                                                                                         Irecv
+208   0 0x55faf7753193                      [unknown]                                                                                                                                                                                                         Wait
+209   0 0x55faf7747aa7                      [unknown]                                                                                                                                                                                                         Reduce
+210   0 0x55faf7752e90                      [unknown]                                                                                                                                                                                                         Wait
+211   0 0x55faf7751f21                      [unknown]                                                                                                                                                                                                         Allreduce
+212   0 0x55faf7769f38                      [unknown]                                                                                                                                                                                                         Bcast
+213   0 0x55faf7752784                      [unknown]                                                                                                                                                                                                         Irecv
+214   0 0x55faf774772d                      [unknown]                                                                                                                                                                                                         Allreduce
+215   0 0x55faf7757f33                      [unknown]                                                                                                                                                                                                         Allgather
+216   0 0x55faf775a13c                      [unknown]                                                                                                                                                                                                         Allreduce
+---------------------------------------------------------------------------
+@--- Aggregate Time (top twenty, descending, milliseconds) ----------------
+---------------------------------------------------------------------------
+Call                 Site       Time    App%    MPI%     COV
+Allreduce              49   8.78e+03    2.58   15.07    0.00
+Allreduce             130   6.04e+03    1.77   10.37    0.00
+Allreduce             211      6e+03    1.76   10.30    0.00
+Allreduce             103   4.95e+03    1.45    8.50    0.00
+Allreduce              22   4.92e+03    1.45    8.45    0.00
+Allreduce             157   4.87e+03    1.43    8.37    0.00
+Allreduce              76   4.11e+03    1.21    7.06    0.00
+Allreduce              81   2.19e+03    0.64    3.77    0.00
+Allreduce              54   2.17e+03    0.64    3.73    0.00
+Allreduce             216   2.07e+03    0.61    3.55    0.00
+Allreduce             135   2.06e+03    0.60    3.53    0.00
+Allreduce             199   2.05e+03    0.60    3.52    0.00
+Allreduce              37   2.01e+03    0.59    3.46    0.00
+Allreduce              64   1.95e+03    0.57    3.35    0.00
+Allreduce             117   1.82e+03    0.53    3.12    0.00
+Allreduce              10        535    0.16    0.92    0.00
+Allreduce              27        484    0.14    0.83    0.00
+Allreduce             108        296    0.09    0.51    0.00
+Allreduce              90        146    0.04    0.25    0.00
+Allreduce             162        107    0.03    0.18    0.00
+---------------------------------------------------------------------------
+@--- Aggregate Sent Message Size (top twenty, descending, bytes) ----------
+---------------------------------------------------------------------------
+Call                 Site      Count      Total       Avrg  Sent%
+Send                  177       1407   2.82e+07   2.01e+04  12.63
+Send                  123       1407    2.8e+07   1.99e+04  12.52
+Send                   69       1407    2.8e+07   1.99e+04  12.52
+Send                  150       1407    2.8e+07   1.99e+04  12.52
+Send                   96       1407   2.77e+07   1.97e+04  12.41
+Send                   42       1407   2.77e+07   1.97e+04  12.41
+Send                  204       1407   2.77e+07   1.97e+04  12.41
+Send                   15       1407   2.75e+07   1.95e+04  12.30
+Send                  165          7   7.02e+04      1e+04   0.03
+Send                  111          7   6.96e+04   9.95e+03   0.03
+Send                   58          7   6.96e+04   9.95e+03   0.03
+Send                  138          7   6.96e+04   9.95e+03   0.03
+Send                   84          7    6.9e+04   9.86e+03   0.03
+Send                   31          7    6.9e+04   9.86e+03   0.03
+Send                  193          7    6.9e+04   9.86e+03   0.03
+Send                    4          7   6.84e+04   9.77e+03   0.03
+Allreduce             216        400    3.2e+03          8   0.00
+Allreduce             135        400    3.2e+03          8   0.00
+Allreduce             162        400    3.2e+03          8   0.00
+Allreduce             189        400    3.2e+03          8   0.00
+---------------------------------------------------------------------------
+@--- Aggregate Collective Time (top twenty, descending) -------------------
+---------------------------------------------------------------------------
+Call                 MPI Time %             Comm Size             Data Size
+Allreduce                  68.4          8 -       15         32 -       63
+Allreduce                  16.2          8 -       15          8 -       15
+Allreduce                  14.6          8 -       15          0 -        7
+Allgather                0.0472          8 -       15          0 -        7
+Bcast                    0.0076          8 -       15         32 -       63
+Reduce                  0.00259          8 -       15          8 -       15
+Allreduce              0.000204          8 -       15         64 -      127
+Bcast                  0.000115          8 -       15          0 -        7
+Allgather              8.24e-05          8 -       15         16 -       31
+---------------------------------------------------------------------------
+@--- Aggregate Point-To-Point Sent (top twenty, descending) ---------------
+---------------------------------------------------------------------------
+Call                 MPI Sent %             Comm Size             Data Size
+Send                       98.4          8 -       15      32768 -    65535
+Send                        1.3          8 -       15        512 -     1023
+Send                      0.245          8 -       15      16384 -    32767
+Send                    0.00576          8 -       15          8 -       15
+Send                    0.00324          8 -       15        256 -      511
+Send                   0.000215          8 -       15          0 -        7
+---------------------------------------------------------------------------
+@--- Callsite Time statistics (all, milliseconds): 216 --------------------
+---------------------------------------------------------------------------
+Name              Site Rank  Count      Max     Mean      Min   App%   MPI%
+Allgather            9    0      1   0.0362   0.0362   0.0362   0.00   0.00
+Allgather            9    *      1   0.0362   0.0362   0.0362   0.00   0.00
+
+Allgather           12    0      1    0.006    0.006    0.006   0.00   0.00
+Allgather           12    *      1    0.006    0.006    0.006   0.00   0.00
+
+Allgather           26    0      1    0.512    0.512    0.512   0.00   0.01
+Allgather           26    *      1    0.512    0.512    0.512   0.00   0.00
+
+Allgather           36    2      1   0.0355   0.0355   0.0355   0.00   0.00
+Allgather           36    *      1   0.0355   0.0355   0.0355   0.00   0.00
+
+Allgather           39    2      1  0.00575  0.00575  0.00575   0.00   0.00
+Allgather           39    *      1  0.00575  0.00575  0.00575   0.00   0.00
+
+Allgather           53    2      1     6.61     6.61     6.61   0.02   0.05
+Allgather           53    *      1     6.61     6.61     6.61   0.00   0.01
+
+Allgather           63    3      1   0.0328   0.0328   0.0328   0.00   0.00
+Allgather           63    *      1   0.0328   0.0328   0.0328   0.00   0.00
+
+Allgather           66    3      1  0.00675  0.00675  0.00675   0.00   0.00
+Allgather           66    *      1  0.00675  0.00675  0.00675   0.00   0.00
+
+Allgather           80    3      1     6.48     6.48     6.48   0.02   0.08
+Allgather           80    *      1     6.48     6.48     6.48   0.00   0.01
+
+Allgather           91    4      1    0.031    0.031    0.031   0.00   0.00
+Allgather           91    *      1    0.031    0.031    0.031   0.00   0.00
+
+Allgather           94    4      1  0.00625  0.00625  0.00625   0.00   0.00
+Allgather           94    *      1  0.00625  0.00625  0.00625   0.00   0.00
+
+Allgather          107    4      1     0.39     0.39     0.39   0.00   0.01
+Allgather          107    *      1     0.39     0.39     0.39   0.00   0.00
+
+Allgather          118    5      1   0.0335   0.0335   0.0335   0.00   0.00
+Allgather          118    *      1   0.0335   0.0335   0.0335   0.00   0.00
+
+Allgather          121    5      1  0.00625  0.00625  0.00625   0.00   0.00
+Allgather          121    *      1  0.00625  0.00625  0.00625   0.00   0.00
+
+Allgather          134    5      1     6.46     6.46     6.46   0.02   0.06
+Allgather          134    *      1     6.46     6.46     6.46   0.00   0.01
+
+Allgather          145    6      1   0.0325   0.0325   0.0325   0.00   0.00
+Allgather          145    *      1   0.0325   0.0325   0.0325   0.00   0.00
+
+Allgather          148    6      1   0.0055   0.0055   0.0055   0.00   0.00
+Allgather          148    *      1   0.0055   0.0055   0.0055   0.00   0.00
+
+Allgather          161    6      1    0.161    0.161    0.161   0.00   0.00
+Allgather          161    *      1    0.161    0.161    0.161   0.00   0.00
+
+Allgather          172    7      1   0.0295   0.0295   0.0295   0.00   0.04
+Allgather          172    *      1   0.0295   0.0295   0.0295   0.00   0.00
+
+Allgather          175    7      1  0.00575  0.00575  0.00575   0.00   0.01
+Allgather          175    *      1  0.00575  0.00575  0.00575   0.00   0.00
+
+Allgather          188    7      1    0.008    0.008    0.008   0.00   0.01
+Allgather          188    *      1    0.008    0.008    0.008   0.00   0.00
+
+Allgather          198    1      1    0.034    0.034    0.034   0.00   0.00
+Allgather          198    *      1    0.034    0.034    0.034   0.00   0.00
+
+Allgather          201    1      1  0.00575  0.00575  0.00575   0.00   0.00
+Allgather          201    *      1  0.00575  0.00575  0.00575   0.00   0.00
+
+Allgather          215    1      1      6.6      6.6      6.6   0.02   0.06
+Allgather          215    *      1      6.6      6.6      6.6   0.00   0.01
+
+Allreduce            5    0      1   0.0158   0.0158   0.0158   0.00   0.00
+Allreduce            5    *      1   0.0158   0.0158   0.0158   0.00   0.00
+
+Allreduce            8    0      1   0.0085   0.0085   0.0085   0.00   0.00
+Allreduce            8    *      1   0.0085   0.0085   0.0085   0.00   0.00
+
+Allreduce           10    0      1      535      535      535   1.26   8.92
+Allreduce           10    *      1      535      535      535   0.16   0.92
+
+Allreduce           14    0      1     5.96     5.96     5.96   0.01   0.10
+Allreduce           14    *      1     5.96     5.96     5.96   0.00   0.01
+
+Allreduce           16    0      2    0.048   0.0321   0.0163   0.00   0.00
+Allreduce           16    *      2    0.048   0.0321   0.0163   0.00   0.00
+
+Allreduce           22    0      1 4.92e+03 4.92e+03 4.92e+03  11.57  82.12
+Allreduce           22    *      1 4.92e+03 4.92e+03 4.92e+03   1.45   8.45
+
+Allreduce           25    0      1   0.0727   0.0727   0.0727   0.00   0.00
+Allreduce           25    *      1   0.0727   0.0727   0.0727   0.00   0.00
+
+Allreduce           27    0    400     2.53     1.21   0.0107   1.14   8.07
+Allreduce           27    *    400     2.53     1.21   0.0107   0.14   0.83
+
+Allreduce           32    2      1   0.0163   0.0163   0.0163   0.00   0.00
+Allreduce           32    *      1   0.0163   0.0163   0.0163   0.00   0.00
+
+Allreduce           35    2      1  0.00875  0.00875  0.00875   0.00   0.00
+Allreduce           35    *      1  0.00875  0.00875  0.00875   0.00   0.00
+
+Allreduce           37    2      1 2.01e+03 2.01e+03 2.01e+03   4.73  15.40
+Allreduce           37    *      1 2.01e+03 2.01e+03 2.01e+03   0.59   3.46
+
+Allreduce           41    2      1     36.7     36.7     36.7   0.09   0.28
+Allreduce           41    *      1     36.7     36.7     36.7   0.01   0.06
+
+Allreduce           43    2      2    0.453    0.291     0.13   0.00   0.00
+Allreduce           43    *      2    0.453    0.291     0.13   0.00   0.00
+
+Allreduce           49    2      1 8.78e+03 8.78e+03 8.78e+03  20.63  67.10
+Allreduce           49    *      1 8.78e+03 8.78e+03 8.78e+03   2.58  15.07
+
+Allreduce           52    2      1   0.0737   0.0737   0.0737   0.00   0.00
+Allreduce           52    *      1   0.0737   0.0737   0.0737   0.00   0.00
+
+Allreduce           54    2    400     11.3     5.43   0.0155   5.11  16.61
+Allreduce           54    *    400     11.3     5.43   0.0155   0.64   3.73
+
+Allreduce           59    3      1    0.016    0.016    0.016   0.00   0.00
+Allreduce           59    *      1    0.016    0.016    0.016   0.00   0.00
+
+Allreduce           62    3      1  0.00875  0.00875  0.00875   0.00   0.00
+Allreduce           62    *      1  0.00875  0.00875  0.00875   0.00   0.00
+
+Allreduce           64    3      1 1.95e+03 1.95e+03 1.95e+03   4.59  23.32
+Allreduce           64    *      1 1.95e+03 1.95e+03 1.95e+03   0.57   3.35
+
+Allreduce           68    3      1     35.7     35.7     35.7   0.08   0.43
+Allreduce           68    *      1     35.7     35.7     35.7   0.01   0.06
+
+Allreduce           70    3      2    0.364    0.248    0.133   0.00   0.01
+Allreduce           70    *      2    0.364    0.248    0.133   0.00   0.00
+
+Allreduce           76    3      1 4.11e+03 4.11e+03 4.11e+03   9.67  49.12
+Allreduce           76    *      1 4.11e+03 4.11e+03 4.11e+03   1.21   7.06
+
+Allreduce           79    3      1   0.0742   0.0742   0.0742   0.00   0.00
+Allreduce           79    *      1   0.0742   0.0742   0.0742   0.00   0.00
+
+Allreduce           81    3    400     11.6     5.48    0.016   5.15  26.20
+Allreduce           81    *    400     11.6     5.48    0.016   0.64   3.77
+
+Allreduce           86    4      1   0.0158   0.0158   0.0158   0.00   0.00
+Allreduce           86    *      1   0.0158   0.0158   0.0158   0.00   0.00
+
+Allreduce           88    4      1  0.00825  0.00825  0.00825   0.00   0.00
+Allreduce           88    *      1  0.00825  0.00825  0.00825   0.00   0.00
+
+Allreduce           90    4      1      146      146      146   0.34   2.68
+Allreduce           90    *      1      146      146      146   0.04   0.25
+
+Allreduce           95    4      1     2.84     2.84     2.84   0.01   0.05
+Allreduce           95    *      1     2.84     2.84     2.84   0.00   0.00
+
+Allreduce           97    4      2    0.133   0.0968   0.0607   0.00   0.00
+Allreduce           97    *      2    0.133   0.0968   0.0607   0.00   0.00
+
+Allreduce          103    4      1 4.95e+03 4.95e+03 4.95e+03  11.64  90.96
+Allreduce          103    *      1 4.95e+03 4.95e+03 4.95e+03   1.45   8.50
+
+Allreduce          105    4      1   0.0735   0.0735   0.0735   0.00   0.00
+Allreduce          105    *      1   0.0735   0.0735   0.0735   0.00   0.00
+
+Allreduce          108    4    400     1.72    0.739  0.00975   0.69   5.43
+Allreduce          108    *    400     1.72    0.739  0.00975   0.09   0.51
+
+Allreduce          113    5      1    0.007    0.007    0.007   0.00   0.00
+Allreduce          113    *      1    0.007    0.007    0.007   0.00   0.00
+
+Allreduce          115    5      1  0.00875  0.00875  0.00875   0.00   0.00
+Allreduce          115    *      1  0.00875  0.00875  0.00875   0.00   0.00
+
+Allreduce          117    5      1 1.82e+03 1.82e+03 1.82e+03   4.27  18.16
+Allreduce          117    *      1 1.82e+03 1.82e+03 1.82e+03   0.53   3.12
+
+Allreduce          122    5      1     35.1     35.1     35.1   0.08   0.35
+Allreduce          122    *      1     35.1     35.1     35.1   0.01   0.06
+
+Allreduce          124    5      2    0.383    0.258    0.133   0.00   0.01
+Allreduce          124    *      2    0.383    0.258    0.133   0.00   0.00
+
+Allreduce          130    5      1 6.04e+03 6.04e+03 6.04e+03  14.19  60.30
+Allreduce          130    *      1 6.04e+03 6.04e+03 6.04e+03   1.77  10.37
+
+Allreduce          132    5      1   0.0668   0.0668   0.0668   0.00   0.00
+Allreduce          132    *      1   0.0668   0.0668   0.0668   0.00   0.00
+
+Allreduce          135    5    400     10.9     5.14    0.014   4.83  20.53
+Allreduce          135    *    400     10.9     5.14    0.014   0.60   3.53
+
+Allreduce          140    6      1   0.0165   0.0165   0.0165   0.00   0.00
+Allreduce          140    *      1   0.0165   0.0165   0.0165   0.00   0.00
+
+Allreduce          142    6      1    0.008    0.008    0.008   0.00   0.00
+Allreduce          142    *      1    0.008    0.008    0.008   0.00   0.00
+
+Allreduce          144    6      1    0.019    0.019    0.019   0.00   0.00
+Allreduce          144    *      1    0.019    0.019    0.019   0.00   0.00
+
+Allreduce          149    6      1     2.48     2.48     2.48   0.01   0.05
+Allreduce          149    *      1     2.48     2.48     2.48   0.00   0.00
+
+Allreduce          151    6      2    0.133    0.092    0.051   0.00   0.00
+Allreduce          151    *      2    0.133    0.092    0.051   0.00   0.00
+
+Allreduce          157    6      1 4.87e+03 4.87e+03 4.87e+03  11.45  96.98
+Allreduce          157    *      1 4.87e+03 4.87e+03 4.87e+03   1.43   8.37
+
+Allreduce          159    6      1   0.0565   0.0565   0.0565   0.00   0.00
+Allreduce          159    *      1   0.0565   0.0565   0.0565   0.00   0.00
+
+Allreduce          162    6    400    0.845    0.268   0.0105   0.25   2.13
+Allreduce          162    *    400    0.845    0.268   0.0105   0.03   0.18
+
+Allreduce          167    7      1   0.0165   0.0165   0.0165   0.00   0.02
+Allreduce          167    *      1   0.0165   0.0165   0.0165   0.00   0.00
+
+Allreduce          169    7      1  0.00775  0.00775  0.00775   0.00   0.01
+Allreduce          169    *      1  0.00775  0.00775  0.00775   0.00   0.00
+
+Allreduce          171    7      1     9.34     9.34     9.34   0.02  12.34
+Allreduce          171    *      1     9.34     9.34     9.34   0.00   0.02
+
+Allreduce          176    7      1   0.0165   0.0165   0.0165   0.00   0.02
+Allreduce          176    *      1   0.0165   0.0165   0.0165   0.00   0.00
+
+Allreduce          178    7      2    0.134   0.0719  0.00975   0.00   0.19
+Allreduce          178    *      2    0.134   0.0719  0.00975   0.00   0.00
+
+Allreduce          184    7      1   0.0355   0.0355   0.0355   0.00   0.05
+Allreduce          184    *      1   0.0355   0.0355   0.0355   0.00   0.00
+
+Allreduce          186    7      1   0.0495   0.0495   0.0495   0.00   0.07
+Allreduce          186    *      1   0.0495   0.0495   0.0495   0.00   0.00
+
+Allreduce          189    7    400      0.4   0.0801   0.0155   0.08  42.35
+Allreduce          189    *    400      0.4   0.0801   0.0155   0.01   0.06
+
+Allreduce          194    1      1    0.015    0.015    0.015   0.00   0.00
+Allreduce          194    *      1    0.015    0.015    0.015   0.00   0.00
+
+Allreduce          197    1      1   0.0085   0.0085   0.0085   0.00   0.00
+Allreduce          197    *      1   0.0085   0.0085   0.0085   0.00   0.00
+
+Allreduce          199    1      1 2.05e+03 2.05e+03 2.05e+03   4.81  20.04
+Allreduce          199    *      1 2.05e+03 2.05e+03 2.05e+03   0.60   3.52
+
+Allreduce          203    1      1     36.6     36.6     36.6   0.09   0.36
+Allreduce          203    *      1     36.6     36.6     36.6   0.01   0.06
+
+Allreduce          205    1      2     0.44    0.286    0.133   0.00   0.01
+Allreduce          205    *      2     0.44    0.286    0.133   0.00   0.00
+
+Allreduce          211    1      1    6e+03    6e+03    6e+03  14.10  58.71
+Allreduce          211    *      1    6e+03    6e+03    6e+03   1.76  10.30
+
+Allreduce          214    1      1    0.074    0.074    0.074   0.00   0.00
+Allreduce          214    *      1    0.074    0.074    0.074   0.00   0.00
+
+Allreduce          216    1    400     10.5     5.17    0.015   4.86  20.24
+Allreduce          216    *    400     10.5     5.17    0.015   0.61   3.55
+
+Bcast                2    0      1    0.007    0.007    0.007   0.00   0.00
+Bcast                2    *      1    0.007    0.007    0.007   0.00   0.00
+
+Bcast               23    0      1    0.117    0.117    0.117   0.00   0.00
+Bcast               23    *      1    0.117    0.117    0.117   0.00   0.00
+
+Bcast               29    2      1   0.0085   0.0085   0.0085   0.00   0.00
+Bcast               29    *      1   0.0085   0.0085   0.0085   0.00   0.00
+
+Bcast               50    2      1    0.936    0.936    0.936   0.00   0.01
+Bcast               50    *      1    0.936    0.936    0.936   0.00   0.00
+
+Bcast               56    3      1  0.00675  0.00675  0.00675   0.00   0.00
+Bcast               56    *      1  0.00675  0.00675  0.00675   0.00   0.00
+
+Bcast               77    3      1    0.939    0.939    0.939   0.00   0.01
+Bcast               77    *      1    0.939    0.939    0.939   0.00   0.00
+
+Bcast               83    4      1  0.00775  0.00775  0.00775   0.00   0.00
+Bcast               83    *      1  0.00775  0.00775  0.00775   0.00   0.00
+
+Bcast              104    4      1    0.162    0.162    0.162   0.00   0.00
+Bcast              104    *      1    0.162    0.162    0.162   0.00   0.00
+
+Bcast              110    5      1  0.00725  0.00725  0.00725   0.00   0.00
+Bcast              110    *      1  0.00725  0.00725  0.00725   0.00   0.00
+
+Bcast              131    5      1    0.945    0.945    0.945   0.00   0.01
+Bcast              131    *      1    0.945    0.945    0.945   0.00   0.00
+
+Bcast              137    6      1   0.0103   0.0103   0.0103   0.00   0.00
+Bcast              137    *      1   0.0103   0.0103   0.0103   0.00   0.00
+
+Bcast              158    6      1    0.197    0.197    0.197   0.00   0.00
+Bcast              158    *      1    0.197    0.197    0.197   0.00   0.00
+
+Bcast              164    7      1     0.01     0.01     0.01   0.00   0.01
+Bcast              164    *      1     0.01     0.01     0.01   0.00   0.00
+
+Bcast              185    7      1    0.191    0.191    0.191   0.00   0.25
+Bcast              185    *      1    0.191    0.191    0.191   0.00   0.00
+
+Bcast              191    1      1  0.00975  0.00975  0.00975   0.00   0.00
+Bcast              191    *      1  0.00975  0.00975  0.00975   0.00   0.00
+
+Bcast              212    1      1     0.94     0.94     0.94   0.00   0.01
+Bcast              212    *      1     0.94     0.94     0.94   0.00   0.00
+
+Irecv               13    0      7  0.00425  0.00396  0.00375   0.00   0.00
+Irecv               13    *      7  0.00425  0.00396  0.00375   0.00   0.00
+
+Irecv               17    0      7  0.00425  0.00368    0.003   0.00   0.00
+Irecv               17    *      7  0.00425  0.00368    0.003   0.00   0.00
+
+Irecv               18    0   1407    0.018  0.00598    0.003   0.02   0.14
+Irecv               18    *   1407    0.018  0.00598    0.003   0.00   0.01
+
+Irecv               24    0      7    0.019  0.00618  0.00325   0.00   0.00
+Irecv               24    *      7    0.019  0.00618  0.00325   0.00   0.00
+
+Irecv               40    2      7    0.003  0.00268   0.0025   0.00   0.00
+Irecv               40    *      7    0.003  0.00268   0.0025   0.00   0.00
+
+Irecv               44    2      7  0.00375    0.003  0.00275   0.00   0.00
+Irecv               44    *      7  0.00375    0.003  0.00275   0.00   0.00
+
+Irecv               45    2   1407   0.0265  0.00426  0.00225   0.01   0.05
+Irecv               45    *   1407   0.0265  0.00426  0.00225   0.00   0.01
+
+Irecv               51    2      7   0.0225  0.00557   0.0025   0.00   0.00
+Irecv               51    *      7   0.0225  0.00557   0.0025   0.00   0.00
+
+Irecv               67    3      7    0.003  0.00271   0.0025   0.00   0.00
+Irecv               67    *      7    0.003  0.00271   0.0025   0.00   0.00
+
+Irecv               71    3      7  0.00375  0.00286   0.0025   0.00   0.00
+Irecv               71    *      7  0.00375  0.00286   0.0025   0.00   0.00
+
+Irecv               72    3   1407   0.0158  0.00402  0.00225   0.01   0.07
+Irecv               72    *   1407   0.0158  0.00402  0.00225   0.00   0.01
+
+Irecv               78    3      7    0.014  0.00432   0.0025   0.00   0.00
+Irecv               78    *      7    0.014  0.00432   0.0025   0.00   0.00
+
+Irecv               92    4      7   0.0045  0.00404  0.00375   0.00   0.00
+Irecv               92    *      7   0.0045  0.00404  0.00375   0.00   0.00
+
+Irecv               98    4      7   0.0045  0.00404  0.00375   0.00   0.00
+Irecv               98    *      7   0.0045  0.00404  0.00375   0.00   0.00
+
+Irecv              102    4   1407   0.0165  0.00532    0.003   0.02   0.14
+Irecv              102    *   1407   0.0165  0.00532    0.003   0.00   0.01
+
+Irecv              106    4      7   0.0182    0.006   0.0035   0.00   0.00
+Irecv              106    *      7   0.0182    0.006   0.0035   0.00   0.00
+
+Irecv              119    5      7  0.00275  0.00268   0.0025   0.00   0.00
+Irecv              119    *      7  0.00275  0.00268   0.0025   0.00   0.00
+
+Irecv              125    5      7  0.00375  0.00289   0.0025   0.00   0.00
+Irecv              125    *      7  0.00375  0.00289   0.0025   0.00   0.00
+
+Irecv              129    5   1407   0.0515  0.00423  0.00225   0.01   0.06
+Irecv              129    *   1407   0.0515  0.00423  0.00225   0.00   0.01
+
+Irecv              133    5      7   0.0208  0.00536   0.0025   0.00   0.00
+Irecv              133    *      7   0.0208  0.00536   0.0025   0.00   0.00
+
+Irecv              146    6      7  0.00425  0.00386  0.00325   0.00   0.00
+Irecv              146    *      7  0.00425  0.00386  0.00325   0.00   0.00
+
+Irecv              152    6      7  0.00475  0.00407   0.0035   0.00   0.00
+Irecv              152    *      7  0.00475  0.00407   0.0035   0.00   0.00
+
+Irecv              156    6   1407   0.0203  0.00577    0.003   0.02   0.16
+Irecv              156    *   1407   0.0203  0.00577    0.003   0.00   0.01
+
+Irecv              160    6      7    0.024  0.00693  0.00375   0.00   0.00
+Irecv              160    *      7    0.024  0.00693  0.00375   0.00   0.00
+
+Irecv              173    7      7  0.00425  0.00346    0.003   0.00   0.03
+Irecv              173    *      7  0.00425  0.00346    0.003   0.00   0.00
+
+Irecv              179    7      7  0.00475  0.00375  0.00325   0.00   0.03
+Irecv              179    *      7  0.00475  0.00375  0.00325   0.00   0.00
+
+Irecv              183    7   1407   0.0235  0.00506  0.00275   0.02   9.42
+Irecv              183    *   1407   0.0235  0.00506  0.00275   0.00   0.01
+
+Irecv              187    7      7   0.0243  0.00689  0.00375   0.00   0.06
+Irecv              187    *      7   0.0243  0.00689  0.00375   0.00   0.00
+
+Irecv              202    1      7    0.003  0.00268   0.0025   0.00   0.00
+Irecv              202    *      7    0.003  0.00268   0.0025   0.00   0.00
+
+Irecv              206    1      7  0.00375  0.00293   0.0025   0.00   0.00
+Irecv              206    *      7  0.00375  0.00293   0.0025   0.00   0.00
+
+Irecv              207    1   1407   0.0235  0.00404  0.00225   0.01   0.06
+Irecv              207    *   1407   0.0235  0.00404  0.00225   0.00   0.01
+
+Irecv              213    1      7   0.0147  0.00439   0.0025   0.00   0.00
+Irecv              213    *      7   0.0147  0.00439   0.0025   0.00   0.00
+
+Reduce              11    0      1   0.0075   0.0075   0.0075   0.00   0.00
+Reduce              11    *      1   0.0075   0.0075   0.0075   0.00   0.00
+
+Reduce              20    0      1    0.629    0.629    0.629   0.00   0.01
+Reduce              20    *      1    0.629    0.629    0.629   0.00   0.00
+
+Reduce              38    2      1   0.0143   0.0143   0.0143   0.00   0.00
+Reduce              38    *      1   0.0143   0.0143   0.0143   0.00   0.00
+
+Reduce              46    2      1    0.023    0.023    0.023   0.00   0.00
+Reduce              46    *      1    0.023    0.023    0.023   0.00   0.00
+
+Reduce              65    3      1    0.005    0.005    0.005   0.00   0.00
+Reduce              65    *      1    0.005    0.005    0.005   0.00   0.00
+
+Reduce              73    3      1   0.0288   0.0288   0.0288   0.00   0.00
+Reduce              73    *      1   0.0288   0.0288   0.0288   0.00   0.00
+
+Reduce              93    4      1  0.00725  0.00725  0.00725   0.00   0.00
+Reduce              93    *      1  0.00725  0.00725  0.00725   0.00   0.00
+
+Reduce             100    4      1    0.416    0.416    0.416   0.00   0.01
+Reduce             100    *      1    0.416    0.416    0.416   0.00   0.00
+
+Reduce             120    5      1  0.00425  0.00425  0.00425   0.00   0.00
+Reduce             120    *      1  0.00425  0.00425  0.00425   0.00   0.00
+
+Reduce             127    5      1   0.0177   0.0177   0.0177   0.00   0.00
+Reduce             127    *      1   0.0177   0.0177   0.0177   0.00   0.00
+
+Reduce             147    6      1  0.00625  0.00625  0.00625   0.00   0.00
+Reduce             147    *      1  0.00625  0.00625  0.00625   0.00   0.00
+
+Reduce             153    6      1    0.295    0.295    0.295   0.00   0.01
+Reduce             153    *      1    0.295    0.295    0.295   0.00   0.00
+
+Reduce             174    7      1  0.00525  0.00525  0.00525   0.00   0.01
+Reduce             174    *      1  0.00525  0.00525  0.00525   0.00   0.00
+
+Reduce             180    7      1   0.0205   0.0205   0.0205   0.00   0.03
+Reduce             180    *      1   0.0205   0.0205   0.0205   0.00   0.00
+
+Reduce             200    1      1  0.00625  0.00625  0.00625   0.00   0.00
+Reduce             200    *      1  0.00625  0.00625  0.00625   0.00   0.00
+
+Reduce             209    1      1   0.0205   0.0205   0.0205   0.00   0.00
+Reduce             209    *      1   0.0205   0.0205   0.0205   0.00   0.00
+
+Send                 3    0      7   0.0035  0.00329    0.003   0.00   0.00
+Send                 3    *      7   0.0035  0.00329    0.003   0.00   0.00
+
+Send                 4    0      7    0.017  0.00857  0.00325   0.00   0.00
+Send                 4    *      7    0.017  0.00857  0.00325   0.00   0.00
+
+Send                 7    0      7   0.0158  0.00571  0.00375   0.00   0.00
+Send                 7    *      7   0.0158  0.00571  0.00375   0.00   0.00
+
+Send                15    0   1407   0.0267  0.00716  0.00275   0.02   0.17
+Send                15    *   1407   0.0267  0.00716  0.00275   0.00   0.02
+
+Send                30    2      7    0.003  0.00275   0.0025   0.00   0.00
+Send                30    *      7    0.003  0.00275   0.0025   0.00   0.00
+
+Send                31    2      7   0.0165  0.00768   0.0025   0.00   0.00
+Send                31    *      7   0.0165  0.00768   0.0025   0.00   0.00
+
+Send                34    2      7   0.0103  0.00393   0.0025   0.00   0.00
+Send                34    *      7   0.0103  0.00393   0.0025   0.00   0.00
+
+Send                42    2   1407   0.0432  0.00707  0.00225   0.02   0.08
+Send                42    *   1407   0.0432  0.00707  0.00225   0.00   0.02
+
+Send                57    3      7  0.00325  0.00279   0.0025   0.00   0.00
+Send                57    *      7  0.00325  0.00279   0.0025   0.00   0.00
+
+Send                58    3      7   0.0168  0.00768   0.0025   0.00   0.00
+Send                58    *      7   0.0168  0.00768   0.0025   0.00   0.00
+
+Send                61    3      7   0.0105    0.004  0.00275   0.00   0.00
+Send                61    *      7   0.0105    0.004  0.00275   0.00   0.00
+
+Send                69    3   1407   0.0257  0.00692   0.0025   0.02   0.12
+Send                69    *   1407   0.0257  0.00692   0.0025   0.00   0.02
+
+Send                84    4      7   0.0187  0.00961   0.0035   0.00   0.00
+Send                84    *      7   0.0187  0.00961   0.0035   0.00   0.00
+
+Send                85    4      7    0.004  0.00343  0.00325   0.00   0.00
+Send                85    *      7    0.004  0.00343  0.00325   0.00   0.00
+
+Send                89    4      7   0.0155  0.00561  0.00375   0.00   0.00
+Send                89    *      7   0.0155  0.00561  0.00375   0.00   0.00
+
+Send                96    4   1407   0.0318  0.00708  0.00275   0.02   0.18
+Send                96    *   1407   0.0318  0.00708  0.00275   0.00   0.02
+
+Send               111    5      7   0.0158  0.00779   0.0025   0.00   0.00
+Send               111    *      7   0.0158  0.00779   0.0025   0.00   0.00
+
+Send               112    5      7    0.003  0.00275   0.0025   0.00   0.00
+Send               112    *      7    0.003  0.00275   0.0025   0.00   0.00
+
+Send               116    5      7   0.0103  0.00396  0.00275   0.00   0.00
+Send               116    *      7   0.0103  0.00396  0.00275   0.00   0.00
+
+Send               123    5   1407     0.03  0.00654  0.00225   0.02   0.09
+Send               123    *   1407     0.03  0.00654  0.00225   0.00   0.02
+
+Send               138    6      7   0.0227   0.0108  0.00325   0.00   0.00
+Send               138    *      7   0.0227   0.0108  0.00325   0.00   0.00
+
+Send               139    6      7  0.00375  0.00343    0.003   0.00   0.00
+Send               139    *      7  0.00375  0.00343    0.003   0.00   0.00
+
+Send               143    6      7    0.014   0.0055  0.00375   0.00   0.00
+Send               143    *      7    0.014   0.0055  0.00375   0.00   0.00
+
+Send               150    6   1407   0.0203  0.00707    0.003   0.02   0.20
+Send               150    *   1407   0.0203  0.00707    0.003   0.00   0.02
+
+Send               165    7      7    0.022   0.0102  0.00325   0.00   0.09
+Send               165    *      7    0.022   0.0102  0.00325   0.00   0.00
+
+Send               166    7      7  0.00425  0.00339    0.003   0.00   0.03
+Send               166    *      7  0.00425  0.00339    0.003   0.00   0.00
+
+Send               170    7      7   0.0138  0.00561  0.00375   0.00   0.05
+Send               170    *      7   0.0138  0.00561  0.00375   0.00   0.00
+
+Send               177    7   1407   0.0445  0.00792  0.00275   0.03  14.73
+Send               177    *   1407   0.0445  0.00792  0.00275   0.00   0.02
+
+Send               192    1      7  0.00325  0.00293  0.00275   0.00   0.00
+Send               192    *      7  0.00325  0.00293  0.00275   0.00   0.00
+
+Send               193    1      7   0.0175  0.00761  0.00275   0.00   0.00
+Send               193    *      7   0.0175  0.00761  0.00275   0.00   0.00
+
+Send               196    1      7   0.0105  0.00404  0.00275   0.00   0.00
+Send               196    *      7   0.0105  0.00404  0.00275   0.00   0.00
+
+Send               204    1   1407   0.0295  0.00587  0.00225   0.02   0.08
+Send               204    *   1407   0.0295  0.00587  0.00225   0.00   0.01
+
+Wait                 1    0      7   0.0165  0.00614    0.004   0.00   0.00
+Wait                 1    *      7   0.0165  0.00614    0.004   0.00   0.00
+
+Wait                 6    0   1407     0.43   0.0194  0.00275   0.06   0.46
+Wait                 6    *   1407     0.43   0.0194  0.00275   0.01   0.05
+
+Wait                19    0      7     0.01  0.00639  0.00375   0.00   0.00
+Wait                19    *      7     0.01  0.00639  0.00375   0.00   0.00
+
+Wait                21    0      7  0.00425  0.00368  0.00325   0.00   0.00
+Wait                21    *      7  0.00425  0.00368  0.00325   0.00   0.00
+
+Wait                28    2      7   0.0367  0.00921  0.00275   0.00   0.00
+Wait                28    *      7   0.0367  0.00921  0.00275   0.00   0.00
+
+Wait                33    2   1407     2.97   0.0385  0.00225   0.13   0.41
+Wait                33    *   1407     2.97   0.0385  0.00225   0.02   0.09
+
+Wait                47    2      7     0.16   0.0259   0.0025   0.00   0.00
+Wait                47    *      7     0.16   0.0259   0.0025   0.00   0.00
+
+Wait                48    2      7    0.084   0.0158   0.0025   0.00   0.00
+Wait                48    *      7    0.084   0.0158   0.0025   0.00   0.00
+
+Wait                55    3      7   0.0432   0.0109  0.00275   0.00   0.00
+Wait                55    *      7   0.0432   0.0109  0.00275   0.00   0.00
+
+Wait                60    3   1407     2.91   0.0387  0.00225   0.13   0.65
+Wait                60    *   1407     2.91   0.0387  0.00225   0.02   0.09
+
+Wait                74    3      7    0.151   0.0311   0.0025   0.00   0.00
+Wait                74    *      7    0.151   0.0311   0.0025   0.00   0.00
+
+Wait                75    3      7   0.0855   0.0188   0.0025   0.00   0.00
+Wait                75    *      7   0.0855   0.0188   0.0025   0.00   0.00
+
+Wait                82    4      7    0.016  0.00607    0.004   0.00   0.00
+Wait                82    *      7    0.016  0.00607    0.004   0.00   0.00
+
+Wait                87    4   1407    0.427   0.0202  0.00275   0.07   0.52
+Wait                87    *   1407    0.427   0.0202  0.00275   0.01   0.05
+
+Wait                99    4      7    0.011  0.00671  0.00425   0.00   0.00
+Wait                99    *      7    0.011  0.00671  0.00425   0.00   0.00
+
+Wait               101    4      7   0.0045  0.00414  0.00375   0.00   0.00
+Wait               101    *      7   0.0045  0.00414  0.00375   0.00   0.00
+
+Wait               109    5      7    0.041    0.011  0.00275   0.00   0.00
+Wait               109    *      7    0.041    0.011  0.00275   0.00   0.00
+
+Wait               114    5   1407     2.84   0.0305    0.002   0.10   0.43
+Wait               114    *   1407     2.84   0.0305    0.002   0.01   0.07
+
+Wait               126    5      7    0.105   0.0173   0.0025   0.00   0.00
+Wait               126    *      7    0.105   0.0173   0.0025   0.00   0.00
+
+Wait               128    5      7    0.196   0.0304  0.00275   0.00   0.00
+Wait               128    *      7    0.196   0.0304  0.00275   0.00   0.00
+
+Wait               136    6      7   0.0152  0.00607  0.00425   0.00   0.00
+Wait               136    *      7   0.0152  0.00607  0.00425   0.00   0.00
+
+Wait               141    6   1407     0.29    0.016  0.00275   0.05   0.45
+Wait               141    *   1407     0.29    0.016  0.00275   0.01   0.04
+
+Wait               154    6      7    0.005  0.00418  0.00375   0.00   0.00
+Wait               154    *      7    0.005  0.00418  0.00375   0.00   0.00
+
+Wait               155    6      7  0.00825  0.00571  0.00375   0.00   0.00
+Wait               155    *      7  0.00825  0.00571  0.00375   0.00   0.00
+
+Wait               163    7      7   0.0163  0.00593  0.00375   0.00   0.05
+Wait               163    *      7   0.0163  0.00593  0.00375   0.00   0.00
+
+Wait               168    7   1407    0.211   0.0108  0.00325   0.04  20.01
+Wait               168    *   1407    0.211   0.0108  0.00325   0.00   0.03
+
+Wait               181    7      7   0.0045  0.00421    0.004   0.00   0.04
+Wait               181    *      7   0.0045  0.00421    0.004   0.00   0.00
+
+Wait               182    7      7    0.007  0.00532  0.00375   0.00   0.05
+Wait               182    *      7    0.007  0.00532  0.00375   0.00   0.00
+
+Wait               190    1      7    0.028  0.00986    0.003   0.00   0.00
+Wait               190    *      7    0.028  0.00986    0.003   0.00   0.00
+
+Wait               195    1   1407     2.92   0.0314  0.00225   0.10   0.43
+Wait               195    *   1407     2.92   0.0314  0.00225   0.01   0.08
+
+Wait               208    1      7   0.0775   0.0163   0.0025   0.00   0.00
+Wait               208    *      7   0.0775   0.0163   0.0025   0.00   0.00
+
+Wait               210    1      7    0.114   0.0257   0.0025   0.00   0.00
+Wait               210    *      7    0.114   0.0257   0.0025   0.00   0.00
+---------------------------------------------------------------------------
+@--- Callsite Message Sent statistics (all, sent bytes) -------------------
+---------------------------------------------------------------------------
+Name              Site Rank   Count       Max      Mean       Min       Sum
+Allgather            9    0       1         4         4         4         4
+Allgather            9    *       1         4         4         4         4
+
+Allgather           12    0       1        24        24        24        24
+Allgather           12    *       1        24        24        24        24
+
+Allgather           26    0       1         4         4         4         4
+Allgather           26    *       1         4         4         4         4
+
+Allgather           36    2       1         4         4         4         4
+Allgather           36    *       1         4         4         4         4
+
+Allgather           39    2       1        24        24        24        24
+Allgather           39    *       1        24        24        24        24
+
+Allgather           53    2       1         4         4         4         4
+Allgather           53    *       1         4         4         4         4
+
+Allgather           63    3       1         4         4         4         4
+Allgather           63    *       1         4         4         4         4
+
+Allgather           66    3       1        24        24        24        24
+Allgather           66    *       1        24        24        24        24
+
+Allgather           80    3       1         4         4         4         4
+Allgather           80    *       1         4         4         4         4
+
+Allgather           91    4       1         4         4         4         4
+Allgather           91    *       1         4         4         4         4
+
+Allgather           94    4       1        24        24        24        24
+Allgather           94    *       1        24        24        24        24
+
+Allgather          107    4       1         4         4         4         4
+Allgather          107    *       1         4         4         4         4
+
+Allgather          118    5       1         4         4         4         4
+Allgather          118    *       1         4         4         4         4
+
+Allgather          121    5       1        24        24        24        24
+Allgather          121    *       1        24        24        24        24
+
+Allgather          134    5       1         4         4         4         4
+Allgather          134    *       1         4         4         4         4
+
+Allgather          145    6       1         4         4         4         4
+Allgather          145    *       1         4         4         4         4
+
+Allgather          148    6       1        24        24        24        24
+Allgather          148    *       1        24        24        24        24
+
+Allgather          161    6       1         4         4         4         4
+Allgather          161    *       1         4         4         4         4
+
+Allgather          172    7       1         4         4         4         4
+Allgather          172    *       1         4         4         4         4
+
+Allgather          175    7       1        24        24        24        24
+Allgather          175    *       1        24        24        24        24
+
+Allgather          188    7       1         4         4         4         4
+Allgather          188    *       1         4         4         4         4
+
+Allgather          198    1       1         4         4         4         4
+Allgather          198    *       1         4         4         4         4
+
+Allgather          201    1       1        24        24        24        24
+Allgather          201    *       1        24        24        24        24
+
+Allgather          215    1       1         4         4         4         4
+Allgather          215    *       1         4         4         4         4
+
+Allreduce            5    0       1        64        64        64        64
+Allreduce            5    *       1        64        64        64        64
+
+Allreduce            8    0       1         8         8         8         8
+Allreduce            8    *       1         8         8         8         8
+
+Allreduce           10    0       1         4         4         4         4
+Allreduce           10    *       1         4         4         4         4
+
+Allreduce           14    0       1        32        32        32        32
+Allreduce           14    *       1        32        32        32        32
+
+Allreduce           16    0       2        32        32        32        64
+Allreduce           16    *       2        32        32        32        64
+
+Allreduce           22    0       1        32        32        32        32
+Allreduce           22    *       1        32        32        32        32
+
+Allreduce           25    0       1         4         4         4         4
+Allreduce           25    *       1         4         4         4         4
+
+Allreduce           27    0     400         8         8         8      3200
+Allreduce           27    *     400         8         8         8      3200
+
+Allreduce           32    2       1        64        64        64        64
+Allreduce           32    *       1        64        64        64        64
+
+Allreduce           35    2       1         8         8         8         8
+Allreduce           35    *       1         8         8         8         8
+
+Allreduce           37    2       1         4         4         4         4
+Allreduce           37    *       1         4         4         4         4
+
+Allreduce           41    2       1        32        32        32        32
+Allreduce           41    *       1        32        32        32        32
+
+Allreduce           43    2       2        32        32        32        64
+Allreduce           43    *       2        32        32        32        64
+
+Allreduce           49    2       1        32        32        32        32
+Allreduce           49    *       1        32        32        32        32
+
+Allreduce           52    2       1         4         4         4         4
+Allreduce           52    *       1         4         4         4         4
+
+Allreduce           54    2     400         8         8         8      3200
+Allreduce           54    *     400         8         8         8      3200
+
+Allreduce           59    3       1        64        64        64        64
+Allreduce           59    *       1        64        64        64        64
+
+Allreduce           62    3       1         8         8         8         8
+Allreduce           62    *       1         8         8         8         8
+
+Allreduce           64    3       1         4         4         4         4
+Allreduce           64    *       1         4         4         4         4
+
+Allreduce           68    3       1        32        32        32        32
+Allreduce           68    *       1        32        32        32        32
+
+Allreduce           70    3       2        32        32        32        64
+Allreduce           70    *       2        32        32        32        64
+
+Allreduce           76    3       1        32        32        32        32
+Allreduce           76    *       1        32        32        32        32
+
+Allreduce           79    3       1         4         4         4         4
+Allreduce           79    *       1         4         4         4         4
+
+Allreduce           81    3     400         8         8         8      3200
+Allreduce           81    *     400         8         8         8      3200
+
+Allreduce           86    4       1        64        64        64        64
+Allreduce           86    *       1        64        64        64        64
+
+Allreduce           88    4       1         8         8         8         8
+Allreduce           88    *       1         8         8         8         8
+
+Allreduce           90    4       1         4         4         4         4
+Allreduce           90    *       1         4         4         4         4
+
+Allreduce           95    4       1        32        32        32        32
+Allreduce           95    *       1        32        32        32        32
+
+Allreduce           97    4       2        32        32        32        64
+Allreduce           97    *       2        32        32        32        64
+
+Allreduce          103    4       1        32        32        32        32
+Allreduce          103    *       1        32        32        32        32
+
+Allreduce          105    4       1         4         4         4         4
+Allreduce          105    *       1         4         4         4         4
+
+Allreduce          108    4     400         8         8         8      3200
+Allreduce          108    *     400         8         8         8      3200
+
+Allreduce          113    5       1        64        64        64        64
+Allreduce          113    *       1        64        64        64        64
+
+Allreduce          115    5       1         8         8         8         8
+Allreduce          115    *       1         8         8         8         8
+
+Allreduce          117    5       1         4         4         4         4
+Allreduce          117    *       1         4         4         4         4
+
+Allreduce          122    5       1        32        32        32        32
+Allreduce          122    *       1        32        32        32        32
+
+Allreduce          124    5       2        32        32        32        64
+Allreduce          124    *       2        32        32        32        64
+
+Allreduce          130    5       1        32        32        32        32
+Allreduce          130    *       1        32        32        32        32
+
+Allreduce          132    5       1         4         4         4         4
+Allreduce          132    *       1         4         4         4         4
+
+Allreduce          135    5     400         8         8         8      3200
+Allreduce          135    *     400         8         8         8      3200
+
+Allreduce          140    6       1        64        64        64        64
+Allreduce          140    *       1        64        64        64        64
+
+Allreduce          142    6       1         8         8         8         8
+Allreduce          142    *       1         8         8         8         8
+
+Allreduce          144    6       1         4         4         4         4
+Allreduce          144    *       1         4         4         4         4
+
+Allreduce          149    6       1        32        32        32        32
+Allreduce          149    *       1        32        32        32        32
+
+Allreduce          151    6       2        32        32        32        64
+Allreduce          151    *       2        32        32        32        64
+
+Allreduce          157    6       1        32        32        32        32
+Allreduce          157    *       1        32        32        32        32
+
+Allreduce          159    6       1         4         4         4         4
+Allreduce          159    *       1         4         4         4         4
+
+Allreduce          162    6     400         8         8         8      3200
+Allreduce          162    *     400         8         8         8      3200
+
+Allreduce          167    7       1        64        64        64        64
+Allreduce          167    *       1        64        64        64        64
+
+Allreduce          169    7       1         8         8         8         8
+Allreduce          169    *       1         8         8         8         8
+
+Allreduce          171    7       1         4         4         4         4
+Allreduce          171    *       1         4         4         4         4
+
+Allreduce          176    7       1        32        32        32        32
+Allreduce          176    *       1        32        32        32        32
+
+Allreduce          178    7       2        32        32        32        64
+Allreduce          178    *       2        32        32        32        64
+
+Allreduce          184    7       1        32        32        32        32
+Allreduce          184    *       1        32        32        32        32
+
+Allreduce          186    7       1         4         4         4         4
+Allreduce          186    *       1         4         4         4         4
+
+Allreduce          189    7     400         8         8         8      3200
+Allreduce          189    *     400         8         8         8      3200
+
+Allreduce          194    1       1        64        64        64        64
+Allreduce          194    *       1        64        64        64        64
+
+Allreduce          197    1       1         8         8         8         8
+Allreduce          197    *       1         8         8         8         8
+
+Allreduce          199    1       1         4         4         4         4
+Allreduce          199    *       1         4         4         4         4
+
+Allreduce          203    1       1        32        32        32        32
+Allreduce          203    *       1        32        32        32        32
+
+Allreduce          205    1       2        32        32        32        64
+Allreduce          205    *       2        32        32        32        64
+
+Allreduce          211    1       1        32        32        32        32
+Allreduce          211    *       1        32        32        32        32
+
+Allreduce          214    1       1         4         4         4         4
+Allreduce          214    *       1         4         4         4         4
+
+Allreduce          216    1     400         8         8         8      3200
+Allreduce          216    *     400         8         8         8      3200
+
+Bcast                2    0       1         4         4         4         4
+Bcast                2    *       1         4         4         4         4
+
+Bcast               23    0       1        52        52        52        52
+Bcast               23    *       1        52        52        52        52
+
+Bcast               29    2       1         4         4         4         4
+Bcast               29    *       1         4         4         4         4
+
+Bcast               50    2       1        52        52        52        52
+Bcast               50    *       1        52        52        52        52
+
+Bcast               56    3       1         4         4         4         4
+Bcast               56    *       1         4         4         4         4
+
+Bcast               77    3       1        52        52        52        52
+Bcast               77    *       1        52        52        52        52
+
+Bcast               83    4       1         4         4         4         4
+Bcast               83    *       1         4         4         4         4
+
+Bcast              104    4       1        52        52        52        52
+Bcast              104    *       1        52        52        52        52
+
+Bcast              110    5       1         4         4         4         4
+Bcast              110    *       1         4         4         4         4
+
+Bcast              131    5       1        52        52        52        52
+Bcast              131    *       1        52        52        52        52
+
+Bcast              137    6       1         4         4         4         4
+Bcast              137    *       1         4         4         4         4
+
+Bcast              158    6       1        52        52        52        52
+Bcast              158    *       1        52        52        52        52
+
+Bcast              164    7       1         4         4         4         4
+Bcast              164    *       1         4         4         4         4
+
+Bcast              185    7       1        52        52        52        52
+Bcast              185    *       1        52        52        52        52
+
+Bcast              191    1       1         4         4         4         4
+Bcast              191    *       1         4         4         4         4
+
+Bcast              212    1       1        52        52        52        52
+Bcast              212    *       1        52        52        52        52
+
+Reduce              11    0       1         8         8         8         8
+Reduce              11    *       1         8         8         8         8
+
+Reduce              20    0       1         8         8         8         8
+Reduce              20    *       1         8         8         8         8
+
+Reduce              38    2       1         8         8         8         8
+Reduce              38    *       1         8         8         8         8
+
+Reduce              46    2       1         8         8         8         8
+Reduce              46    *       1         8         8         8         8
+
+Reduce              65    3       1         8         8         8         8
+Reduce              65    *       1         8         8         8         8
+
+Reduce              73    3       1         8         8         8         8
+Reduce              73    *       1         8         8         8         8
+
+Reduce              93    4       1         8         8         8         8
+Reduce              93    *       1         8         8         8         8
+
+Reduce             100    4       1         8         8         8         8
+Reduce             100    *       1         8         8         8         8
+
+Reduce             120    5       1         8         8         8         8
+Reduce             120    *       1         8         8         8         8
+
+Reduce             127    5       1         8         8         8         8
+Reduce             127    *       1         8         8         8         8
+
+Reduce             147    6       1         8         8         8         8
+Reduce             147    *       1         8         8         8         8
+
+Reduce             153    6       1         8         8         8         8
+Reduce             153    *       1         8         8         8         8
+
+Reduce             174    7       1         8         8         8         8
+Reduce             174    *       1         8         8         8         8
+
+Reduce             180    7       1         8         8         8         8
+Reduce             180    *       1         8         8         8         8
+
+Reduce             200    1       1         8         8         8         8
+Reduce             200    *       1         8         8         8         8
+
+Reduce             209    1       1         8         8         8         8
+Reduce             209    *       1         8         8         8         8
+
+Send                 3    0       7         4         4         4        28
+Send                 3    *       7         4         4         4        28
+
+Send                 4    0       7  2.25e+04      9772         4  6.84e+04
+Send                 4    *       7  2.25e+04      9772         4  6.84e+04
+
+Send                 7    0       7         4         4         4        28
+Send                 7    *       7         4         4         4        28
+
+Send                15    0    1407   4.5e+04 1.954e+04         8  2.75e+07
+Send                15    *    1407   4.5e+04 1.954e+04         8  2.75e+07
+
+Send                30    2       7         4         4         4        28
+Send                30    *       7         4         4         4        28
+
+Send                31    2       7  2.28e+04      9858         4 6.901e+04
+Send                31    *       7  2.28e+04      9858         4 6.901e+04
+
+Send                34    2       7         4         4         4        28
+Send                34    *       7         4         4         4        28
+
+Send                42    2    1407  4.56e+04 1.972e+04         8 2.774e+07
+Send                42    *    1407  4.56e+04 1.972e+04         8 2.774e+07
+
+Send                57    3       7         4         4         4        28
+Send                57    *       7         4         4         4        28
+
+Send                58    3       7  2.31e+04      9945         4 6.962e+04
+Send                58    *       7  2.31e+04      9945         4 6.962e+04
+
+Send                61    3       7         4         4         4        28
+Send                61    *       7         4         4         4        28
+
+Send                69    3    1407 4.621e+04 1.989e+04         8 2.799e+07
+Send                69    *    1407 4.621e+04 1.989e+04         8 2.799e+07
+
+Send                84    4       7  2.28e+04      9858         4 6.901e+04
+Send                84    *       7  2.28e+04      9858         4 6.901e+04
+
+Send                85    4       7         4         4         4        28
+Send                85    *       7         4         4         4        28
+
+Send                89    4       7         4         4         4        28
+Send                89    *       7         4         4         4        28
+
+Send                96    4    1407  4.56e+04 1.972e+04         8 2.774e+07
+Send                96    *    1407  4.56e+04 1.972e+04         8 2.774e+07
+
+Send               111    5       7  2.31e+04      9945         4 6.962e+04
+Send               111    *       7  2.31e+04      9945         4 6.962e+04
+
+Send               112    5       7         4         4         4        28
+Send               112    *       7         4         4         4        28
+
+Send               116    5       7         4         4         4        28
+Send               116    *       7         4         4         4        28
+
+Send               123    5    1407 4.621e+04 1.989e+04         8 2.799e+07
+Send               123    *    1407 4.621e+04 1.989e+04         8 2.799e+07
+
+Send               138    6       7  2.31e+04      9945         4 6.962e+04
+Send               138    *       7  2.31e+04      9945         4 6.962e+04
+
+Send               139    6       7         4         4         4        28
+Send               139    *       7         4         4         4        28
+
+Send               143    6       7         4         4         4        28
+Send               143    *       7         4         4         4        28
+
+Send               150    6    1407 4.621e+04 1.989e+04         8 2.799e+07
+Send               150    *    1407 4.621e+04 1.989e+04         8 2.799e+07
+
+Send               165    7       7  2.31e+04 1.003e+04         4 7.023e+04
+Send               165    *       7  2.31e+04 1.003e+04         4 7.023e+04
+
+Send               166    7       7         4         4         4        28
+Send               166    *       7         4         4         4        28
+
+Send               170    7       7         4         4         4        28
+Send               170    *       7         4         4         4        28
+
+Send               177    7    1407 4.621e+04 2.007e+04         8 2.823e+07
+Send               177    *    1407 4.621e+04 2.007e+04         8 2.823e+07
+
+Send               192    1       7         4         4         4        28
+Send               192    *       7         4         4         4        28
+
+Send               193    1       7  2.28e+04      9858         4 6.901e+04
+Send               193    *       7  2.28e+04      9858         4 6.901e+04
+
+Send               196    1       7         4         4         4        28
+Send               196    *       7         4         4         4        28
+
+Send               204    1    1407  4.56e+04 1.972e+04         8 2.774e+07
+Send               204    *    1407  4.56e+04 1.972e+04         8 2.774e+07
+---------------------------------------------------------------------------
+@--- End of Report --------------------------------------------------------
+---------------------------------------------------------------------------
