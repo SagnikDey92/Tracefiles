@@ -1,0 +1,170 @@
+@ mpiP
+@ Command : ./sp.A.x 
+@ Version                  : 3.4.1
+@ MPIP Build date          : Jan 11 2021, 16:10:54
+@ Start time               : 2021 01 12 15:38:36
+@ Stop time                : 2021 01 12 15:38:36
+@ Timer Used               : PMPI_Wtime
+@ MPIP env var             : -y -p -f /users/misc/sagnikd/mpiPOutputs
+@ Collector Rank           : 0
+@ Collector PID            : 18290
+@ Final Output Dir         : /users/misc/sagnikd/mpiPOutputs
+@ Report generation        : Single collector task
+@ MPI Task Assignment      : 0 csews2
+@ MPI Task Assignment      : 1 csews2
+@ MPI Task Assignment      : 2 csews2
+@ MPI Task Assignment      : 3 csews2
+@ MPI Task Assignment      : 4 csews2
+@ MPI Task Assignment      : 5 csews2
+@ MPI Task Assignment      : 6 csews2
+@ MPI Task Assignment      : 7 csews2
+@ MPI Task Assignment      : 8 csews2
+@ MPI Task Assignment      : 9 csews2
+@ MPI Task Assignment      : 10 csews2
+@ MPI Task Assignment      : 11 csews2
+@ MPI Task Assignment      : 12 csews3
+@ MPI Task Assignment      : 13 csews3
+@ MPI Task Assignment      : 14 csews3
+@ MPI Task Assignment      : 15 csews3
+@ MPI Task Assignment      : 16 csews3
+@ MPI Task Assignment      : 17 csews3
+@ MPI Task Assignment      : 18 csews3
+@ MPI Task Assignment      : 19 csews3
+@ MPI Task Assignment      : 20 csews3
+@ MPI Task Assignment      : 21 csews3
+@ MPI Task Assignment      : 22 csews3
+@ MPI Task Assignment      : 23 csews3
+@ MPI Task Assignment      : 24 csews4
+@ MPI Task Assignment      : 25 csews4
+@ MPI Task Assignment      : 26 csews4
+@ MPI Task Assignment      : 27 csews4
+@ MPI Task Assignment      : 28 csews4
+@ MPI Task Assignment      : 29 csews4
+@ MPI Task Assignment      : 30 csews4
+@ MPI Task Assignment      : 31 csews4
+@ MPI Task Assignment      : 32 csews4
+@ MPI Task Assignment      : 33 csews4
+@ MPI Task Assignment      : 34 csews4
+@ MPI Task Assignment      : 35 csews4
+@ MPI Task Assignment      : 36 csews5
+@ MPI Task Assignment      : 37 csews5
+@ MPI Task Assignment      : 38 csews5
+@ MPI Task Assignment      : 39 csews5
+@ MPI Task Assignment      : 40 csews5
+@ MPI Task Assignment      : 41 csews5
+@ MPI Task Assignment      : 42 csews5
+@ MPI Task Assignment      : 43 csews5
+@ MPI Task Assignment      : 44 csews5
+@ MPI Task Assignment      : 45 csews5
+@ MPI Task Assignment      : 46 csews5
+@ MPI Task Assignment      : 47 csews5
+@ MPI Task Assignment      : 48 csews6
+@ MPI Task Assignment      : 49 csews6
+@ MPI Task Assignment      : 50 csews6
+@ MPI Task Assignment      : 51 csews6
+@ MPI Task Assignment      : 52 csews6
+@ MPI Task Assignment      : 53 csews6
+@ MPI Task Assignment      : 54 csews6
+@ MPI Task Assignment      : 55 csews6
+@ MPI Task Assignment      : 56 csews6
+@ MPI Task Assignment      : 57 csews6
+@ MPI Task Assignment      : 58 csews6
+@ MPI Task Assignment      : 59 csews6
+@ MPI Task Assignment      : 60 csews7
+@ MPI Task Assignment      : 61 csews7
+@ MPI Task Assignment      : 62 csews7
+@ MPI Task Assignment      : 63 csews7
+
+---------------------------------------------------------------------------
+@--- MPI Time (seconds) ---------------------------------------------------
+---------------------------------------------------------------------------
+Task    AppTime    MPITime     MPI%
+   0          0          0     0.00
+   1          0          0     0.00
+   2          0          0     0.00
+   3          0          0     0.00
+   4          0          0     0.00
+   5          0          0     0.00
+   6          0          0     0.00
+   7          0          0     0.00
+   8          0          0     0.00
+   9          0          0     0.00
+  10          0          0     0.00
+  11          0          0     0.00
+  12          0          0     0.00
+  13          0          0     0.00
+  14          0          0     0.00
+  15          0          0     0.00
+  16          0          0     0.00
+  17          0          0     0.00
+  18   0.000128          0     0.00
+  19          0          0     0.00
+  20          0          0     0.00
+  21    9.6e-05          0     0.00
+  22          0          0     0.00
+  23          0          0     0.00
+  24          0          0     0.00
+  25          0          0     0.00
+  26          0          0     0.00
+  27          0          0     0.00
+  28          0          0     0.00
+  29   0.000423          0     0.00
+  30   0.000392          0     0.00
+  31          0          0     0.00
+  32          0     0.0518     0.00
+  33          0          0     0.00
+  34   0.000157          0     0.00
+  35   0.000149          0     0.00
+  36          0          0     0.00
+  37          0          0     0.00
+  38          0          0     0.00
+  39          0          0     0.00
+  40          0          0     0.00
+  41          0          0     0.00
+  42          0          0     0.00
+  43          0          0     0.00
+  44          0          0     0.00
+  45          0          0     0.00
+  46          0          0     0.00
+  47          0          0     0.00
+  48   7.22e-05     0.0522    72253.63
+  49   3.38e-05          0     0.00
+  50          0          0     0.00
+  51   4.28e-05          0     0.00
+  52    3.4e-05          0     0.00
+  53          0          0     0.00
+  54   8.02e-05          0     0.00
+  55   4.22e-05          0     0.00
+  56   5.95e-05          0     0.00
+  57   3.38e-05          0     0.00
+  58   3.67e-05          0     0.00
+  59   3.63e-05          0     0.00
+  60          0          0     0.00
+  61   9.25e-05          0     0.00
+  62   0.000101          0     0.00
+  63    7.6e-05          0     0.00
+   *    0.00209      0.104    4986.32
+---------------------------------------------------------------------------
+@--- Callsites: 2 ---------------------------------------------------------
+---------------------------------------------------------------------------
+ ID Lev File/Address        Line Parent_Funct             MPI_Call
+  1   0 0x55cde1fe288a           [unknown]                Comm_dup
+  2   0 0x55629e36188a           [unknown]                Comm_dup
+---------------------------------------------------------------------------
+@--- Aggregate Time (top twenty, descending, milliseconds) ----------------
+---------------------------------------------------------------------------
+Call                 Site       Time    App%    MPI%     COV
+Comm_dup                2       52.2  2501.65   50.17    0.00
+Comm_dup                1       51.8  2484.67   49.83    0.00
+---------------------------------------------------------------------------
+@--- Callsite Time statistics (all, milliseconds): 2 ----------------------
+---------------------------------------------------------------------------
+Name              Site Rank  Count      Max     Mean      Min   App%   MPI%
+Comm_dup             1   32      1     51.8     51.8     51.8    inf 100.00
+Comm_dup             1    *      1     51.8     51.8     51.8 2484.67  49.83
+
+Comm_dup             2   48      1     52.2     52.2     52.2 72253.63 100.00
+Comm_dup             2    *      1     52.2     52.2     52.2 2501.65  50.17
+---------------------------------------------------------------------------
+@--- End of Report --------------------------------------------------------
+---------------------------------------------------------------------------
