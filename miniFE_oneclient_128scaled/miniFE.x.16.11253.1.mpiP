@@ -1,0 +1,909 @@
+@ mpiP
+@ Command : ./miniFE.x -nx 250 -ny 250 -nz 250 
+@ Version                  : 3.4.1
+@ MPIP Build date          : Jan 15 2021, 15:16:15
+@ Start time               : 2021 01 16 15:14:25
+@ Stop time                : 2021 01 16 15:14:26
+@ Timer Used               : PMPI_Wtime
+@ MPIP env var             : -y -p -f /users/misc/sagnikd/mpiPOutputs
+@ Collector Rank           : 0
+@ Collector PID            : 11253
+@ Final Output Dir         : /users/misc/sagnikd/mpiPOutputs
+@ Report generation        : Single collector task
+@ MPI Task Assignment      : 0 csews1
+@ MPI Task Assignment      : 1 csews1
+@ MPI Task Assignment      : 2 csews1
+@ MPI Task Assignment      : 3 csews1
+@ MPI Task Assignment      : 4 csews1
+@ MPI Task Assignment      : 5 csews1
+@ MPI Task Assignment      : 6 csews1
+@ MPI Task Assignment      : 7 csews1
+@ MPI Task Assignment      : 8 csews2
+@ MPI Task Assignment      : 9 csews2
+@ MPI Task Assignment      : 10 csews2
+@ MPI Task Assignment      : 11 csews2
+@ MPI Task Assignment      : 12 csews2
+@ MPI Task Assignment      : 13 csews2
+@ MPI Task Assignment      : 14 csews2
+@ MPI Task Assignment      : 15 csews2
+
+---------------------------------------------------------------------------
+@--- MPI Time (seconds) ---------------------------------------------------
+---------------------------------------------------------------------------
+Task    AppTime    MPITime     MPI%
+   0       1.01    0.00151     0.15
+   1       1.01    0.00214     0.21
+   2          1    0.00144     0.14
+   3          1     0.0019     0.19
+   4          1     0.0135     1.35
+   5          1     0.0138     1.38
+   6       1.01     0.0134     1.33
+   7          1     0.0136     1.36
+   8       1.01    0.00234     0.23
+   9          1    0.00223     0.22
+  10       1.01    0.00168     0.17
+  11          1     0.0138     1.38
+  12          1    0.00211     0.21
+  13          1    0.00201     0.20
+  14       1.01    0.00183     0.18
+  15          1     0.0137     1.37
+   *       16.1      0.101     0.63
+---------------------------------------------------------------------------
+@--- Callsites: 112 -------------------------------------------------------
+---------------------------------------------------------------------------
+ ID Lev File/Address        Line Parent_Funct                                                                                                                                        MPI_Call
+  1   0 utils.hpp            142 float miniFE::compute_std_dev_as_percentage<float>(float, float)                                                                                    Allgather
+  2   0 box_utils.hpp        266 void miniFE::create_map_id_to_row<int>(int, int, int, Box const&, std::map<int, int, std::less<int>, std::allocator<std::pair<int const, int> > >&) Allgather
+  3   0 utils.hpp             96 void miniFE::get_global_min_max<int>(int, int&, int&, int&, int&, int&)                                                                             Allreduce
+  4   0 utils.cpp             92 miniFE::broadcast_parameters(miniFE::Parameters&)                                                                                                   Bcast
+  5   0 main.cpp             121 main                                                                                                                                                Allreduce
+  6   0 box_utils.hpp        254 void miniFE::create_map_id_to_row<int>(int, int, int, Box const&, std::map<int, int, std::less<int>, std::allocator<std::pair<int const, int> > >&) Allgather
+  7   0 utils.cpp            108 miniFE::broadcast_parameters(miniFE::Parameters&)                                                                                                   Bcast
+  8   0 0x559c701eeeff           [unknown]                                                                                                                                           Allgather
+  9   0 0x559c701ef384           [unknown]                                                                                                                                           Allgather
+ 10   0 0x559c701eebb2           [unknown]                                                                                                                                           Allreduce
+ 11   0 0x559c70201278           [unknown]                                                                                                                                           Bcast
+ 12   0 0x559c701dea6d           [unknown]                                                                                                                                           Allreduce
+ 13   0 0x559c701ef273           [unknown]                                                                                                                                           Allgather
+ 14   0 0x559c70201328           [unknown]                                                                                                                                           Bcast
+ 15   0 0x5562822cbeff           [unknown]                                                                                                                                           Allgather
+ 16   0 0x5562822cc384           [unknown]                                                                                                                                           Allgather
+ 17   0 0x5562822cbbb2           [unknown]                                                                                                                                           Allreduce
+ 18   0 0x5562822de278           [unknown]                                                                                                                                           Bcast
+ 19   0 0x5562822bba6d           [unknown]                                                                                                                                           Allreduce
+ 20   0 0x5562822cc273           [unknown]                                                                                                                                           Allgather
+ 21   0 0x5562822de328           [unknown]                                                                                                                                           Bcast
+ 22   0 0x55ec646c3eff           [unknown]                                                                                                                                           Allgather
+ 23   0 0x55ec646c4384           [unknown]                                                                                                                                           Allgather
+ 24   0 0x55ec646c3bb2           [unknown]                                                                                                                                           Allreduce
+ 25   0 0x55ec646d6278           [unknown]                                                                                                                                           Bcast
+ 26   0 0x55ec646b3a6d           [unknown]                                                                                                                                           Allreduce
+ 27   0 0x55ec646c4273           [unknown]                                                                                                                                           Allgather
+ 28   0 0x55ec646d6328           [unknown]                                                                                                                                           Bcast
+ 29   0 0x55ecc9f4beff           [unknown]                                                                                                                                           Allgather
+ 30   0 0x55ecc9f4c384           [unknown]                                                                                                                                           Allgather
+ 31   0 0x55ecc9f4bbb2           [unknown]                                                                                                                                           Allreduce
+ 32   0 0x55ecc9f5e278           [unknown]                                                                                                                                           Bcast
+ 33   0 0x55ecc9f3ba6d           [unknown]                                                                                                                                           Allreduce
+ 34   0 0x55ecc9f4c273           [unknown]                                                                                                                                           Allgather
+ 35   0 0x55ecc9f5e328           [unknown]                                                                                                                                           Bcast
+ 36   0 0x56271f9d8eff           [unknown]                                                                                                                                           Allgather
+ 37   0 0x56271f9d9384           [unknown]                                                                                                                                           Allgather
+ 38   0 0x56271f9d8bb2           [unknown]                                                                                                                                           Allreduce
+ 39   0 0x56271f9eb278           [unknown]                                                                                                                                           Bcast
+ 40   0 0x56271f9c8a6d           [unknown]                                                                                                                                           Allreduce
+ 41   0 0x56271f9d9273           [unknown]                                                                                                                                           Allgather
+ 42   0 0x56271f9eb328           [unknown]                                                                                                                                           Bcast
+ 43   0 0x5621d5ec1eff           [unknown]                                                                                                                                           Allgather
+ 44   0 0x5621d5ec2384           [unknown]                                                                                                                                           Allgather
+ 45   0 0x5621d5ec1bb2           [unknown]                                                                                                                                           Allreduce
+ 46   0 0x5621d5ed4278           [unknown]                                                                                                                                           Bcast
+ 47   0 0x5621d5eb1a6d           [unknown]                                                                                                                                           Allreduce
+ 48   0 0x5621d5ec2273           [unknown]                                                                                                                                           Allgather
+ 49   0 0x5621d5ed4328           [unknown]                                                                                                                                           Bcast
+ 50   0 0x55ad99b9deff           [unknown]                                                                                                                                           Allgather
+ 51   0 0x55ad99b9e384           [unknown]                                                                                                                                           Allgather
+ 52   0 0x55ad99b9dbb2           [unknown]                                                                                                                                           Allreduce
+ 53   0 0x55ad99bb0278           [unknown]                                                                                                                                           Bcast
+ 54   0 0x55ad99b8da6d           [unknown]                                                                                                                                           Allreduce
+ 55   0 0x55ad99b9e273           [unknown]                                                                                                                                           Allgather
+ 56   0 0x55ad99bb0328           [unknown]                                                                                                                                           Bcast
+ 57   0 0x56075c1ffeff           [unknown]                                                                                                                                           Allgather
+ 58   0 0x56075c200384           [unknown]                                                                                                                                           Allgather
+ 59   0 0x56075c1ffbb2           [unknown]                                                                                                                                           Allreduce
+ 60   0 0x56075c1efa6d           [unknown]                                                                                                                                           Allreduce
+ 61   0 0x56075c212278           [unknown]                                                                                                                                           Bcast
+ 62   0 0x56075c200273           [unknown]                                                                                                                                           Allgather
+ 63   0 0x56075c212328           [unknown]                                                                                                                                           Bcast
+ 64   0 0x5608b4293eff           [unknown]                                                                                                                                           Allgather
+ 65   0 0x5608b4294384           [unknown]                                                                                                                                           Allgather
+ 66   0 0x5608b4293bb2           [unknown]                                                                                                                                           Allreduce
+ 67   0 0x5608b4283a6d           [unknown]                                                                                                                                           Allreduce
+ 68   0 0x5608b42a6278           [unknown]                                                                                                                                           Bcast
+ 69   0 0x5608b4294273           [unknown]                                                                                                                                           Allgather
+ 70   0 0x5608b42a6328           [unknown]                                                                                                                                           Bcast
+ 71   0 0x55c3068ffeff           [unknown]                                                                                                                                           Allgather
+ 72   0 0x55c306900384           [unknown]                                                                                                                                           Allgather
+ 73   0 0x55c3068ffbb2           [unknown]                                                                                                                                           Allreduce
+ 74   0 0x55c3068efa6d           [unknown]                                                                                                                                           Allreduce
+ 75   0 0x55c306912278           [unknown]                                                                                                                                           Bcast
+ 76   0 0x55c306900273           [unknown]                                                                                                                                           Allgather
+ 77   0 0x55c306912328           [unknown]                                                                                                                                           Bcast
+ 78   0 0x560d2a48beff           [unknown]                                                                                                                                           Allgather
+ 79   0 0x560d2a48c384           [unknown]                                                                                                                                           Allgather
+ 80   0 0x560d2a48bbb2           [unknown]                                                                                                                                           Allreduce
+ 81   0 0x560d2a47ba6d           [unknown]                                                                                                                                           Allreduce
+ 82   0 0x560d2a49e278           [unknown]                                                                                                                                           Bcast
+ 83   0 0x560d2a48c273           [unknown]                                                                                                                                           Allgather
+ 84   0 0x560d2a49e328           [unknown]                                                                                                                                           Bcast
+ 85   0 0x55fd5e68beff           [unknown]                                                                                                                                           Allgather
+ 86   0 0x55fd5e68c384           [unknown]                                                                                                                                           Allgather
+ 87   0 0x55fd5e68bbb2           [unknown]                                                                                                                                           Allreduce
+ 88   0 0x55fd5e67ba6d           [unknown]                                                                                                                                           Allreduce
+ 89   0 0x55fd5e69e278           [unknown]                                                                                                                                           Bcast
+ 90   0 0x55fd5e68c273           [unknown]                                                                                                                                           Allgather
+ 91   0 0x55fd5e69e328           [unknown]                                                                                                                                           Bcast
+ 92   0 0x55b3f7d69eff           [unknown]                                                                                                                                           Allgather
+ 93   0 0x55b3f7d6a384           [unknown]                                                                                                                                           Allgather
+ 94   0 0x55b3f7d69bb2           [unknown]                                                                                                                                           Allreduce
+ 95   0 0x55b3f7d59a6d           [unknown]                                                                                                                                           Allreduce
+ 96   0 0x55b3f7d7c278           [unknown]                                                                                                                                           Bcast
+ 97   0 0x55b3f7d6a273           [unknown]                                                                                                                                           Allgather
+ 98   0 0x55b3f7d7c328           [unknown]                                                                                                                                           Bcast
+ 99   0 0x55b39153ceff           [unknown]                                                                                                                                           Allgather
+100   0 0x55b39153d384           [unknown]                                                                                                                                           Allgather
+101   0 0x55b39153cbb2           [unknown]                                                                                                                                           Allreduce
+102   0 0x55b39152ca6d           [unknown]                                                                                                                                           Allreduce
+103   0 0x55b39154f278           [unknown]                                                                                                                                           Bcast
+104   0 0x55b39153d273           [unknown]                                                                                                                                           Allgather
+105   0 0x55b39154f328           [unknown]                                                                                                                                           Bcast
+106   0 0x5603d8fc1eff           [unknown]                                                                                                                                           Allgather
+107   0 0x5603d8fc2384           [unknown]                                                                                                                                           Allgather
+108   0 0x5603d8fc1bb2           [unknown]                                                                                                                                           Allreduce
+109   0 0x5603d8fb1a6d           [unknown]                                                                                                                                           Allreduce
+110   0 0x5603d8fd4278           [unknown]                                                                                                                                           Bcast
+111   0 0x5603d8fc2273           [unknown]                                                                                                                                           Allgather
+112   0 0x5603d8fd4328           [unknown]                                                                                                                                           Bcast
+---------------------------------------------------------------------------
+@--- Aggregate Time (top twenty, descending, milliseconds) ----------------
+---------------------------------------------------------------------------
+Call                 Site       Time    App%    MPI%     COV
+Allgather              69       12.6    0.08   12.47    0.00
+Allgather              41       12.5    0.08   12.41    0.00
+Allgather              83       12.3    0.08   12.21    0.00
+Allgather              34       12.2    0.08   12.07    0.00
+Allgather              55       12.2    0.08   12.04    0.00
+Allgather              48       12.1    0.08   11.98    0.00
+Allgather              90       1.53    0.01    1.51    0.00
+Allgather              97       1.04    0.01    1.03    0.00
+Allgather             111      0.938    0.01    0.93    0.00
+Allgather              62      0.829    0.01    0.82    0.00
+Allgather              27      0.762    0.00    0.76    0.00
+Allgather             104      0.747    0.00    0.74    0.00
+Allgather              50      0.665    0.00    0.66    0.00
+Allgather              76       0.64    0.00    0.63    0.00
+Allgather               6      0.639    0.00    0.63    0.00
+Allgather               8      0.607    0.00    0.60    0.00
+Allgather              78      0.602    0.00    0.60    0.00
+Allgather              15       0.56    0.00    0.55    0.00
+Allgather              22      0.557    0.00    0.55    0.00
+Allgather              99      0.551    0.00    0.55    0.00
+---------------------------------------------------------------------------
+@--- Aggregate Sent Message Size (top twenty, descending, bytes) ----------
+---------------------------------------------------------------------------
+Call                 Site      Count      Total       Avrg  Sent%
+Allreduce              66          1         64         64   2.56
+Allreduce              73          1         64         64   2.56
+Allreduce              80          1         64         64   2.56
+Allreduce              87          1         64         64   2.56
+Allreduce              94          1         64         64   2.56
+Allreduce             101          1         64         64   2.56
+Allreduce             108          1         64         64   2.56
+Allreduce               3          1         64         64   2.56
+Allreduce              10          1         64         64   2.56
+Allreduce              17          1         64         64   2.56
+Allreduce              24          1         64         64   2.56
+Allreduce              31          1         64         64   2.56
+Allreduce              38          1         64         64   2.56
+Allreduce              45          1         64         64   2.56
+Allreduce              52          1         64         64   2.56
+Allreduce              59          1         64         64   2.56
+Bcast                  89          1         52         52   2.08
+Bcast                  82          1         52         52   2.08
+Bcast                  75          1         52         52   2.08
+Bcast                  68          1         52         52   2.08
+---------------------------------------------------------------------------
+@--- Aggregate Collective Time (top twenty, descending) -------------------
+---------------------------------------------------------------------------
+Call                 MPI Time %             Comm Size             Data Size
+Allgather                  88.3         16 -       31          0 -        7
+Allreduce                  5.06         16 -       31          0 -        7
+Bcast                      2.92         16 -       31         32 -       63
+Allreduce                  2.07         16 -       31         64 -      127
+Allgather                  1.52         16 -       31         16 -       31
+Bcast                     0.121         16 -       31          0 -        7
+---------------------------------------------------------------------------
+@--- Aggregate Point-To-Point Sent (top twenty, descending) ---------------
+---------------------------------------------------------------------------
+No point to point operations to report
+---------------------------------------------------------------------------
+@--- Callsite Time statistics (all, milliseconds): 112 --------------------
+---------------------------------------------------------------------------
+Name              Site Rank  Count      Max     Mean      Min   App%   MPI%
+Allgather            1    0      1    0.134    0.134    0.134   0.01   8.85
+Allgather            1    *      1    0.134    0.134    0.134   0.00   0.13
+
+Allgather            2    0      1    0.148    0.148    0.148   0.01   9.80
+Allgather            2    *      1    0.148    0.148    0.148   0.00   0.15
+
+Allgather            6    0      1    0.639    0.639    0.639   0.06  42.36
+Allgather            6    *      1    0.639    0.639    0.639   0.00   0.63
+
+Allgather            8    2      1    0.607    0.607    0.607   0.06  42.18
+Allgather            8    *      1    0.607    0.607    0.607   0.00   0.60
+
+Allgather            9    2      1    0.138    0.138    0.138   0.01   9.62
+Allgather            9    *      1    0.138    0.138    0.138   0.00   0.14
+
+Allgather           13    2      1   0.0357   0.0357   0.0357   0.00   2.49
+Allgather           13    *      1   0.0357   0.0357   0.0357   0.00   0.04
+
+Allgather           15    3      1     0.56     0.56     0.56   0.06  29.41
+Allgather           15    *      1     0.56     0.56     0.56   0.00   0.55
+
+Allgather           16    3      1    0.143    0.143    0.143   0.01   7.51
+Allgather           16    *      1    0.143    0.143    0.143   0.00   0.14
+
+Allgather           20    3      1    0.532    0.532    0.532   0.05  27.97
+Allgather           20    *      1    0.532    0.532    0.532   0.00   0.53
+
+Allgather           22    1      1    0.557    0.557    0.557   0.06  26.05
+Allgather           22    *      1    0.557    0.557    0.557   0.00   0.55
+
+Allgather           23    1      1     0.15     0.15     0.15   0.01   7.02
+Allgather           23    *      1     0.15     0.15     0.15   0.00   0.15
+
+Allgather           27    1      1    0.762    0.762    0.762   0.08  35.68
+Allgather           27    *      1    0.762    0.762    0.762   0.00   0.76
+
+Allgather           29    4      1    0.477    0.477    0.477   0.05   3.54
+Allgather           29    *      1    0.477    0.477    0.477   0.00   0.47
+
+Allgather           30    4      1    0.146    0.146    0.146   0.01   1.08
+Allgather           30    *      1    0.146    0.146    0.146   0.00   0.14
+
+Allgather           34    4      1     12.2     12.2     12.2   1.22  90.49
+Allgather           34    *      1     12.2     12.2     12.2   0.08  12.07
+
+Allgather           36    5      1    0.482    0.482    0.482   0.05   3.48
+Allgather           36    *      1    0.482    0.482    0.482   0.00   0.48
+
+Allgather           37    5      1    0.148    0.148    0.148   0.01   1.07
+Allgather           37    *      1    0.148    0.148    0.148   0.00   0.15
+
+Allgather           41    5      1     12.5     12.5     12.5   1.25  90.59
+Allgather           41    *      1     12.5     12.5     12.5   0.08  12.41
+
+Allgather           43    6      1    0.481    0.481    0.481   0.05   3.59
+Allgather           43    *      1    0.481    0.481    0.481   0.00   0.48
+
+Allgather           44    6      1    0.146    0.146    0.146   0.01   1.09
+Allgather           44    *      1    0.146    0.146    0.146   0.00   0.14
+
+Allgather           48    6      1     12.1     12.1     12.1   1.20  90.32
+Allgather           48    *      1     12.1     12.1     12.1   0.08  11.98
+
+Allgather           50    7      1    0.665    0.665    0.665   0.07   4.88
+Allgather           50    *      1    0.665    0.665    0.665   0.00   0.66
+
+Allgather           51    7      1    0.143    0.143    0.143   0.01   1.05
+Allgather           51    *      1    0.143    0.143    0.143   0.00   0.14
+
+Allgather           55    7      1     12.2     12.2     12.2   1.22  89.14
+Allgather           55    *      1     12.2     12.2     12.2   0.08  12.04
+
+Allgather           57   13      1    0.473    0.473    0.473   0.05  23.50
+Allgather           57    *      1    0.473    0.473    0.473   0.00   0.47
+
+Allgather           58   13      1   0.0435   0.0435   0.0435   0.00   2.16
+Allgather           58    *      1   0.0435   0.0435   0.0435   0.00   0.04
+
+Allgather           62   13      1    0.829    0.829    0.829   0.08  41.13
+Allgather           62    *      1    0.829    0.829    0.829   0.01   0.82
+
+Allgather           64   11      1    0.478    0.478    0.478   0.05   3.46
+Allgather           64    *      1    0.478    0.478    0.478   0.00   0.47
+
+Allgather           65   11      1    0.048    0.048    0.048   0.00   0.35
+Allgather           65    *      1    0.048    0.048    0.048   0.00   0.05
+
+Allgather           69   11      1     12.6     12.6     12.6   1.26  91.31
+Allgather           69    *      1     12.6     12.6     12.6   0.08  12.47
+
+Allgather           71   14      1    0.471    0.471    0.471   0.05  25.71
+Allgather           71    *      1    0.471    0.471    0.471   0.00   0.47
+
+Allgather           72   14      1   0.0525   0.0525   0.0525   0.01   2.86
+Allgather           72    *      1   0.0525   0.0525   0.0525   0.00   0.05
+
+Allgather           76   14      1     0.64     0.64     0.64   0.06  34.91
+Allgather           76    *      1     0.64     0.64     0.64   0.00   0.63
+
+Allgather           78   15      1    0.602    0.602    0.602   0.06   4.41
+Allgather           78    *      1    0.602    0.602    0.602   0.00   0.60
+
+Allgather           79   15      1   0.0508   0.0508   0.0508   0.01   0.37
+Allgather           79    *      1   0.0508   0.0508   0.0508   0.00   0.05
+
+Allgather           83   15      1     12.3     12.3     12.3   1.23  90.31
+Allgather           83    *      1     12.3     12.3     12.3   0.08  12.21
+
+Allgather           85    8      1    0.097    0.097    0.097   0.01   4.14
+Allgather           85    *      1    0.097    0.097    0.097   0.00   0.10
+
+Allgather           86    8      1    0.051    0.051    0.051   0.01   2.18
+Allgather           86    *      1    0.051    0.051    0.051   0.00   0.05
+
+Allgather           90    8      1     1.53     1.53     1.53   0.15  65.16
+Allgather           90    *      1     1.53     1.53     1.53   0.01   1.51
+
+Allgather           92    9      1    0.482    0.482    0.482   0.05  21.68
+Allgather           92    *      1    0.482    0.482    0.482   0.00   0.48
+
+Allgather           93    9      1   0.0375   0.0375   0.0375   0.00   1.69
+Allgather           93    *      1   0.0375   0.0375   0.0375   0.00   0.04
+
+Allgather           97    9      1     1.04     1.04     1.04   0.10  46.60
+Allgather           97    *      1     1.04     1.04     1.04   0.01   1.03
+
+Allgather           99   10      1    0.551    0.551    0.551   0.05  32.78
+Allgather           99    *      1    0.551    0.551    0.551   0.00   0.55
+
+Allgather          100   10      1   0.0478   0.0478   0.0478   0.00   2.84
+Allgather          100    *      1   0.0478   0.0478   0.0478   0.00   0.05
+
+Allgather          104   10      1    0.747    0.747    0.747   0.07  44.45
+Allgather          104    *      1    0.747    0.747    0.747   0.00   0.74
+
+Allgather          106   12      1     0.46     0.46     0.46   0.05  21.85
+Allgather          106    *      1     0.46     0.46     0.46   0.00   0.46
+
+Allgather          107   12      1   0.0415   0.0415   0.0415   0.00   1.97
+Allgather          107    *      1   0.0415   0.0415   0.0415   0.00   0.04
+
+Allgather          111   12      1    0.938    0.938    0.938   0.09  44.56
+Allgather          111    *      1    0.938    0.938    0.938   0.01   0.93
+
+Allreduce            3    0      1   0.0192   0.0192   0.0192   0.00   1.28
+Allreduce            3    *      1   0.0192   0.0192   0.0192   0.00   0.02
+
+Allreduce            5    0      1    0.442    0.442    0.442   0.04  29.30
+Allreduce            5    *      1    0.442    0.442    0.442   0.00   0.44
+
+Allreduce           10    2      1   0.0795   0.0795   0.0795   0.01   5.53
+Allreduce           10    *      1   0.0795   0.0795   0.0795   0.00   0.08
+
+Allreduce           12    2      1    0.419    0.419    0.419   0.04  29.16
+Allreduce           12    *      1    0.419    0.419    0.419   0.00   0.42
+
+Allreduce           17    3      1   0.0795   0.0795   0.0795   0.01   4.18
+Allreduce           17    *      1   0.0795   0.0795   0.0795   0.00   0.08
+
+Allreduce           19    3      1     0.42     0.42     0.42   0.04  22.05
+Allreduce           19    *      1     0.42     0.42     0.42   0.00   0.42
+
+Allreduce           24    1      1   0.0795   0.0795   0.0795   0.01   3.72
+Allreduce           24    *      1   0.0795   0.0795   0.0795   0.00   0.08
+
+Allreduce           26    1      1    0.404    0.404    0.404   0.04  18.90
+Allreduce           26    *      1    0.404    0.404    0.404   0.00   0.40
+
+Allreduce           31    4      1   0.0793   0.0793   0.0793   0.01   0.59
+Allreduce           31    *      1   0.0793   0.0793   0.0793   0.00   0.08
+
+Allreduce           33    4      1    0.443    0.443    0.443   0.04   3.29
+Allreduce           33    *      1    0.443    0.443    0.443   0.00   0.44
+
+Allreduce           38    5      1   0.0795   0.0795   0.0795   0.01   0.57
+Allreduce           38    *      1   0.0795   0.0795   0.0795   0.00   0.08
+
+Allreduce           40    5      1    0.441    0.441    0.441   0.04   3.18
+Allreduce           40    *      1    0.441    0.441    0.441   0.00   0.44
+
+Allreduce           45    6      1   0.0798   0.0798   0.0798   0.01   0.60
+Allreduce           45    *      1   0.0798   0.0798   0.0798   0.00   0.08
+
+Allreduce           47    6      1    0.406    0.406    0.406   0.04   3.03
+Allreduce           47    *      1    0.406    0.406    0.406   0.00   0.40
+
+Allreduce           52    7      1     0.08     0.08     0.08   0.01   0.59
+Allreduce           52    *      1     0.08     0.08     0.08   0.00   0.08
+
+Allreduce           54    7      1    0.405    0.405    0.405   0.04   2.97
+Allreduce           54    *      1    0.405    0.405    0.405   0.00   0.40
+
+Allreduce           59   13      1    0.189    0.189    0.189   0.02   9.39
+Allreduce           59    *      1    0.189    0.189    0.189   0.00   0.19
+
+Allreduce           60   13      1    0.281    0.281    0.281   0.03  13.92
+Allreduce           60    *      1    0.281    0.281    0.281   0.00   0.28
+
+Allreduce           66   11      1    0.191    0.191    0.191   0.02   1.39
+Allreduce           66    *      1    0.191    0.191    0.191   0.00   0.19
+
+Allreduce           67   11      1    0.023    0.023    0.023   0.00   0.17
+Allreduce           67    *      1    0.023    0.023    0.023   0.00   0.02
+
+Allreduce           73   14      1    0.189    0.189    0.189   0.02  10.32
+Allreduce           73    *      1    0.189    0.189    0.189   0.00   0.19
+
+Allreduce           74   14      1    0.281    0.281    0.281   0.03  15.30
+Allreduce           74    *      1    0.281    0.281    0.281   0.00   0.28
+
+Allreduce           80   15      1     0.19     0.19     0.19   0.02   1.39
+Allreduce           80    *      1     0.19     0.19     0.19   0.00   0.19
+
+Allreduce           81   15      1     0.28     0.28     0.28   0.03   2.05
+Allreduce           81    *      1     0.28     0.28     0.28   0.00   0.28
+
+Allreduce           87    8      1    0.189    0.189    0.189   0.02   8.07
+Allreduce           87    *      1    0.189    0.189    0.189   0.00   0.19
+
+Allreduce           88    8      1     0.28     0.28     0.28   0.03  11.95
+Allreduce           88    *      1     0.28     0.28     0.28   0.00   0.28
+
+Allreduce           94    9      1     0.19     0.19     0.19   0.02   8.51
+Allreduce           94    *      1     0.19     0.19     0.19   0.00   0.19
+
+Allreduce           95    9      1    0.281    0.281    0.281   0.03  12.60
+Allreduce           95    *      1    0.281    0.281    0.281   0.00   0.28
+
+Allreduce          101   10      1    0.191    0.191    0.191   0.02  11.37
+Allreduce          101    *      1    0.191    0.191    0.191   0.00   0.19
+
+Allreduce          102   10      1   0.0215   0.0215   0.0215   0.00   1.28
+Allreduce          102    *      1   0.0215   0.0215   0.0215   0.00   0.02
+
+Allreduce          108   12      1    0.189    0.189    0.189   0.02   8.98
+Allreduce          108    *      1    0.189    0.189    0.189   0.00   0.19
+
+Allreduce          109   12      1     0.28     0.28     0.28   0.03  13.31
+Allreduce          109    *      1     0.28     0.28     0.28   0.00   0.28
+
+Bcast                4    0      1    0.118    0.118    0.118   0.01   7.81
+Bcast                4    *      1    0.118    0.118    0.118   0.00   0.12
+
+Bcast                7    0      1    0.009    0.009    0.009   0.00   0.60
+Bcast                7    *      1    0.009    0.009    0.009   0.00   0.01
+
+Bcast               11    2      1    0.146    0.146    0.146   0.01  10.19
+Bcast               11    *      1    0.146    0.146    0.146   0.00   0.15
+
+Bcast               14    2      1    0.012    0.012    0.012   0.00   0.83
+Bcast               14    *      1    0.012    0.012    0.012   0.00   0.01
+
+Bcast               18    3      1    0.159    0.159    0.159   0.02   8.34
+Bcast               18    *      1    0.159    0.159    0.159   0.00   0.16
+
+Bcast               21    3      1   0.0105   0.0105   0.0105   0.00   0.55
+Bcast               21    *      1   0.0105   0.0105   0.0105   0.00   0.01
+
+Bcast               25    1      1    0.173    0.173    0.173   0.02   8.12
+Bcast               25    *      1    0.173    0.173    0.173   0.00   0.17
+
+Bcast               28    1      1    0.011    0.011    0.011   0.00   0.51
+Bcast               28    *      1    0.011    0.011    0.011   0.00   0.01
+
+Bcast               32    4      1    0.128    0.128    0.128   0.01   0.95
+Bcast               32    *      1    0.128    0.128    0.128   0.00   0.13
+
+Bcast               35    4      1    0.008    0.008    0.008   0.00   0.06
+Bcast               35    *      1    0.008    0.008    0.008   0.00   0.01
+
+Bcast               39    5      1    0.148    0.148    0.148   0.01   1.07
+Bcast               39    *      1    0.148    0.148    0.148   0.00   0.15
+
+Bcast               42    5      1  0.00325  0.00325  0.00325   0.00   0.02
+Bcast               42    *      1  0.00325  0.00325  0.00325   0.00   0.00
+
+Bcast               46    6      1    0.175    0.175    0.175   0.02   1.31
+Bcast               46    *      1    0.175    0.175    0.175   0.00   0.17
+
+Bcast               49    6      1    0.008    0.008    0.008   0.00   0.06
+Bcast               49    *      1    0.008    0.008    0.008   0.00   0.01
+
+Bcast               53    7      1    0.179    0.179    0.179   0.02   1.32
+Bcast               53    *      1    0.179    0.179    0.179   0.00   0.18
+
+Bcast               56    7      1    0.007    0.007    0.007   0.00   0.05
+Bcast               56    *      1    0.007    0.007    0.007   0.00   0.01
+
+Bcast               61   13      1    0.195    0.195    0.195   0.02   9.65
+Bcast               61    *      1    0.195    0.195    0.195   0.00   0.19
+
+Bcast               63   13      1    0.005    0.005    0.005   0.00   0.25
+Bcast               63    *      1    0.005    0.005    0.005   0.00   0.00
+
+Bcast               68   11      1    0.446    0.446    0.446   0.04   3.23
+Bcast               68    *      1    0.446    0.446    0.446   0.00   0.44
+
+Bcast               70   11      1    0.013    0.013    0.013   0.00   0.09
+Bcast               70    *      1    0.013    0.013    0.013   0.00   0.01
+
+Bcast               75   14      1    0.195    0.195    0.195   0.02  10.61
+Bcast               75    *      1    0.195    0.195    0.195   0.00   0.19
+
+Bcast               77   14      1  0.00525  0.00525  0.00525   0.00   0.29
+Bcast               77    *      1  0.00525  0.00525  0.00525   0.00   0.01
+
+Bcast               82   15      1    0.196    0.196    0.196   0.02   1.43
+Bcast               82    *      1    0.196    0.196    0.196   0.00   0.19
+
+Bcast               84   15      1    0.005    0.005    0.005   0.00   0.04
+Bcast               84    *      1    0.005    0.005    0.005   0.00   0.00
+
+Bcast               89    8      1    0.193    0.193    0.193   0.02   8.23
+Bcast               89    *      1    0.193    0.193    0.193   0.00   0.19
+
+Bcast               91    8      1  0.00625  0.00625  0.00625   0.00   0.27
+Bcast               91    *      1  0.00625  0.00625  0.00625   0.00   0.01
+
+Bcast               96    9      1    0.193    0.193    0.193   0.02   8.68
+Bcast               96    *      1    0.193    0.193    0.193   0.00   0.19
+
+Bcast               98    9      1  0.00525  0.00525  0.00525   0.00   0.24
+Bcast               98    *      1  0.00525  0.00525  0.00525   0.00   0.01
+
+Bcast              103   10      1    0.113    0.113    0.113   0.01   6.73
+Bcast              103    *      1    0.113    0.113    0.113   0.00   0.11
+
+Bcast              105   10      1  0.00925  0.00925  0.00925   0.00   0.55
+Bcast              105    *      1  0.00925  0.00925  0.00925   0.00   0.01
+
+Bcast              110   12      1    0.192    0.192    0.192   0.02   9.11
+Bcast              110    *      1    0.192    0.192    0.192   0.00   0.19
+
+Bcast              112   12      1  0.00475  0.00475  0.00475   0.00   0.23
+Bcast              112    *      1  0.00475  0.00475  0.00475   0.00   0.00
+---------------------------------------------------------------------------
+@--- Callsite Message Sent statistics (all, sent bytes) -------------------
+---------------------------------------------------------------------------
+Name              Site Rank   Count       Max      Mean       Min       Sum
+Allgather            1    0       1         4         4         4         4
+Allgather            1    *       1         4         4         4         4
+
+Allgather            2    0       1        24        24        24        24
+Allgather            2    *       1        24        24        24        24
+
+Allgather            6    0       1         4         4         4         4
+Allgather            6    *       1         4         4         4         4
+
+Allgather            8    2       1         4         4         4         4
+Allgather            8    *       1         4         4         4         4
+
+Allgather            9    2       1        24        24        24        24
+Allgather            9    *       1        24        24        24        24
+
+Allgather           13    2       1         4         4         4         4
+Allgather           13    *       1         4         4         4         4
+
+Allgather           15    3       1         4         4         4         4
+Allgather           15    *       1         4         4         4         4
+
+Allgather           16    3       1        24        24        24        24
+Allgather           16    *       1        24        24        24        24
+
+Allgather           20    3       1         4         4         4         4
+Allgather           20    *       1         4         4         4         4
+
+Allgather           22    1       1         4         4         4         4
+Allgather           22    *       1         4         4         4         4
+
+Allgather           23    1       1        24        24        24        24
+Allgather           23    *       1        24        24        24        24
+
+Allgather           27    1       1         4         4         4         4
+Allgather           27    *       1         4         4         4         4
+
+Allgather           29    4       1         4         4         4         4
+Allgather           29    *       1         4         4         4         4
+
+Allgather           30    4       1        24        24        24        24
+Allgather           30    *       1        24        24        24        24
+
+Allgather           34    4       1         4         4         4         4
+Allgather           34    *       1         4         4         4         4
+
+Allgather           36    5       1         4         4         4         4
+Allgather           36    *       1         4         4         4         4
+
+Allgather           37    5       1        24        24        24        24
+Allgather           37    *       1        24        24        24        24
+
+Allgather           41    5       1         4         4         4         4
+Allgather           41    *       1         4         4         4         4
+
+Allgather           43    6       1         4         4         4         4
+Allgather           43    *       1         4         4         4         4
+
+Allgather           44    6       1        24        24        24        24
+Allgather           44    *       1        24        24        24        24
+
+Allgather           48    6       1         4         4         4         4
+Allgather           48    *       1         4         4         4         4
+
+Allgather           50    7       1         4         4         4         4
+Allgather           50    *       1         4         4         4         4
+
+Allgather           51    7       1        24        24        24        24
+Allgather           51    *       1        24        24        24        24
+
+Allgather           55    7       1         4         4         4         4
+Allgather           55    *       1         4         4         4         4
+
+Allgather           57   13       1         4         4         4         4
+Allgather           57    *       1         4         4         4         4
+
+Allgather           58   13       1        24        24        24        24
+Allgather           58    *       1        24        24        24        24
+
+Allgather           62   13       1         4         4         4         4
+Allgather           62    *       1         4         4         4         4
+
+Allgather           64   11       1         4         4         4         4
+Allgather           64    *       1         4         4         4         4
+
+Allgather           65   11       1        24        24        24        24
+Allgather           65    *       1        24        24        24        24
+
+Allgather           69   11       1         4         4         4         4
+Allgather           69    *       1         4         4         4         4
+
+Allgather           71   14       1         4         4         4         4
+Allgather           71    *       1         4         4         4         4
+
+Allgather           72   14       1        24        24        24        24
+Allgather           72    *       1        24        24        24        24
+
+Allgather           76   14       1         4         4         4         4
+Allgather           76    *       1         4         4         4         4
+
+Allgather           78   15       1         4         4         4         4
+Allgather           78    *       1         4         4         4         4
+
+Allgather           79   15       1        24        24        24        24
+Allgather           79    *       1        24        24        24        24
+
+Allgather           83   15       1         4         4         4         4
+Allgather           83    *       1         4         4         4         4
+
+Allgather           85    8       1         4         4         4         4
+Allgather           85    *       1         4         4         4         4
+
+Allgather           86    8       1        24        24        24        24
+Allgather           86    *       1        24        24        24        24
+
+Allgather           90    8       1         4         4         4         4
+Allgather           90    *       1         4         4         4         4
+
+Allgather           92    9       1         4         4         4         4
+Allgather           92    *       1         4         4         4         4
+
+Allgather           93    9       1        24        24        24        24
+Allgather           93    *       1        24        24        24        24
+
+Allgather           97    9       1         4         4         4         4
+Allgather           97    *       1         4         4         4         4
+
+Allgather           99   10       1         4         4         4         4
+Allgather           99    *       1         4         4         4         4
+
+Allgather          100   10       1        24        24        24        24
+Allgather          100    *       1        24        24        24        24
+
+Allgather          104   10       1         4         4         4         4
+Allgather          104    *       1         4         4         4         4
+
+Allgather          106   12       1         4         4         4         4
+Allgather          106    *       1         4         4         4         4
+
+Allgather          107   12       1        24        24        24        24
+Allgather          107    *       1        24        24        24        24
+
+Allgather          111   12       1         4         4         4         4
+Allgather          111    *       1         4         4         4         4
+
+Allreduce            3    0       1        64        64        64        64
+Allreduce            3    *       1        64        64        64        64
+
+Allreduce            5    0       1         4         4         4         4
+Allreduce            5    *       1         4         4         4         4
+
+Allreduce           10    2       1        64        64        64        64
+Allreduce           10    *       1        64        64        64        64
+
+Allreduce           12    2       1         4         4         4         4
+Allreduce           12    *       1         4         4         4         4
+
+Allreduce           17    3       1        64        64        64        64
+Allreduce           17    *       1        64        64        64        64
+
+Allreduce           19    3       1         4         4         4         4
+Allreduce           19    *       1         4         4         4         4
+
+Allreduce           24    1       1        64        64        64        64
+Allreduce           24    *       1        64        64        64        64
+
+Allreduce           26    1       1         4         4         4         4
+Allreduce           26    *       1         4         4         4         4
+
+Allreduce           31    4       1        64        64        64        64
+Allreduce           31    *       1        64        64        64        64
+
+Allreduce           33    4       1         4         4         4         4
+Allreduce           33    *       1         4         4         4         4
+
+Allreduce           38    5       1        64        64        64        64
+Allreduce           38    *       1        64        64        64        64
+
+Allreduce           40    5       1         4         4         4         4
+Allreduce           40    *       1         4         4         4         4
+
+Allreduce           45    6       1        64        64        64        64
+Allreduce           45    *       1        64        64        64        64
+
+Allreduce           47    6       1         4         4         4         4
+Allreduce           47    *       1         4         4         4         4
+
+Allreduce           52    7       1        64        64        64        64
+Allreduce           52    *       1        64        64        64        64
+
+Allreduce           54    7       1         4         4         4         4
+Allreduce           54    *       1         4         4         4         4
+
+Allreduce           59   13       1        64        64        64        64
+Allreduce           59    *       1        64        64        64        64
+
+Allreduce           60   13       1         4         4         4         4
+Allreduce           60    *       1         4         4         4         4
+
+Allreduce           66   11       1        64        64        64        64
+Allreduce           66    *       1        64        64        64        64
+
+Allreduce           67   11       1         4         4         4         4
+Allreduce           67    *       1         4         4         4         4
+
+Allreduce           73   14       1        64        64        64        64
+Allreduce           73    *       1        64        64        64        64
+
+Allreduce           74   14       1         4         4         4         4
+Allreduce           74    *       1         4         4         4         4
+
+Allreduce           80   15       1        64        64        64        64
+Allreduce           80    *       1        64        64        64        64
+
+Allreduce           81   15       1         4         4         4         4
+Allreduce           81    *       1         4         4         4         4
+
+Allreduce           87    8       1        64        64        64        64
+Allreduce           87    *       1        64        64        64        64
+
+Allreduce           88    8       1         4         4         4         4
+Allreduce           88    *       1         4         4         4         4
+
+Allreduce           94    9       1        64        64        64        64
+Allreduce           94    *       1        64        64        64        64
+
+Allreduce           95    9       1         4         4         4         4
+Allreduce           95    *       1         4         4         4         4
+
+Allreduce          101   10       1        64        64        64        64
+Allreduce          101    *       1        64        64        64        64
+
+Allreduce          102   10       1         4         4         4         4
+Allreduce          102    *       1         4         4         4         4
+
+Allreduce          108   12       1        64        64        64        64
+Allreduce          108    *       1        64        64        64        64
+
+Allreduce          109   12       1         4         4         4         4
+Allreduce          109    *       1         4         4         4         4
+
+Bcast                4    0       1        52        52        52        52
+Bcast                4    *       1        52        52        52        52
+
+Bcast                7    0       1         4         4         4         4
+Bcast                7    *       1         4         4         4         4
+
+Bcast               11    2       1        52        52        52        52
+Bcast               11    *       1        52        52        52        52
+
+Bcast               14    2       1         4         4         4         4
+Bcast               14    *       1         4         4         4         4
+
+Bcast               18    3       1        52        52        52        52
+Bcast               18    *       1        52        52        52        52
+
+Bcast               21    3       1         4         4         4         4
+Bcast               21    *       1         4         4         4         4
+
+Bcast               25    1       1        52        52        52        52
+Bcast               25    *       1        52        52        52        52
+
+Bcast               28    1       1         4         4         4         4
+Bcast               28    *       1         4         4         4         4
+
+Bcast               32    4       1        52        52        52        52
+Bcast               32    *       1        52        52        52        52
+
+Bcast               35    4       1         4         4         4         4
+Bcast               35    *       1         4         4         4         4
+
+Bcast               39    5       1        52        52        52        52
+Bcast               39    *       1        52        52        52        52
+
+Bcast               42    5       1         4         4         4         4
+Bcast               42    *       1         4         4         4         4
+
+Bcast               46    6       1        52        52        52        52
+Bcast               46    *       1        52        52        52        52
+
+Bcast               49    6       1         4         4         4         4
+Bcast               49    *       1         4         4         4         4
+
+Bcast               53    7       1        52        52        52        52
+Bcast               53    *       1        52        52        52        52
+
+Bcast               56    7       1         4         4         4         4
+Bcast               56    *       1         4         4         4         4
+
+Bcast               61   13       1        52        52        52        52
+Bcast               61    *       1        52        52        52        52
+
+Bcast               63   13       1         4         4         4         4
+Bcast               63    *       1         4         4         4         4
+
+Bcast               68   11       1        52        52        52        52
+Bcast               68    *       1        52        52        52        52
+
+Bcast               70   11       1         4         4         4         4
+Bcast               70    *       1         4         4         4         4
+
+Bcast               75   14       1        52        52        52        52
+Bcast               75    *       1        52        52        52        52
+
+Bcast               77   14       1         4         4         4         4
+Bcast               77    *       1         4         4         4         4
+
+Bcast               82   15       1        52        52        52        52
+Bcast               82    *       1        52        52        52        52
+
+Bcast               84   15       1         4         4         4         4
+Bcast               84    *       1         4         4         4         4
+
+Bcast               89    8       1        52        52        52        52
+Bcast               89    *       1        52        52        52        52
+
+Bcast               91    8       1         4         4         4         4
+Bcast               91    *       1         4         4         4         4
+
+Bcast               96    9       1        52        52        52        52
+Bcast               96    *       1        52        52        52        52
+
+Bcast               98    9       1         4         4         4         4
+Bcast               98    *       1         4         4         4         4
+
+Bcast              103   10       1        52        52        52        52
+Bcast              103    *       1        52        52        52        52
+
+Bcast              105   10       1         4         4         4         4
+Bcast              105    *       1         4         4         4         4
+
+Bcast              110   12       1        52        52        52        52
+Bcast              110    *       1        52        52        52        52
+
+Bcast              112   12       1         4         4         4         4
+Bcast              112    *       1         4         4         4         4
+---------------------------------------------------------------------------
+@--- End of Report --------------------------------------------------------
+---------------------------------------------------------------------------
